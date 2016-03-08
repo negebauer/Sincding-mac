@@ -116,6 +116,15 @@ class SidingParser: NSObject {
                     if error != nil {
                         print("Error: \(error!)")
                     } else {
+                        
+                        //Get the local docs directory and append your local filename.
+                        var docURL = (NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)).last! as NSURL
+                        
+                        docURL = docURL.URLByAppendingPathComponent( "myFileName.pdf")
+                        
+                        //Lastly, write your file to the disk.
+                        data!.writeToURL(docURL, atomically: true)
+                        
                         // print("Response: \(self.stringFromSidingData(data!))")
 //                        let doc = Kanna.HTML(html: self.stringFromSidingData(data!), encoding: NSUTF8StringEncoding)
 //                        print("Doc: \(doc!.text!)")
