@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -641,12 +642,12 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="SIncDING" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
@@ -667,11 +668,61 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="SIncDING" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eE7-mj-cE8">
+                                <rect key="frame" x="170" y="117" width="140" height="33"/>
+                                <buttonCell key="cell" type="push" title="Print fucking log" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QOA-no-WNX">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="doStuff:" target="XfG-lQ-9wD" id="dEi-Z0-rlg"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hus-hh-htS">
+                                <rect key="frame" x="176" y="186" width="128" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" placeholderString="uc username" drawsBackground="YES" id="2GN-1V-5KK">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5IQ-hA-Cd7">
+                                <rect key="frame" x="176" y="154" width="128" height="22"/>
+                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="password" drawsBackground="YES" usesSingleLineMode="YES" id="wFp-7w-nup">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <allowedInputSourceLocales>
+                                        <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                    </allowedInputSourceLocales>
+                                </secureTextFieldCell>
+                                <connections>
+                                    <action selector="passwordEnterPressed:" target="XfG-lQ-9wD" id="M21-s9-ahK"/>
+                                </connections>
+                            </secureTextField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="eE7-mj-cE8" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="2zq-I6-rZ9"/>
+                            <constraint firstItem="hus-hh-htS" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="L0A-Tu-J6Z"/>
+                            <constraint firstItem="eE7-mj-cE8" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Ras-HV-zVP"/>
+                            <constraint firstItem="5IQ-hA-Cd7" firstAttribute="top" secondItem="hus-hh-htS" secondAttribute="bottom" constant="10" id="Xk3-09-S5Q"/>
+                            <constraint firstItem="eE7-mj-cE8" firstAttribute="height" secondItem="hus-hh-htS" secondAttribute="height" id="ace-Gf-RY6"/>
+                            <constraint firstItem="5IQ-hA-Cd7" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="fHn-Db-IyW"/>
+                            <constraint firstItem="eE7-mj-cE8" firstAttribute="height" secondItem="5IQ-hA-Cd7" secondAttribute="height" id="fOB-Ca-TQs"/>
+                            <constraint firstItem="eE7-mj-cE8" firstAttribute="width" secondItem="hus-hh-htS" secondAttribute="width" id="kb7-S6-fwj"/>
+                            <constraint firstItem="eE7-mj-cE8" firstAttribute="top" secondItem="5IQ-hA-Cd7" secondAttribute="bottom" constant="8" id="qXY-GS-gEB"/>
+                            <constraint firstItem="eE7-mj-cE8" firstAttribute="width" secondItem="5IQ-hA-Cd7" secondAttribute="width" id="tfb-jr-jEU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="5IQ-hA-Cd7" id="dG7-In-lvk"/>
+                        <outlet property="usernameField" destination="hus-hh-htS" id="Sui-Of-5o2"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
