@@ -14,30 +14,10 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SIncDINGTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-SIncDINGUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>2523B992E1861A28683743786D13A1CC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5247AF715F2318B8F33DFD9D770CFFDA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5E20FBAB756C25E083BE9E8052117509</key>
 		<dict>
 			<key>primary</key>
 			<true/>

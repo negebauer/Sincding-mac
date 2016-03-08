@@ -11,14 +11,10 @@ target 'SIncDING' do
 end
 
 target 'SIncDINGTests' do
-	pod 'Alamofire', '~> 3.0'
-    pod 'Fabric'
-    pod 'Crashlytics'
+    
 end
 
 target 'SIncDINGUITests' do
-	pod 'Alamofire', '~> 3.0'
-    pod 'Fabric'
-    pod 'Crashlytics'
+    
 end
 

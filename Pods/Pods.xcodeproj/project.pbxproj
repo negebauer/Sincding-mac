@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		046AF6E3BF94FED5219F19ED5A8EDFDF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
 		095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4715A59B2BB3E6FF0AFA9247103C7 /* Error.swift */; };
-		116D67E1117C8C2CDBE027A2CCDD4F47 /* Pods-SIncDINGUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B317D710EFFB50504162E750E4AD09FE /* Pods-SIncDINGUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		134E616295390CE3A9D08810F4A8219D /* Pods-SIncDINGUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A50C933405C9FC454A22BB6637B282 /* Pods-SIncDINGUITests-dummy.m */; };
 		16102E4E35FAA0FC4161282FECE56469 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F02770FF1A89B95DA374F0DF7DAFB2 /* Timeline.swift */; };
 		2D3405986FC586FA6C0A5E0B6BA7E64E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649FCEA9FD71D07FD1E24C40C278C6AF /* Validation.swift */; };
 		2E45A3085839C51AA020EBB5987CD765 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
@@ -22,18 +19,15 @@
 		62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D791BEBEDBE2D3C6E6A65E45383D0C4 /* Response.swift */; };
 		7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E92D8680A78BB9BA230A019337EA5 /* ServerTrustPolicy.swift */; };
 		8EB11202167FCDDF1257AAAB1D1FB244 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB41246C089591E98399F5ED630BB10 /* Alamofire.swift */; };
-		9105168954179E5746E06A05D487E1CC /* Pods-SIncDING-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AFD2B333E7EE182929D0589669595E /* Pods-SIncDING-dummy.m */; };
+		9105168954179E5746E06A05D487E1CC /* Pods-SIncDING-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CBEBFD84A2414063D7C155C98F1C55 /* Pods-SIncDING-dummy.m */; };
 		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 335CA164134D4B45EEC90EE25B904194 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		97E9B254999FEEADC921FC7AAF7866BB /* Pods-SIncDINGTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 181E8168DEBD4BCB14EABB57B63480DF /* Pods-SIncDINGTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A98E97CC5300607D14A5DD93FC778BBA /* Pods-SIncDING-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 846426148FEF8D5BD5849220506F5E9F /* Pods-SIncDING-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A98E97CC5300607D14A5DD93FC778BBA /* Pods-SIncDING-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ED9AB71366EEE57554933982539BDD1 /* Pods-SIncDING-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B446FC46CFCCAF5018EF1E9EF641CB /* Result.swift */; };
 		ADF19C953CE2A7D0B72EC93A81FCCC26 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5188458C9C0E04BDBC5F8C582A454E0 /* Alamofire-dummy.m */; };
 		AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAB7E751A1EE98B7A6B7B124454A3C4 /* Stream.swift */; };
-		BC17553EFFA97F1541D77C987C1368E9 /* Pods-SIncDINGTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA7A6CC8E04087905FE9C7ACC7ADDE /* Pods-SIncDINGTests-dummy.m */; };
 		BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B8BB63128D502D15B60485F21D4E7 /* Notifications.swift */; };
 		C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6257A1A889A19880C853629A3285B21 /* ParameterEncoding.swift */; };
 		C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB72ADE88E501D9540E8274AE2DDE3 /* MultipartFormData.swift */; };
-		D2326C2E4E3650292F751B9483B09913 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
 		EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486293756513F8A7E96393C2D65CC604 /* Request.swift */; };
 		F3F3FD9096F43B73CBB52EF0E1CCF73E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -46,103 +40,51 @@
 			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
 			remoteInfo = Alamofire;
 		};
-		96FA409ECFC1AB2CA928DCDAB09139A9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
-			remoteInfo = Alamofire;
-		};
-		D2749C1AE6D3D2C307A61F2F78856184 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
-			remoteInfo = Alamofire;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		058C993A3F5A6B3929FC44062C7CE5EA /* Pods-SIncDINGTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SIncDINGTests.release.xcconfig"; sourceTree = "<group>"; };
+		00B3BA6FE33DE7A1164E8BACEC0F51AC /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		037FC63D69AD239BDAAFC86754C5078B /* Pods-SIncDING.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SIncDING.modulemap"; sourceTree = "<group>"; };
 		077FBEACB9022693E46FDFEBB88F6BB8 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		08878060F30AC47F3873D3183AA69B26 /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
-		09AD2D8BE5248D720749AE584D333543 /* Pods-SIncDINGUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SIncDINGUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0B8AD0FC891084F3569A35BD9C7A4246 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C447C717168871B69F0D9F5A2AF698D /* Pods-SIncDING.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SIncDING.debug.xcconfig"; sourceTree = "<group>"; };
 		0F5B8BB63128D502D15B60485F21D4E7 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		181E8168DEBD4BCB14EABB57B63480DF /* Pods-SIncDINGTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SIncDINGTests-umbrella.h"; sourceTree = "<group>"; };
+		1B69D4EB19464AB20E07CC8755542BEA /* Pods-SIncDING-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SIncDING-acknowledgements.plist"; sourceTree = "<group>"; };
 		1BAB7E751A1EE98B7A6B7B124454A3C4 /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
 		1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		22ECD4C6CAD20640AA3705C518898397 /* Pods-SIncDINGUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SIncDINGUITests.release.xcconfig"; sourceTree = "<group>"; };
-		25D8F0119A2E219A0FAE17CA92DE5AE4 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAAC43871AD300EE112742B01EF779C /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
+		2ED9AB71366EEE57554933982539BDD1 /* Pods-SIncDING-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SIncDING-umbrella.h"; sourceTree = "<group>"; };
 		3235E217188072C0CCBCF4CD97F1ECD4 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
 		335CA164134D4B45EEC90EE25B904194 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		35EBA70E1546E2F03A03B0BB335DA36F /* Pods-SIncDING-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SIncDING-frameworks.sh"; sourceTree = "<group>"; };
 		3740EB9D131A1E57126697EFC3D354C4 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = OSX/Crashlytics.framework; sourceTree = "<group>"; };
-		3AA1EE517D04E1A18BCF95367D4CC5F0 /* Pods-SIncDINGUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SIncDINGUITests.modulemap"; sourceTree = "<group>"; };
+		3B8608AF6D086CC68EAC363D30177F4B /* Pods-SIncDING-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SIncDING-acknowledgements.markdown"; sourceTree = "<group>"; };
 		436E7179CCA7E21D88BB770493BEB62A /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		45B446FC46CFCCAF5018EF1E9EF641CB /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		486293756513F8A7E96393C2D65CC604 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		4BA792535E333F6017CA75CFEBF46036 /* Pods-SIncDINGTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SIncDINGTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		504DC9C636BBDCC70C96670CE6072F86 /* Pods-SIncDINGUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SIncDINGUITests-resources.sh"; sourceTree = "<group>"; };
-		536523783CA380BA5646E9D42FA2A48A /* Pods-SIncDING-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SIncDING-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5B1B8B5D74EA06C57B47DA12200C7226 /* Pods-SIncDING.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SIncDING.release.xcconfig"; sourceTree = "<group>"; };
 		5BE432FDFF51909629F72AEF1FCF6C1B /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		649FCEA9FD71D07FD1E24C40C278C6AF /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		64AFD2B333E7EE182929D0589669595E /* Pods-SIncDING-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SIncDING-dummy.m"; sourceTree = "<group>"; };
 		67F02770FF1A89B95DA374F0DF7DAFB2 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		6D791BEBEDBE2D3C6E6A65E45383D0C4 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		74BE4D1FB75BF6C74C458E1D276EFCCB /* Pods-SIncDING-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SIncDING-frameworks.sh"; sourceTree = "<group>"; };
 		7BFB72ADE88E501D9540E8274AE2DDE3 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		7FA1C93E91B9AF929E5C2BD914FBB9D4 /* Pods-SIncDINGUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SIncDINGUITests-frameworks.sh"; sourceTree = "<group>"; };
-		81895C5E7645DD6E0EA6EDF57B2E8BFB /* Pods-SIncDING.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SIncDING.release.xcconfig"; sourceTree = "<group>"; };
-		82070EB581951DE5616FA19A3DDBC7FE /* Pods-SIncDING.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SIncDING.debug.xcconfig"; sourceTree = "<group>"; };
-		846426148FEF8D5BD5849220506F5E9F /* Pods-SIncDING-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SIncDING-umbrella.h"; sourceTree = "<group>"; };
-		84AF2793FA3E6FCD1BBA3F5D76CD4A02 /* Pods-SIncDING.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SIncDING.modulemap"; sourceTree = "<group>"; };
-		86D07FD7A6AFA0B4FE7D700E9DE8290B /* Pods-SIncDINGTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SIncDINGTests.modulemap"; sourceTree = "<group>"; };
+		88AF5932A435F541CE8FCE48FEB3C36C /* Pods_SIncDING.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIncDING.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D5ED6437CAD86EDD68CC7E324302AC /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
-		89606FC74A84876B048922BB757251FA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8AFA7A6CC8E04087905FE9C7ACC7ADDE /* Pods-SIncDINGTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SIncDINGTests-dummy.m"; sourceTree = "<group>"; };
 		8EB41246C089591E98399F5ED630BB10 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		8FEC648E796B137BF820D8DA2D386DDE /* Pods-SIncDING-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SIncDING-resources.sh"; sourceTree = "<group>"; };
-		926FA8C9459969F0B3F00ED1438741F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C3E92D8680A78BB9BA230A019337EA5 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		A1A50C933405C9FC454A22BB6637B282 /* Pods-SIncDINGUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SIncDINGUITests-dummy.m"; sourceTree = "<group>"; };
 		A5188458C9C0E04BDBC5F8C582A454E0 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		B234176D4A80D94B2BDA0B9AF8F6FA87 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = OSX/Fabric.framework; sourceTree = "<group>"; };
-		B317D710EFFB50504162E750E4AD09FE /* Pods-SIncDINGUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SIncDINGUITests-umbrella.h"; sourceTree = "<group>"; };
-		B7E4EA1031088824CF894531A55C57B6 /* Pods-SIncDING-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SIncDING-acknowledgements.plist"; sourceTree = "<group>"; };
-		B811EB8358F87AAF1EFB50DB0ECF90DB /* Pods_SIncDINGTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIncDINGTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7311C891B650F64F812F22AC4F0DA8F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8CBEBFD84A2414063D7C155C98F1C55 /* Pods-SIncDING-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SIncDING-dummy.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C05870C6C757CF31C79EB26B3DB77487 /* Pods_SIncDINGUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIncDINGUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2166C695A68336B44CB259A3B866233 /* Pods-SIncDINGUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SIncDINGUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C99F0F881CB01D509DDAABA8B4C21FA4 /* Pods-SIncDINGTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SIncDINGTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C103A0B2BC8AD64C010BBC1726213861 /* Pods-SIncDING-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SIncDING-resources.sh"; sourceTree = "<group>"; };
 		CC998E56F099C37D58169510BD5B6D94 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE286421690579020FB5393B73B477B7 /* Pods-SIncDINGTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SIncDINGTests-frameworks.sh"; sourceTree = "<group>"; };
-		D22CC23C27606437B4F3ED8AA1EB96E4 /* Pods-SIncDINGUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SIncDINGUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D6257A1A889A19880C853629A3285B21 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		DD1C5AA1D12432AFC3CF5098163101AA /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		DF53B6CD64BA36D61A81FD2EBC9051C1 /* Pods_SIncDING.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIncDING.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E12108126EB6A507FEDD01ABBCFFBBE4 /* Pods-SIncDINGTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SIncDINGTests-resources.sh"; sourceTree = "<group>"; };
-		FD683FC864196C5B2794150BC0DA8333 /* Pods-SIncDINGTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SIncDINGTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FEC4715A59B2BB3E6FF0AFA9247103C7 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		55C4168B01E68A36610CCEFEA6FC2EC4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D2326C2E4E3650292F751B9483B09913 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6D8C3585A02B556927BF81D805131362 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				046AF6E3BF94FED5219F19ED5A8EDFDF /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		86631BCDD6995CFD2A8A7716F3673282 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,40 +104,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		279BF2CFB658C9ACD82C9F4D58C67C16 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				51A29870BA992D5117068A90AFC8FC5E /* Pods-SIncDING */,
-				519247982B91D4760C4AC43F81D828D3 /* Pods-SIncDINGTests */,
-				2C9DACEA98BC51F2F7CC5116F0276DC7 /* Pods-SIncDINGUITests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		28C17CEF104526ACA07B6EEE217EC43E /* OS X */ = {
 			isa = PBXGroup;
 			children = (
 				1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */,
 			);
 			name = "OS X";
-			sourceTree = "<group>";
-		};
-		2C9DACEA98BC51F2F7CC5116F0276DC7 /* Pods-SIncDINGUITests */ = {
-			isa = PBXGroup;
-			children = (
-				926FA8C9459969F0B3F00ED1438741F1 /* Info.plist */,
-				3AA1EE517D04E1A18BCF95367D4CC5F0 /* Pods-SIncDINGUITests.modulemap */,
-				09AD2D8BE5248D720749AE584D333543 /* Pods-SIncDINGUITests-acknowledgements.markdown */,
-				C2166C695A68336B44CB259A3B866233 /* Pods-SIncDINGUITests-acknowledgements.plist */,
-				A1A50C933405C9FC454A22BB6637B282 /* Pods-SIncDINGUITests-dummy.m */,
-				7FA1C93E91B9AF929E5C2BD914FBB9D4 /* Pods-SIncDINGUITests-frameworks.sh */,
-				504DC9C636BBDCC70C96670CE6072F86 /* Pods-SIncDINGUITests-resources.sh */,
-				B317D710EFFB50504162E750E4AD09FE /* Pods-SIncDINGUITests-umbrella.h */,
-				D22CC23C27606437B4F3ED8AA1EB96E4 /* Pods-SIncDINGUITests.debug.xcconfig */,
-				22ECD4C6CAD20640AA3705C518898397 /* Pods-SIncDINGUITests.release.xcconfig */,
-			);
-			name = "Pods-SIncDINGUITests";
-			path = "Target Support Files/Pods-SIncDINGUITests";
 			sourceTree = "<group>";
 		};
 		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
@@ -230,42 +144,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		519247982B91D4760C4AC43F81D828D3 /* Pods-SIncDINGTests */ = {
-			isa = PBXGroup;
-			children = (
-				89606FC74A84876B048922BB757251FA /* Info.plist */,
-				86D07FD7A6AFA0B4FE7D700E9DE8290B /* Pods-SIncDINGTests.modulemap */,
-				FD683FC864196C5B2794150BC0DA8333 /* Pods-SIncDINGTests-acknowledgements.markdown */,
-				4BA792535E333F6017CA75CFEBF46036 /* Pods-SIncDINGTests-acknowledgements.plist */,
-				8AFA7A6CC8E04087905FE9C7ACC7ADDE /* Pods-SIncDINGTests-dummy.m */,
-				CE286421690579020FB5393B73B477B7 /* Pods-SIncDINGTests-frameworks.sh */,
-				E12108126EB6A507FEDD01ABBCFFBBE4 /* Pods-SIncDINGTests-resources.sh */,
-				181E8168DEBD4BCB14EABB57B63480DF /* Pods-SIncDINGTests-umbrella.h */,
-				C99F0F881CB01D509DDAABA8B4C21FA4 /* Pods-SIncDINGTests.debug.xcconfig */,
-				058C993A3F5A6B3929FC44062C7CE5EA /* Pods-SIncDINGTests.release.xcconfig */,
-			);
-			name = "Pods-SIncDINGTests";
-			path = "Target Support Files/Pods-SIncDINGTests";
-			sourceTree = "<group>";
-		};
-		51A29870BA992D5117068A90AFC8FC5E /* Pods-SIncDING */ = {
-			isa = PBXGroup;
-			children = (
-				0B8AD0FC891084F3569A35BD9C7A4246 /* Info.plist */,
-				84AF2793FA3E6FCD1BBA3F5D76CD4A02 /* Pods-SIncDING.modulemap */,
-				536523783CA380BA5646E9D42FA2A48A /* Pods-SIncDING-acknowledgements.markdown */,
-				B7E4EA1031088824CF894531A55C57B6 /* Pods-SIncDING-acknowledgements.plist */,
-				64AFD2B333E7EE182929D0589669595E /* Pods-SIncDING-dummy.m */,
-				74BE4D1FB75BF6C74C458E1D276EFCCB /* Pods-SIncDING-frameworks.sh */,
-				8FEC648E796B137BF820D8DA2D386DDE /* Pods-SIncDING-resources.sh */,
-				846426148FEF8D5BD5849220506F5E9F /* Pods-SIncDING-umbrella.h */,
-				82070EB581951DE5616FA19A3DDBC7FE /* Pods-SIncDING.debug.xcconfig */,
-				81895C5E7645DD6E0EA6EDF57B2E8BFB /* Pods-SIncDING.release.xcconfig */,
-			);
-			name = "Pods-SIncDING";
-			path = "Target Support Files/Pods-SIncDING";
-			sourceTree = "<group>";
-		};
 		677EE78BED7164AF763ED3244343FA77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,8 +158,8 @@
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
 				512ED7994F0BEE513B3D2DE56E10B2C6 /* Pods */,
-				B3115335947A6924B7E94CFEEFF584F4 /* Products */,
-				279BF2CFB658C9ACD82C9F4D58C67C16 /* Targets Support Files */,
+				D93E0FB26AE29DF024C3A58A67E21D11 /* Products */,
+				E9B4D59A1E8ACEE1F24D46DD6AFD4BF8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -318,23 +196,39 @@
 			path = Crashlytics;
 			sourceTree = "<group>";
 		};
-		B3115335947A6924B7E94CFEEFF584F4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				25D8F0119A2E219A0FAE17CA92DE5AE4 /* Alamofire.framework */,
-				DF53B6CD64BA36D61A81FD2EBC9051C1 /* Pods_SIncDING.framework */,
-				B811EB8358F87AAF1EFB50DB0ECF90DB /* Pods_SIncDINGTests.framework */,
-				C05870C6C757CF31C79EB26B3DB77487 /* Pods_SIncDINGUITests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		C14DAAFBA676CB4D090D0B8FDC9374D2 /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
 				DB58F1FF20625158988569638C9DE36C /* Frameworks */,
 			);
 			path = Fabric;
+			sourceTree = "<group>";
+		};
+		D93E0FB26AE29DF024C3A58A67E21D11 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00B3BA6FE33DE7A1164E8BACEC0F51AC /* Alamofire.framework */,
+				88AF5932A435F541CE8FCE48FEB3C36C /* Pods_SIncDING.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAF72FA2EA9AB7BD90AEBD9C8B7D0E27 /* Pods-SIncDING */ = {
+			isa = PBXGroup;
+			children = (
+				B7311C891B650F64F812F22AC4F0DA8F /* Info.plist */,
+				037FC63D69AD239BDAAFC86754C5078B /* Pods-SIncDING.modulemap */,
+				3B8608AF6D086CC68EAC363D30177F4B /* Pods-SIncDING-acknowledgements.markdown */,
+				1B69D4EB19464AB20E07CC8755542BEA /* Pods-SIncDING-acknowledgements.plist */,
+				B8CBEBFD84A2414063D7C155C98F1C55 /* Pods-SIncDING-dummy.m */,
+				35EBA70E1546E2F03A03B0BB335DA36F /* Pods-SIncDING-frameworks.sh */,
+				C103A0B2BC8AD64C010BBC1726213861 /* Pods-SIncDING-resources.sh */,
+				2ED9AB71366EEE57554933982539BDD1 /* Pods-SIncDING-umbrella.h */,
+				0C447C717168871B69F0D9F5A2AF698D /* Pods-SIncDING.debug.xcconfig */,
+				5B1B8B5D74EA06C57B47DA12200C7226 /* Pods-SIncDING.release.xcconfig */,
+			);
+			name = "Pods-SIncDING";
+			path = "Target Support Files/Pods-SIncDING";
 			sourceTree = "<group>";
 		};
 		DB58F1FF20625158988569638C9DE36C /* Frameworks */ = {
@@ -345,17 +239,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E9B4D59A1E8ACEE1F24D46DD6AFD4BF8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAF72FA2EA9AB7BD90AEBD9C8B7D0E27 /* Pods-SIncDING */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		BA71FAD12C711B30CAD885B1A8D4A68D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				116D67E1117C8C2CDBE027A2CCDD4F47 /* Pods-SIncDINGUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C3292FBC6C043E3235F0747C1FA03BA0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,14 +263,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8ED0A4A107045E0E58F8547D0BDBD3C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				97E9B254999FEEADC921FC7AAF7866BB /* Pods-SIncDINGTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,43 +284,7 @@
 			);
 			name = "Pods-SIncDING";
 			productName = "Pods-SIncDING";
-			productReference = DF53B6CD64BA36D61A81FD2EBC9051C1 /* Pods_SIncDING.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		5247AF715F2318B8F33DFD9D770CFFDA /* Pods-SIncDINGTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 36533AB639C53E864C909A7AF9E974B2 /* Build configuration list for PBXNativeTarget "Pods-SIncDINGTests" */;
-			buildPhases = (
-				F615C2DDB2941253C5A9B5E58D162B73 /* Sources */,
-				6D8C3585A02B556927BF81D805131362 /* Frameworks */,
-				F8ED0A4A107045E0E58F8547D0BDBD3C /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EA23B567C7AB9D44DCDFC1DEFE066D62 /* PBXTargetDependency */,
-			);
-			name = "Pods-SIncDINGTests";
-			productName = "Pods-SIncDINGTests";
-			productReference = B811EB8358F87AAF1EFB50DB0ECF90DB /* Pods_SIncDINGTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		5E20FBAB756C25E083BE9E8052117509 /* Pods-SIncDINGUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2431A609868CB3C49218858EE6C7C056 /* Build configuration list for PBXNativeTarget "Pods-SIncDINGUITests" */;
-			buildPhases = (
-				E8105F24559E10AF49F045B885DD4E81 /* Sources */,
-				55C4168B01E68A36610CCEFEA6FC2EC4 /* Frameworks */,
-				BA71FAD12C711B30CAD885B1A8D4A68D /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				165737D92B59CCA464B4F9D7D4EC70D6 /* PBXTargetDependency */,
-			);
-			name = "Pods-SIncDINGUITests";
-			productName = "Pods-SIncDINGUITests";
-			productReference = C05870C6C757CF31C79EB26B3DB77487 /* Pods_SIncDINGUITests.framework */;
+			productReference = 88AF5932A435F541CE8FCE48FEB3C36C /* Pods_SIncDING.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */ = {
@@ -451,7 +301,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 25D8F0119A2E219A0FAE17CA92DE5AE4 /* Alamofire.framework */;
+			productReference = 00B3BA6FE33DE7A1164E8BACEC0F51AC /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -471,14 +321,12 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = B3115335947A6924B7E94CFEEFF584F4 /* Products */;
+			productRefGroup = D93E0FB26AE29DF024C3A58A67E21D11 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */,
 				2523B992E1861A28683743786D13A1CC /* Pods-SIncDING */,
-				5247AF715F2318B8F33DFD9D770CFFDA /* Pods-SIncDINGTests */,
-				5E20FBAB756C25E083BE9E8052117509 /* Pods-SIncDINGUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -509,14 +357,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8105F24559E10AF49F045B885DD4E81 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				134E616295390CE3A9D08810F4A8219D /* Pods-SIncDINGUITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EAA6C19DFBE5540F061B2C243798898B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -525,69 +365,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F615C2DDB2941253C5A9B5E58D162B73 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC17553EFFA97F1541D77C987C1368E9 /* Pods-SIncDINGTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		165737D92B59CCA464B4F9D7D4EC70D6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
-			targetProxy = D2749C1AE6D3D2C307A61F2F78856184 /* PBXContainerItemProxy */;
-		};
 		98579FB6E6E363935EECBC6D78E03AA1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
 			targetProxy = 4936E007373D1E8142F56E8717C3DD58 /* PBXContainerItemProxy */;
 		};
-		EA23B567C7AB9D44DCDFC1DEFE066D62 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
-			targetProxy = 96FA409ECFC1AB2CA928DCDAB09139A9 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		048E1D116A765AD05EFFD750E3839731 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D22CC23C27606437B4F3ED8AA1EB96E4 /* Pods-SIncDINGUITests.debug.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-SIncDINGUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MODULEMAP_FILE = "Target Support Files/Pods-SIncDINGUITests/Pods-SIncDINGUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_SIncDINGUITests;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		10B2EE21B5D67EE2C819831CCC43832B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -627,102 +416,9 @@
 			};
 			name = Debug;
 		};
-		2C991153477C9ADCB510E0D4C2A4418A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22ECD4C6CAD20640AA3705C518898397 /* Pods-SIncDINGUITests.release.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-SIncDINGUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MODULEMAP_FILE = "Target Support Files/Pods-SIncDINGUITests/Pods-SIncDINGUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_SIncDINGUITests;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		340A40531B789D858C8F1200AB8CA301 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 058C993A3F5A6B3929FC44062C7CE5EA /* Pods-SIncDINGTests.release.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-SIncDINGTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MODULEMAP_FILE = "Target Support Files/Pods-SIncDINGTests/Pods-SIncDINGTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_SIncDINGTests;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3CF9F3BA2008ACED15C026CB213FBB46 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C99F0F881CB01D509DDAABA8B4C21FA4 /* Pods-SIncDINGTests.debug.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-SIncDINGTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MODULEMAP_FILE = "Target Support Files/Pods-SIncDINGTests/Pods-SIncDINGTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_SIncDINGTests;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		493666C9F3161857EFE1DA409A275C5D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82070EB581951DE5616FA19A3DDBC7FE /* Pods-SIncDING.debug.xcconfig */;
+			baseConfigurationReference = 0C447C717168871B69F0D9F5A2AF698D /* Pods-SIncDING.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -787,7 +483,7 @@
 		};
 		ACA5889C7DE5F132FD14B110289FDC80 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81895C5E7645DD6E0EA6EDF57B2E8BFB /* Pods-SIncDING.release.xcconfig */;
+			baseConfigurationReference = 5B1B8B5D74EA06C57B47DA12200C7226 /* Pods-SIncDING.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -875,29 +571,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2431A609868CB3C49218858EE6C7C056 /* Build configuration list for PBXNativeTarget "Pods-SIncDINGUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				048E1D116A765AD05EFFD750E3839731 /* Debug */,
-				2C991153477C9ADCB510E0D4C2A4418A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				10B2EE21B5D67EE2C819831CCC43832B /* Debug */,
 				7C07D96CC7C445E83983A6C6420BC692 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		36533AB639C53E864C909A7AF9E974B2 /* Build configuration list for PBXNativeTarget "Pods-SIncDINGTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3CF9F3BA2008ACED15C026CB213FBB46 /* Debug */,
-				340A40531B789D858C8F1200AB8CA301 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
