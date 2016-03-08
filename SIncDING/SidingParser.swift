@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import Kanna
 
-class SidingParser {
+class SidingParser: NSObject {
     
     // MARK: - Constants
     
@@ -35,6 +35,11 @@ class SidingParser {
 
     func headers() -> [String: String] {
         return NSHTTPCookie.requestHeaderFieldsWithCookies(cookies)
+    }
+    
+    func stringFromSidingData(data: NSData) -> String {
+        let str = String(data: data, encoding: NSASCIIStringEncoding)!
+        return str
     }
     
     func doStuff() {
@@ -64,7 +69,7 @@ class SidingParser {
                 if error != nil {
                     print("Error: \(error!)")
                 } else {
-                    self.parseSiteHTML(String(data: data!, encoding: NSASCIIStringEncoding)!)
+                    self.parseSiteHTML(self.stringFromSidingData(data!))
                 }
         }
     }
@@ -72,21 +77,54 @@ class SidingParser {
     func parseSiteHTML(data: String) {
         if let doc = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding) {
             print(doc.title)
-            // Search for nodes by XPath
-            for link in doc.xpath("//a | //link") {
-                print(link.text)
-                print(link["href"])
-            }
-            
-            Alamofire.request(.GET, sidingSite + "?accion_curso=avisos&acc_aviso=mostrar&id_curso_ic=8036", headers: headers())
+
+//            for link in doc.xpath("//a | //link") {
+//                print(link.text)
+//                print(link["href"])
+//            }
+            print("Headers: \(headers())")
+            Alamofire.request(.GET, "https://intrawww.ing.puc.cl/siding/dirdes/ingcursos/cursos/vista.phtml?accion_curso=avisos&acc_aviso=mostrar&id_curso_ic=8019", headers: headers())
                 .response { (_, response, data, error) in
                     if error != nil {
                         print("Error: \(error!)")
                     } else {
-                        print("Response: \(response)")
+                        // print("Response: \(self.stringFromSidingData(data!))")
+                        let doc = Kanna.HTML(html: self.stringFromSidingData(data!), encoding: NSUTF8StringEncoding)
+//                        print("Doc: \(doc!.text!)")
+//                        for link in doc!.xpath("//a | //link") {
+//                                            print(link.text)
+//                                            print(link["href"])
+//                                        }
                     }
             }
-            
+            Alamofire.request(.GET, "https://intrawww.ing.puc.cl/siding/dirdes/ingcursos/cursos/vista.phtml?accion_curso=carpetas&acc_carp=abrir_carpeta&id_curso_ic=8019&id_carpeta=48167", headers: headers())
+                .response { (_, response, data, error) in
+                    if error != nil {
+                        print("Error: \(error!)")
+                    } else {
+                        // print("Response: \(self.stringFromSidingData(data!))")
+                        let doc = Kanna.HTML(html: self.stringFromSidingData(data!), encoding: NSUTF8StringEncoding)
+//                        print("Doc: \(doc!.text!)")
+//                        for link in doc!.xpath("//a | //link") {
+//                            print(link.text)
+//                            print(link["href"])
+//                        }
+                    }
+            }
+            Alamofire.request(.GET, "https://intrawww.ing.puc.cl/siding/dirdes/ingcursos/cursos/descarga.phtml?id_curso_ic=8019&id_archivo=304266", headers: headers())
+                .response { (_, response, data, error) in
+                    if error != nil {
+                        print("Error: \(error!)")
+                    } else {
+                        // print("Response: \(self.stringFromSidingData(data!))")
+//                        let doc = Kanna.HTML(html: self.stringFromSidingData(data!), encoding: NSUTF8StringEncoding)
+//                        print("Doc: \(doc!.text!)")
+//                        for link in doc!.xpath("//a | //link") {
+//                            print(link.text)
+//                            print(link["href"])
+//                        }
+                    }
+            }
         }
     }
 }
