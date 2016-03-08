@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9FBE9F9E7E95393B731A2E93'
+               BlueprintIdentifier = 'FF2176CA14BD4D69406E5DFA'
                BlueprintName = 'Pods-SIncDING'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_SIncDING.framework'>

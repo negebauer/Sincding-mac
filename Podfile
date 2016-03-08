@@ -8,6 +8,7 @@ target 'SIncDING' do
 	pod 'Alamofire', '~> 3.0'
     pod 'Fabric'
     pod 'Crashlytics'
+    pod 'Kanna', '~> 1.0.0'
 end
 
 target 'SIncDINGTests' do
