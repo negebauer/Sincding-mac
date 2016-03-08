@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03DE2FCF1C8F7A4000BF1327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FCE1C8F7A4000BF1327 /* AppDelegate.swift */; };
+		03DE2FD11C8F7A4000BF1327 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FD01C8F7A4000BF1327 /* ViewController.swift */; };
+		03DE2FD31C8F7A4000BF1327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03DE2FD21C8F7A4000BF1327 /* Assets.xcassets */; };
+		03DE2FD61C8F7A4000BF1327 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03DE2FD41C8F7A4000BF1327 /* Main.storyboard */; };
+		03DE2FE11C8F7A4000BF1327 /* SIncDINGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FE01C8F7A4000BF1327 /* SIncDINGTests.swift */; };
+		03DE2FEC1C8F7A4000BF1327 /* SIncDINGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FEB1C8F7A4000BF1327 /* SIncDINGUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03DE2FDD1C8F7A4000BF1327 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03DE2FC31C8F7A4000BF1327 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03DE2FCA1C8F7A4000BF1327;
+			remoteInfo = SIncDING;
+		};
+		03DE2FE81C8F7A4000BF1327 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03DE2FC31C8F7A4000BF1327 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03DE2FCA1C8F7A4000BF1327;
+			remoteInfo = SIncDING;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03DE2FCB1C8F7A4000BF1327 /* SIncDING.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIncDING.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03DE2FCE1C8F7A4000BF1327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		03DE2FD01C8F7A4000BF1327 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		03DE2FD21C8F7A4000BF1327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03DE2FD51C8F7A4000BF1327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		03DE2FD71C8F7A4000BF1327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03DE2FDC1C8F7A4000BF1327 /* SIncDINGTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SIncDINGTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03DE2FE01C8F7A4000BF1327 /* SIncDINGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIncDINGTests.swift; sourceTree = "<group>"; };
+		03DE2FE21C8F7A4000BF1327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03DE2FE71C8F7A4000BF1327 /* SIncDINGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SIncDINGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03DE2FEB1C8F7A4000BF1327 /* SIncDINGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIncDINGUITests.swift; sourceTree = "<group>"; };
+		03DE2FED1C8F7A4000BF1327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03DE2FC81C8F7A4000BF1327 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03DE2FD91C8F7A4000BF1327 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03DE2FE41C8F7A4000BF1327 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03DE2FC21C8F7A4000BF1327 = {
+			isa = PBXGroup;
+			children = (
+				03DE2FCD1C8F7A4000BF1327 /* SIncDING */,
+				03DE2FDF1C8F7A4000BF1327 /* SIncDINGTests */,
+				03DE2FEA1C8F7A4000BF1327 /* SIncDINGUITests */,
+				03DE2FCC1C8F7A4000BF1327 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03DE2FCC1C8F7A4000BF1327 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03DE2FCB1C8F7A4000BF1327 /* SIncDING.app */,
+				03DE2FDC1C8F7A4000BF1327 /* SIncDINGTests.xctest */,
+				03DE2FE71C8F7A4000BF1327 /* SIncDINGUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03DE2FCD1C8F7A4000BF1327 /* SIncDING */ = {
+			isa = PBXGroup;
+			children = (
+				03DE2FCE1C8F7A4000BF1327 /* AppDelegate.swift */,
+				03DE2FD01C8F7A4000BF1327 /* ViewController.swift */,
+				03DE2FD21C8F7A4000BF1327 /* Assets.xcassets */,
+				03DE2FD41C8F7A4000BF1327 /* Main.storyboard */,
+				03DE2FD71C8F7A4000BF1327 /* Info.plist */,
+			);
+			path = SIncDING;
+			sourceTree = "<group>";
+		};
+		03DE2FDF1C8F7A4000BF1327 /* SIncDINGTests */ = {
+			isa = PBXGroup;
+			children = (
+				03DE2FE01C8F7A4000BF1327 /* SIncDINGTests.swift */,
+				03DE2FE21C8F7A4000BF1327 /* Info.plist */,
+			);
+			path = SIncDINGTests;
+			sourceTree = "<group>";
+		};
+		03DE2FEA1C8F7A4000BF1327 /* SIncDINGUITests */ = {
+			isa = PBXGroup;
+			children = (
+				03DE2FEB1C8F7A4000BF1327 /* SIncDINGUITests.swift */,
+				03DE2FED1C8F7A4000BF1327 /* Info.plist */,
+			);
+			path = SIncDINGUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03DE2FCA1C8F7A4000BF1327 /* SIncDING */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03DE2FF01C8F7A4000BF1327 /* Build configuration list for PBXNativeTarget "SIncDING" */;
+			buildPhases = (
+				03DE2FC71C8F7A4000BF1327 /* Sources */,
+				03DE2FC81C8F7A4000BF1327 /* Frameworks */,
+				03DE2FC91C8F7A4000BF1327 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SIncDING;
+			productName = SIncDING;
+			productReference = 03DE2FCB1C8F7A4000BF1327 /* SIncDING.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03DE2FDB1C8F7A4000BF1327 /* SIncDINGTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03DE2FF31C8F7A4000BF1327 /* Build configuration list for PBXNativeTarget "SIncDINGTests" */;
+			buildPhases = (
+				03DE2FD81C8F7A4000BF1327 /* Sources */,
+				03DE2FD91C8F7A4000BF1327 /* Frameworks */,
+				03DE2FDA1C8F7A4000BF1327 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03DE2FDE1C8F7A4000BF1327 /* PBXTargetDependency */,
+			);
+			name = SIncDINGTests;
+			productName = SIncDINGTests;
+			productReference = 03DE2FDC1C8F7A4000BF1327 /* SIncDINGTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		03DE2FE61C8F7A4000BF1327 /* SIncDINGUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03DE2FF61C8F7A4000BF1327 /* Build configuration list for PBXNativeTarget "SIncDINGUITests" */;
+			buildPhases = (
+				03DE2FE31C8F7A4000BF1327 /* Sources */,
+				03DE2FE41C8F7A4000BF1327 /* Frameworks */,
+				03DE2FE51C8F7A4000BF1327 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03DE2FE91C8F7A4000BF1327 /* PBXTargetDependency */,
+			);
+			name = SIncDINGUITests;
+			productName = SIncDINGUITests;
+			productReference = 03DE2FE71C8F7A4000BF1327 /* SIncDINGUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03DE2FC31C8F7A4000BF1327 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Nicolás Gebauer";
+				TargetAttributes = {
+					03DE2FCA1C8F7A4000BF1327 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					03DE2FDB1C8F7A4000BF1327 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 03DE2FCA1C8F7A4000BF1327;
+					};
+					03DE2FE61C8F7A4000BF1327 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 03DE2FCA1C8F7A4000BF1327;
+					};
+				};
+			};
+			buildConfigurationList = 03DE2FC61C8F7A4000BF1327 /* Build configuration list for PBXProject "SIncDING" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 03DE2FC21C8F7A4000BF1327;
+			productRefGroup = 03DE2FCC1C8F7A4000BF1327 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03DE2FCA1C8F7A4000BF1327 /* SIncDING */,
+				03DE2FDB1C8F7A4000BF1327 /* SIncDINGTests */,
+				03DE2FE61C8F7A4000BF1327 /* SIncDINGUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03DE2FC91C8F7A4000BF1327 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DE2FD31C8F7A4000BF1327 /* Assets.xcassets in Resources */,
+				03DE2FD61C8F7A4000BF1327 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03DE2FDA1C8F7A4000BF1327 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03DE2FE51C8F7A4000BF1327 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03DE2FC71C8F7A4000BF1327 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DE2FD11C8F7A4000BF1327 /* ViewController.swift in Sources */,
+				03DE2FCF1C8F7A4000BF1327 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03DE2FD81C8F7A4000BF1327 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DE2FE11C8F7A4000BF1327 /* SIncDINGTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03DE2FE31C8F7A4000BF1327 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DE2FEC1C8F7A4000BF1327 /* SIncDINGUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03DE2FDE1C8F7A4000BF1327 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03DE2FCA1C8F7A4000BF1327 /* SIncDING */;
+			targetProxy = 03DE2FDD1C8F7A4000BF1327 /* PBXContainerItemProxy */;
+		};
+		03DE2FE91C8F7A4000BF1327 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03DE2FCA1C8F7A4000BF1327 /* SIncDING */;
+			targetProxy = 03DE2FE81C8F7A4000BF1327 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		03DE2FD41C8F7A4000BF1327 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03DE2FD51C8F7A4000BF1327 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		03DE2FEE1C8F7A4000BF1327 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		03DE2FEF1C8F7A4000BF1327 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		03DE2FF11C8F7A4000BF1327 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SIncDING/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.SIncDING;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		03DE2FF21C8F7A4000BF1327 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SIncDING/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.SIncDING;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		03DE2FF41C8F7A4000BF1327 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SIncDINGTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.SIncDINGTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SIncDING.app/Contents/MacOS/SIncDING";
+			};
+			name = Debug;
+		};
+		03DE2FF51C8F7A4000BF1327 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SIncDINGTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.SIncDINGTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SIncDING.app/Contents/MacOS/SIncDING";
+			};
+			name = Release;
+		};
+		03DE2FF71C8F7A4000BF1327 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SIncDINGUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.SIncDINGUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SIncDING;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		03DE2FF81C8F7A4000BF1327 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SIncDINGUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.SIncDINGUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SIncDING;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03DE2FC61C8F7A4000BF1327 /* Build configuration list for PBXProject "SIncDING" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03DE2FEE1C8F7A4000BF1327 /* Debug */,
+				03DE2FEF1C8F7A4000BF1327 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03DE2FF01C8F7A4000BF1327 /* Build configuration list for PBXNativeTarget "SIncDING" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03DE2FF11C8F7A4000BF1327 /* Debug */,
+				03DE2FF21C8F7A4000BF1327 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		03DE2FF31C8F7A4000BF1327 /* Build configuration list for PBXNativeTarget "SIncDINGTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03DE2FF41C8F7A4000BF1327 /* Debug */,
+				03DE2FF51C8F7A4000BF1327 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		03DE2FF61C8F7A4000BF1327 /* Build configuration list for PBXNativeTarget "SIncDINGUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03DE2FF71C8F7A4000BF1327 /* Debug */,
+				03DE2FF81C8F7A4000BF1327 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03DE2FC31C8F7A4000BF1327 /* Project object */;
+}
