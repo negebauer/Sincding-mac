@@ -48,6 +48,8 @@
 		03DE2FE71C8F7A4000BF1327 /* SIncDINGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SIncDINGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DE2FEB1C8F7A4000BF1327 /* SIncDINGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIncDINGUITests.swift; sourceTree = "<group>"; };
 		03DE2FED1C8F7A4000BF1327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03DE2FFC1C8F7DA000BF1327 /* SIncDING.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SIncDING.png; sourceTree = "<group>"; };
+		03DE2FFD1C8F7DA000BF1327 /* SIncDING.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = SIncDING.psd; sourceTree = "<group>"; };
 		127889684DD33D206CBA4191 /* Pods-SIncDINGUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIncDINGUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SIncDINGUITests/Pods-SIncDINGUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		22580C8D0B00A9DFB6682C13 /* Pods-SIncDING.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIncDING.release.xcconfig"; path = "Pods/Target Support Files/Pods-SIncDING/Pods-SIncDING.release.xcconfig"; sourceTree = "<group>"; };
 		35D8AEDD651AE1EABFB3B09F /* Pods_SIncDING.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIncDING.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				03DE2FCD1C8F7A4000BF1327 /* SIncDING */,
+				03DE2FFB1C8F7DA000BF1327 /* Resources */,
 				03DE2FDF1C8F7A4000BF1327 /* SIncDINGTests */,
 				03DE2FEA1C8F7A4000BF1327 /* SIncDINGUITests */,
 				03DE2FCC1C8F7A4000BF1327 /* Products */,
@@ -137,6 +140,15 @@
 				03DE2FED1C8F7A4000BF1327 /* Info.plist */,
 			);
 			path = SIncDINGUITests;
+			sourceTree = "<group>";
+		};
+		03DE2FFB1C8F7DA000BF1327 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				03DE2FFC1C8F7DA000BF1327 /* SIncDING.png */,
+				03DE2FFD1C8F7DA000BF1327 /* SIncDING.psd */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		539BBF675CCD6388872818B2 /* Pods */ = {
