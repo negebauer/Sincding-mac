@@ -82,6 +82,10 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         doStuff(sender)
     }
     
+    @IBAction func showLog(sender: AnyObject) {
+        performSegueWithIdentifier("IDShowLog", sender: self)
+    }
+    
     // MARK: - Functions
     
     func fileReferencesReady() {
@@ -90,6 +94,15 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     func fileProccessReady() {
         buttonDownload.title = "Archivos sincronizados"
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "IDShowLog" {
+            let logView = segue.destinationController as! LogViewController
+            logView.log = sidingParser.log
+        }
     }
     
 }

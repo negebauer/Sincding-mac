@@ -726,9 +726,20 @@
                                     <action selector="downloadAndSave:" target="XfG-lQ-9wD" id="grN-CN-HIc"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lT3-Th-73Z">
+                                <rect key="frame" x="403" y="13" width="63" height="32"/>
+                                <buttonCell key="cell" type="push" title="Log" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XQY-ST-oar">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="showLog:" target="XfG-lQ-9wD" id="IcT-7V-ai7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="2zq-I6-rZ9"/>
+                            <constraint firstAttribute="trailing" secondItem="lT3-Th-73Z" secondAttribute="trailing" constant="20" id="CNp-ov-rLg"/>
                             <constraint firstItem="hus-hh-htS" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="L0A-Tu-J6Z"/>
                             <constraint firstItem="4js-cg-3gY" firstAttribute="top" secondItem="eE7-mj-cE8" secondAttribute="bottom" constant="12" id="ODD-at-EHy"/>
                             <constraint firstItem="4js-cg-3gY" firstAttribute="width" secondItem="eE7-mj-cE8" secondAttribute="width" id="RZm-Dh-BNu"/>
@@ -739,6 +750,7 @@
                             <constraint firstItem="5IQ-hA-Cd7" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="fHn-Db-IyW"/>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="height" secondItem="5IQ-hA-Cd7" secondAttribute="height" id="fOB-Ca-TQs"/>
                             <constraint firstItem="j2X-N5-Fk2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="8" id="g3a-5j-vOC"/>
+                            <constraint firstAttribute="bottom" secondItem="lT3-Th-73Z" secondAttribute="bottom" constant="20" id="gqL-LU-R5F"/>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="width" secondItem="hus-hh-htS" secondAttribute="width" id="kb7-S6-fwj"/>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="top" secondItem="5IQ-hA-Cd7" secondAttribute="bottom" constant="8" id="qXY-GS-gEB"/>
                             <constraint firstAttribute="trailing" secondItem="j2X-N5-Fk2" secondAttribute="trailing" constant="8" id="tWd-dd-lix"/>
@@ -752,11 +764,58 @@
                         <outlet property="passwordField" destination="5IQ-hA-Cd7" id="dG7-In-lvk"/>
                         <outlet property="path" destination="j2X-N5-Fk2" id="ZXf-ZG-gW7"/>
                         <outlet property="usernameField" destination="hus-hh-htS" id="Sui-Of-5o2"/>
+                        <segue destination="q8z-lU-oaZ" kind="show" identifier="IDShowLog" id="R5c-Wp-xF6"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+        <!--Log View Controller-->
+        <scene sceneID="XIf-ZF-Mqu">
+            <objects>
+                <viewController id="q8z-lU-oaZ" customClass="LogViewController" customModule="SIncDING" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="ogM-IO-n9u">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jp7-8K-vGv">
+                                <rect key="frame" x="20" y="20" width="440" height="230"/>
+                                <clipView key="contentView" ambiguous="YES" id="WEf-XL-Ee3">
+                                    <rect key="frame" x="1" y="1" width="438" height="228"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView ambiguous="YES" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="KGt-cR-jx0">
+                                            <rect key="frame" x="0.0" y="0.0" width="438" height="228"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="438" height="228"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="438" height="228"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="tjk-Y3-bPn">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="h8q-aC-S0y">
+                                    <rect key="frame" x="423" y="1" width="16" height="228"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="logText" destination="KGt-cR-jx0" id="VYQ-yI-y3p"/>
+                    </connections>
+                </viewController>
+                <customObject id="8mr-R3-I7d" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="1050"/>
         </scene>
     </scenes>
 </document>
