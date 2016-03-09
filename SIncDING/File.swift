@@ -63,7 +63,7 @@ struct File {
     func checkFolderStructure(path: String) {
         let fileFolder = "\(path)/\(course)/\(folder)/"
         if !NSFileManager.defaultManager().fileExistsAtPath(fileFolder) {
-            try? NSFileManager.defaultManager().createDirectoryAtPath(fileFolder, withIntermediateDirectories: true, attributes: nil)
+            let _ = try? NSFileManager.defaultManager().createDirectoryAtPath(fileFolder, withIntermediateDirectories: true, attributes: nil)
         }
     }
     
