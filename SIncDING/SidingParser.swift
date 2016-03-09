@@ -106,7 +106,7 @@ class SidingParser: NSObject {
             if error != nil {
                 print("Error: \(error!)")
             } else {
-                print("\n\n\n----- Checkeando \(name)")
+                // print("\n\n\n----- Checkeando \(name)")
                 self.checkFolder(name, data: self.stringFromSidingData(data!))
             }
         }
@@ -120,23 +120,22 @@ class SidingParser: NSObject {
             for link in doc.xpath("//a | //link") {
                 let href = link["href"]
                 if href!.containsString("vista.phtml?") {
-                    print(link.text!)
-                    print(href!)
-//                    let auxSplit = link.text!.componentsSeparatedByString("s.")[1]
-//                    let section = auxSplit.substringToIndex(auxSplit.startIndex.successor())
-//                    let split = link.text!.componentsSeparatedByString(" s.\(section) ")
-//                    let name = split[0] + " " + split[1]
-//                    let link = sidingSite.componentsSeparatedByString("vista.phtml")[0] + href!
-//                    // print("Name: \(name)")
-//                    // print("Link: \(link)")
-//                    subfolders.append((name, link))
+                    let name = link.text!
+                    let link = sidingSite.componentsSeparatedByString("vista.phtml")[0] + href!
+                    // print("Name: \(name)")
+                    // print("Link: \(link)")
+                    subfolders.append((name, link))
                 }
             }
             
-//            folders.forEach({
-//                self.searchFolder($0.0, link: $0.1)
-//            })
+            subfolders.forEach({
+                self.searchSubFolder(name, subfolder: $0.0, link: $0.1)
+            })
         }
+    }
+    
+    func searchSubFolder(name: String, subfolder: String, link: String) {
+        print("Checkeando curso: \(name), subcarpeta: \(subfolder), con link: \(link)")
     }
 }
 
