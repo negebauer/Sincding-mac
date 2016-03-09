@@ -13,6 +13,8 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     // MARK: - Constants
     
+    let workingText = "Trabajando..."
+    
     // MARK: - Variables
     
     var sidingParser: SidingParser!
@@ -30,9 +32,10 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        usernameField.stringValue = "negebauer"
-        path.stringValue = "/Users/Nico/Dropbox/PUC/01 Cursos/2016-1/"
-        passwordField.stringValue = ""
+        path.stringValue = ""
+//        usernameField.stringValue = "negebauer"
+//        path.stringValue = "/Users/Nico/Downloads/TEST"
+//        passwordField.stringValue = ""
     }
     
     override var representedObject: AnyObject? {
@@ -57,7 +60,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         }
         sidingParser = SidingParser(username: usernameField.stringValue, password: passwordField.stringValue, path: path.stringValue)
         sidingParser.viewController = self
-        buttonIndex.title = "Working..."
+        buttonIndex.title = workingText
         sidingParser.doStuff()
     }
     
@@ -71,7 +74,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
             alert.runModal()
             return
         }
-        buttonDownload.title = "Working"
+        buttonDownload.title = workingText
         sidingParser.downloadAndSaveFiles()
     }
     
@@ -82,11 +85,11 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     // MARK: - Functions
     
     func fileReferencesReady() {
-        buttonIndex.title = "Index ready!"
+        buttonIndex.title = "Index listo!"
     }
     
     func fileProccessReady() {
-        buttonDownload.title = "Files synchronized!"
+        buttonDownload.title = "Archivos sincronizados"
     }
     
 }

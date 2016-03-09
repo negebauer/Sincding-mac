@@ -157,10 +157,14 @@ class SidingParser: NSObject {
             for link in doc.xpath("//a | //link") {
                 let href = link["href"]
                 if href!.containsString("id_archivo") {
+                    
                     let name = link.text!
-                    let link = sidingSite.componentsSeparatedByString("vista.phtml")[0] + href!
+                    let link = sidingSite.componentsSeparatedByString("/siding/dirdes/ingcursos/cursos/vista.phtml")[0] + href!
                     let file = File(course: course, folder: folder, name: name, link: link)
                     files.append(file)
+                    
+                    
+                    print("\nArchivo: \(name)\nLink original: \(href)\nLink: \(link)")
                 }
             }
             

@@ -43,6 +43,7 @@ struct File {
     }
     
     func doYourThing(path: String, headers: [String: String], callback: (() -> Void)) {
+        print(link)
         let filePath = "\(path)/\(course)/\(folder)/\(name)"
         let fileExists = NSFileManager.defaultManager().fileExistsAtPath(filePath)
         if !fileExists {
