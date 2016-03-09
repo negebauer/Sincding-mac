@@ -16,19 +16,21 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     // MARK: - Variables
     
     var sidingParser: SidingParser!
+    var filesReferenced = false
     
     // MARK: - Outlets
     
     @IBOutlet weak var usernameField: NSTextField!
     @IBOutlet weak var passwordField: NSSecureTextField!
-    @IBOutlet weak var ruta: NSTextField!
+    @IBOutlet weak var path: NSTextField!
+    @IBOutlet weak var buttonIndex: NSButton!
     
     // MARK: - Init
     
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameField.stringValue = "negebauer"
-        ruta.stringValue = "/Users/Nico/Dropbox/PUC/01 Cursos/2016-1/"
+        path.stringValue = "/Users/Nico/Dropbox/PUC/01 Cursos/2016-1/"
         passwordField.stringValue = ""
     }
     
@@ -51,9 +53,24 @@ class ViewController: NSViewController, NSTextFieldDelegate {
                 alert.runModal()
                 return
             }
-            sidingParser = SidingParser(username: usernameField.stringValue, password: passwordField.stringValue, ruta: ruta.stringValue)
+            sidingParser = SidingParser(username: usernameField.stringValue, password: passwordField.stringValue, path: path.stringValue)
+            sidingParser.viewController = self
         }
+        buttonIndex.title = "Working..."
         sidingParser.doStuff()
+    }
+    
+    @IBAction func downloadAndSave(sender: AnyObject) {
+        guard sidingParser != nil else {
+            let alert = NSAlert()
+            alert.addButtonWithTitle("Ok, sorry")
+            alert.messageText = "Primero genera el index po"
+            alert.informativeText = "Como queri que funcione sin eso..."
+            alert.alertStyle = .WarningAlertStyle
+            alert.runModal()
+            return
+        }
+        sidingParser.downloadAndSaveFiles()
     }
     
     @IBAction func passwordEnterPressed(sender: AnyObject) {
@@ -62,6 +79,9 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     // MARK: - Functions
     
+    func fileReferencesReady() {
+        buttonIndex.title = "Index ready!"
+    }
     
 }
 

@@ -20,18 +20,21 @@ class SidingParser: NSObject {
     
     // MARK: - Variables
     
+    weak var viewController: ViewController!
+    
     var username: String
     var password: String
-    var ruta: String
+    var path: String
     var cookies: [NSHTTPCookie] = []
     var files: [File] = []
+    var taskCount = 0
     
     // MARK: - Init
     
-    init(username: String, password: String, ruta: String) {
+    init(username: String, password: String, path: String) {
         self.username = username
         self.password = password
-        self.ruta = ruta
+        self.path = path
     }
     
     // MARK: - Functions
@@ -130,6 +133,8 @@ class SidingParser: NSObject {
                 }
             }
             
+            taskCount = folders.count
+            
             folders.forEach({
                 self.searchSubFolder(course, folder: $0.0, link: $0.1)
             })
@@ -158,60 +163,19 @@ class SidingParser: NSObject {
                     files.append(file)
                 }
             }
+            
+            taskCount--
+            checkTaskReady()
         }
     }
+    
+    func checkTaskReady() {
+        if taskCount == 0 {
+            viewController.fileReferencesReady()
+        }
+    }
+    
+    func downloadAndSaveFiles() {
+        files.forEach({ $0.doYourThing(self.path) })
+    }
 }
-
-
-//            // print("Headers: \(headers())")
-//            Alamofire.request(.GET, "https://intrawww.ing.puc.cl/siding/dirdes/ingcursos/cursos/vista.phtml?accion_curso=avisos&acc_aviso=mostrar&id_curso_ic=8019", headers: headers())
-//                .response { (_, response, data, error) in
-//                    if error != nil {
-//                        print("Error: \(error!)")
-//                    } else {
-//                        // print("Response: \(self.stringFromSidingData(data!))")
-//                        let doc = Kanna.HTML(html: self.stringFromSidingData(data!), encoding: NSUTF8StringEncoding)
-////                        print("Doc: \(doc!.text!)")
-////                        for link in doc!.xpath("//a | //link") {
-////                                            print(link.text)
-////                                            print(link["href"])
-////                                        }
-//                    }
-//            }
-//            Alamofire.request(.GET, "https://intrawww.ing.puc.cl/siding/dirdes/ingcursos/cursos/vista.phtml?accion_curso=carpetas&acc_carp=abrir_carpeta&id_curso_ic=8019&id_carpeta=48167", headers: headers())
-//                .response { (_, response, data, error) in
-//                    if error != nil {
-//                        print("Error: \(error!)")
-//                    } else {
-//                        // print("Response: \(self.stringFromSidingData(data!))")
-//                        let doc = Kanna.HTML(html: self.stringFromSidingData(data!), encoding: NSUTF8StringEncoding)
-////                        print("Doc: \(doc!.text!)")
-////                        for link in doc!.xpath("//a | //link") {
-////                            print(link.text)
-////                            print(link["href"])
-////                        }
-//                    }
-//            }
-//            Alamofire.request(.GET, "https://intrawww.ing.puc.cl/siding/dirdes/ingcursos/cursos/descarga.phtml?id_curso_ic=8019&id_archivo=304266", headers: headers())
-//                .response { (_, response, data, error) in
-//                    if error != nil {
-//                        print("Error: \(error!)")
-//                    } else {
-//
-//                        //Get the local docs directory and append your local filename.
-//                        var docURL = (NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)).last! as NSURL
-//
-//                        docURL = docURL.URLByAppendingPathComponent( "myFileName.pdf")
-//
-//                        //Lastly, write your file to the disk.
-//                        data!.writeToURL(docURL, atomically: true)
-//
-//                        // print("Response: \(self.stringFromSidingData(data!))")
-////                        let doc = Kanna.HTML(html: self.stringFromSidingData(data!), encoding: NSUTF8StringEncoding)
-////                        print("Doc: \(doc!.text!)")
-////                        for link in doc!.xpath("//a | //link") {
-////                            print(link.text)
-////                            print(link["href"])
-////                        }
-//                    }
-//            }
