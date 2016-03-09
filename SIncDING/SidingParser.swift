@@ -22,13 +22,15 @@ class SidingParser: NSObject {
     
     var username: String
     var password: String
+    var ruta: String
     var cookies: [NSHTTPCookie] = []
     
     // MARK: - Init
     
-    init(username: String, password: String) {
+    init(username: String, password: String, ruta: String) {
         self.username = username
         self.password = password
+        self.ruta = ruta
     }
     
     // MARK: - Functions

@@ -705,6 +705,14 @@
                                     <action selector="passwordEnterPressed:" target="XfG-lQ-9wD" id="M21-s9-ahK"/>
                                 </connections>
                             </secureTextField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j2X-N5-Fk2">
+                                <rect key="frame" x="8" y="228" width="464" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="ruta carpeta, ejemplo: /Users/Pedrito/PUC" drawsBackground="YES" id="sgC-eD-23k">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="2zq-I6-rZ9"/>
@@ -712,15 +720,19 @@
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Ras-HV-zVP"/>
                             <constraint firstItem="5IQ-hA-Cd7" firstAttribute="top" secondItem="hus-hh-htS" secondAttribute="bottom" constant="10" id="Xk3-09-S5Q"/>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="height" secondItem="hus-hh-htS" secondAttribute="height" id="ace-Gf-RY6"/>
+                            <constraint firstItem="j2X-N5-Fk2" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="fH4-AT-Uxg"/>
                             <constraint firstItem="5IQ-hA-Cd7" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="fHn-Db-IyW"/>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="height" secondItem="5IQ-hA-Cd7" secondAttribute="height" id="fOB-Ca-TQs"/>
+                            <constraint firstItem="j2X-N5-Fk2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="8" id="g3a-5j-vOC"/>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="width" secondItem="hus-hh-htS" secondAttribute="width" id="kb7-S6-fwj"/>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="top" secondItem="5IQ-hA-Cd7" secondAttribute="bottom" constant="8" id="qXY-GS-gEB"/>
+                            <constraint firstAttribute="trailing" secondItem="j2X-N5-Fk2" secondAttribute="trailing" constant="8" id="tWd-dd-lix"/>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="width" secondItem="5IQ-hA-Cd7" secondAttribute="width" id="tfb-jr-jEU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="passwordField" destination="5IQ-hA-Cd7" id="dG7-In-lvk"/>
+                        <outlet property="ruta" destination="j2X-N5-Fk2" id="Din-Mr-jOR"/>
                         <outlet property="usernameField" destination="hus-hh-htS" id="Sui-Of-5o2"/>
                     </connections>
                 </viewController>

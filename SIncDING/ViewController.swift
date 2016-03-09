@@ -21,6 +21,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     @IBOutlet weak var usernameField: NSTextField!
     @IBOutlet weak var passwordField: NSSecureTextField!
+    @IBOutlet weak var ruta: NSTextField!
     
     // MARK: - Init
     
@@ -50,7 +51,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
                 alert.runModal()
                 return
             }
-            sidingParser = SidingParser(username: usernameField.stringValue, password: passwordField.stringValue)
+            sidingParser = SidingParser(username: usernameField.stringValue, password: passwordField.stringValue, ruta: ruta.stringValue)
         }
         sidingParser.doStuff()
     }
