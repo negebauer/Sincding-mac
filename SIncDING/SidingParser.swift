@@ -17,7 +17,7 @@ class SidingParser: NSObject {
     let sidingLogin = "https://intrawww.ing.puc.cl/siding/index.phtml"
     let sidingDomain = "intrawww.ing.puc.cl"
     let sidingSite = "https://intrawww.ing.puc.cl/siding/dirdes/ingcursos/cursos/vista.phtml"
-
+    
     // MARK: - Variables
     
     var username: String
@@ -69,71 +69,125 @@ class SidingParser: NSObject {
                 if error != nil {
                     print("Error: \(error!)")
                 } else {
-                    self.parseSiteHTML(self.stringFromSidingData(data!))
+                    self.lookForFolders(self.stringFromSidingData(data!))
                 }
         }
     }
     
-    func parseSiteHTML(data: String) {
+    func lookForFolders(data: String) {
         if let doc = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding) {
-            print(doc.title)
 
-//            for link in doc.xpath("//a | //link") {
-//                print(link.text)
-//                print(link["href"])
-//            }
-            print("Headers: \(headers())")
-            Alamofire.request(.GET, "https://intrawww.ing.puc.cl/siding/dirdes/ingcursos/cursos/vista.phtml?accion_curso=avisos&acc_aviso=mostrar&id_curso_ic=8019", headers: headers())
-                .response { (_, response, data, error) in
-                    if error != nil {
-                        print("Error: \(error!)")
-                    } else {
-                        // print("Response: \(self.stringFromSidingData(data!))")
-                        let doc = Kanna.HTML(html: self.stringFromSidingData(data!), encoding: NSUTF8StringEncoding)
-//                        print("Doc: \(doc!.text!)")
-//                        for link in doc!.xpath("//a | //link") {
-//                                            print(link.text)
-//                                            print(link["href"])
-//                                        }
-                    }
+            var folders: [(String, String)] = []
+            
+            for link in doc.xpath("//a | //link") {
+                let href = link["href"]
+                if href!.containsString("id_curso") {
+                    let auxSplit = link.text!.componentsSeparatedByString("s.")[1]
+                    let section = auxSplit.substringToIndex(auxSplit.startIndex.successor())
+                    let split = link.text!.componentsSeparatedByString(" s.\(section) ")
+                    let name = split[0] + " " + split[1]
+                    let link = sidingSite.componentsSeparatedByString("vista.phtml")[0] + href!
+                    // print("Name: \(name)")
+                    // print("Link: \(link)")
+                    folders.append((name, link))
+                }
             }
-            Alamofire.request(.GET, "https://intrawww.ing.puc.cl/siding/dirdes/ingcursos/cursos/vista.phtml?accion_curso=carpetas&acc_carp=abrir_carpeta&id_curso_ic=8019&id_carpeta=48167", headers: headers())
-                .response { (_, response, data, error) in
-                    if error != nil {
-                        print("Error: \(error!)")
-                    } else {
-                        // print("Response: \(self.stringFromSidingData(data!))")
-                        let doc = Kanna.HTML(html: self.stringFromSidingData(data!), encoding: NSUTF8StringEncoding)
-//                        print("Doc: \(doc!.text!)")
-//                        for link in doc!.xpath("//a | //link") {
-//                            print(link.text)
-//                            print(link["href"])
-//                        }
-                    }
-            }
-            Alamofire.request(.GET, "https://intrawww.ing.puc.cl/siding/dirdes/ingcursos/cursos/descarga.phtml?id_curso_ic=8019&id_archivo=304266", headers: headers())
-                .response { (_, response, data, error) in
-                    if error != nil {
-                        print("Error: \(error!)")
-                    } else {
-                        
-                        //Get the local docs directory and append your local filename.
-                        var docURL = (NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)).last! as NSURL
-                        
-                        docURL = docURL.URLByAppendingPathComponent( "myFileName.pdf")
-                        
-                        //Lastly, write your file to the disk.
-                        data!.writeToURL(docURL, atomically: true)
-                        
-                        // print("Response: \(self.stringFromSidingData(data!))")
-//                        let doc = Kanna.HTML(html: self.stringFromSidingData(data!), encoding: NSUTF8StringEncoding)
-//                        print("Doc: \(doc!.text!)")
-//                        for link in doc!.xpath("//a | //link") {
-//                            print(link.text)
-//                            print(link["href"])
-//                        }
-                    }
+            
+            folders.forEach({
+                self.searchFolder($0.0, link: $0.1)
+            })
+        }
+    }
+    
+    func searchFolder(name: String, link: String) {
+        Alamofire.request(.GET, link, headers: headers()).response { (_, response, data, error) in
+            if error != nil {
+                print("Error: \(error!)")
+            } else {
+                print("\n\n\n----- Checkeando \(name)")
+                self.checkFolder(name, data: self.stringFromSidingData(data!))
             }
         }
     }
+    
+    func checkFolder(name: String, data: String) {
+        if let doc = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding) {
+            
+            var subfolders: [(String, String)] = []
+            
+            for link in doc.xpath("//a | //link") {
+                let href = link["href"]
+                if href!.containsString("vista.phtml?") {
+                    print(link.text!)
+                    print(href!)
+//                    let auxSplit = link.text!.componentsSeparatedByString("s.")[1]
+//                    let section = auxSplit.substringToIndex(auxSplit.startIndex.successor())
+//                    let split = link.text!.componentsSeparatedByString(" s.\(section) ")
+//                    let name = split[0] + " " + split[1]
+//                    let link = sidingSite.componentsSeparatedByString("vista.phtml")[0] + href!
+//                    // print("Name: \(name)")
+//                    // print("Link: \(link)")
+//                    subfolders.append((name, link))
+                }
+            }
+            
+//            folders.forEach({
+//                self.searchFolder($0.0, link: $0.1)
+//            })
+        }
+    }
 }
+
+
+//            // print("Headers: \(headers())")
+//            Alamofire.request(.GET, "https://intrawww.ing.puc.cl/siding/dirdes/ingcursos/cursos/vista.phtml?accion_curso=avisos&acc_aviso=mostrar&id_curso_ic=8019", headers: headers())
+//                .response { (_, response, data, error) in
+//                    if error != nil {
+//                        print("Error: \(error!)")
+//                    } else {
+//                        // print("Response: \(self.stringFromSidingData(data!))")
+//                        let doc = Kanna.HTML(html: self.stringFromSidingData(data!), encoding: NSUTF8StringEncoding)
+////                        print("Doc: \(doc!.text!)")
+////                        for link in doc!.xpath("//a | //link") {
+////                                            print(link.text)
+////                                            print(link["href"])
+////                                        }
+//                    }
+//            }
+//            Alamofire.request(.GET, "https://intrawww.ing.puc.cl/siding/dirdes/ingcursos/cursos/vista.phtml?accion_curso=carpetas&acc_carp=abrir_carpeta&id_curso_ic=8019&id_carpeta=48167", headers: headers())
+//                .response { (_, response, data, error) in
+//                    if error != nil {
+//                        print("Error: \(error!)")
+//                    } else {
+//                        // print("Response: \(self.stringFromSidingData(data!))")
+//                        let doc = Kanna.HTML(html: self.stringFromSidingData(data!), encoding: NSUTF8StringEncoding)
+////                        print("Doc: \(doc!.text!)")
+////                        for link in doc!.xpath("//a | //link") {
+////                            print(link.text)
+////                            print(link["href"])
+////                        }
+//                    }
+//            }
+//            Alamofire.request(.GET, "https://intrawww.ing.puc.cl/siding/dirdes/ingcursos/cursos/descarga.phtml?id_curso_ic=8019&id_archivo=304266", headers: headers())
+//                .response { (_, response, data, error) in
+//                    if error != nil {
+//                        print("Error: \(error!)")
+//                    } else {
+//
+//                        //Get the local docs directory and append your local filename.
+//                        var docURL = (NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)).last! as NSURL
+//
+//                        docURL = docURL.URLByAppendingPathComponent( "myFileName.pdf")
+//
+//                        //Lastly, write your file to the disk.
+//                        data!.writeToURL(docURL, atomically: true)
+//
+//                        // print("Response: \(self.stringFromSidingData(data!))")
+////                        let doc = Kanna.HTML(html: self.stringFromSidingData(data!), encoding: NSUTF8StringEncoding)
+////                        print("Doc: \(doc!.text!)")
+////                        for link in doc!.xpath("//a | //link") {
+////                            print(link.text)
+////                            print(link["href"])
+////                        }
+//                    }
+//            }
