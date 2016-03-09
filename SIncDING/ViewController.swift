@@ -54,9 +54,9 @@ class ViewController: NSViewController, NSTextFieldDelegate {
                 alert.runModal()
                 return
             }
-            sidingParser = SidingParser(username: usernameField.stringValue, password: passwordField.stringValue, path: path.stringValue)
-            sidingParser.viewController = self
         }
+        sidingParser = SidingParser(username: usernameField.stringValue, password: passwordField.stringValue, path: path.stringValue)
+        sidingParser.viewController = self
         buttonIndex.title = "Working..."
         sidingParser.doStuff()
     }
