@@ -673,9 +673,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eE7-mj-cE8">
+                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eE7-mj-cE8">
                                 <rect key="frame" x="170" y="117" width="140" height="33"/>
-                                <buttonCell key="cell" type="push" title="Print fucking log" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QOA-no-WNX">
+                                <buttonCell key="cell" type="push" title="Download stuff" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QOA-no-WNX">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -683,7 +683,7 @@
                                     <action selector="doStuff:" target="XfG-lQ-9wD" id="dEi-Z0-rlg"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hus-hh-htS">
+                            <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hus-hh-htS">
                                 <rect key="frame" x="176" y="186" width="128" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" placeholderString="uc username" drawsBackground="YES" id="2GN-1V-5KK">
                                     <font key="font" metaFont="system"/>
@@ -691,7 +691,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5IQ-hA-Cd7">
+                            <secureTextField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5IQ-hA-Cd7">
                                 <rect key="frame" x="176" y="154" width="128" height="22"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="password" drawsBackground="YES" usesSingleLineMode="YES" id="wFp-7w-nup">
                                     <font key="font" metaFont="system"/>

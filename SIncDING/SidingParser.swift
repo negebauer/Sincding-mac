@@ -24,6 +24,7 @@ class SidingParser: NSObject {
     var password: String
     var ruta: String
     var cookies: [NSHTTPCookie] = []
+    var files: [File] = []
     
     // MARK: - Init
     
@@ -45,6 +46,7 @@ class SidingParser: NSObject {
     }
     
     func doStuff() {
+        files = []
         let params: [String: String] = [
             "login": username,
             "passwd": password,
@@ -79,7 +81,7 @@ class SidingParser: NSObject {
     func lookForFolders(data: String) {
         if let doc = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding) {
 
-            var folders: [(String, String)] = []
+            var courses: [(String, String)] = []
             
             for link in doc.xpath("//a | //link") {
                 let href = link["href"]
@@ -87,55 +89,76 @@ class SidingParser: NSObject {
                     let auxSplit = link.text!.componentsSeparatedByString("s.")[1]
                     let section = auxSplit.substringToIndex(auxSplit.startIndex.successor())
                     let split = link.text!.componentsSeparatedByString(" s.\(section) ")
-                    let name = split[0] + " " + split[1]
+                    let course = split[0] + " " + split[1]
                     let link = sidingSite.componentsSeparatedByString("vista.phtml")[0] + href!
                     // print("Name: \(name)")
                     // print("Link: \(link)")
-                    folders.append((name, link))
+                    courses.append((course, link))
                 }
             }
             
-            folders.forEach({
+            courses.forEach({
                 self.searchFolder($0.0, link: $0.1)
             })
         }
     }
     
-    func searchFolder(name: String, link: String) {
+    func searchFolder(course: String, link: String) {
         Alamofire.request(.GET, link, headers: headers()).response { (_, response, data, error) in
             if error != nil {
                 print("Error: \(error!)")
             } else {
                 // print("\n\n\n----- Checkeando \(name)")
-                self.checkFolder(name, data: self.stringFromSidingData(data!))
+                self.checkFolder(course, data: self.stringFromSidingData(data!))
             }
         }
     }
     
-    func checkFolder(name: String, data: String) {
+    func checkFolder(course: String, data: String) {
         if let doc = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding) {
             
-            var subfolders: [(String, String)] = []
+            var folders: [(String, String)] = []
             
             for link in doc.xpath("//a | //link") {
                 let href = link["href"]
                 if href!.containsString("vista.phtml?") {
-                    let name = link.text!
+                    let folder = link.text!
                     let link = sidingSite.componentsSeparatedByString("vista.phtml")[0] + href!
                     // print("Name: \(name)")
                     // print("Link: \(link)")
-                    subfolders.append((name, link))
+                    folders.append((folder, link))
                 }
             }
             
-            subfolders.forEach({
-                self.searchSubFolder(name, subfolder: $0.0, link: $0.1)
+            folders.forEach({
+                self.searchSubFolder(course, folder: $0.0, link: $0.1)
             })
         }
     }
     
-    func searchSubFolder(name: String, subfolder: String, link: String) {
-        print("Checkeando curso: \(name), subcarpeta: \(subfolder), con link: \(link)")
+    func searchSubFolder(course: String, folder: String, link: String) {
+        Alamofire.request(.GET, link, headers: headers()).response { (_, response, data, error) in
+            if error != nil {
+                print("Error: \(error!)")
+            } else {
+                self.checkFiles(course, folder: folder, data: self.stringFromSidingData(data!))
+            }
+        }
+    }
+    
+    func checkFiles(course: String, folder: String, data: String) {
+        if let doc = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding) {
+            
+            for link in doc.xpath("//a | //link") {
+                let href = link["href"]
+                if href!.containsString("id_archivo") {
+                    let name = link.text!
+                    let link = sidingSite.componentsSeparatedByString("vista.phtml")[0] + href!
+                    let file = File(course: course, folder: folder, name: name, link: link)
+                    files.append(file)
+                }
+            }
+        }
     }
 }
 

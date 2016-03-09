@@ -14,6 +14,7 @@
 		03DE2FE11C8F7A4000BF1327 /* SIncDINGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FE01C8F7A4000BF1327 /* SIncDINGTests.swift */; };
 		03DE2FEC1C8F7A4000BF1327 /* SIncDINGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FEB1C8F7A4000BF1327 /* SIncDINGUITests.swift */; };
 		03DE2FFF1C8F874E00BF1327 /* SidingParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FFE1C8F874E00BF1327 /* SidingParser.swift */; };
+		03DE30011C8FA87C00BF1327 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE30001C8FA87C00BF1327 /* File.swift */; };
 		247762CF86C862E5D2CA6DF6 /* Pods_SIncDINGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E0D8B9BE15607195A81FE6 /* Pods_SIncDINGUITests.framework */; };
 		F659DAFAF81ADF9C592070D7 /* Pods_SIncDING.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D8AEDD651AE1EABFB3B09F /* Pods_SIncDING.framework */; };
 		FAD2D614C00C587BBFDA0CF7 /* Pods_SIncDINGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D7EAA606CF74AEBC61DEC3 /* Pods_SIncDINGTests.framework */; };
@@ -50,6 +51,7 @@
 		03DE2FEB1C8F7A4000BF1327 /* SIncDINGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIncDINGUITests.swift; sourceTree = "<group>"; };
 		03DE2FED1C8F7A4000BF1327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03DE2FFE1C8F874E00BF1327 /* SidingParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidingParser.swift; sourceTree = "<group>"; };
+		03DE30001C8FA87C00BF1327 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		22580C8D0B00A9DFB6682C13 /* Pods-SIncDING.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIncDING.release.xcconfig"; path = "Pods/Target Support Files/Pods-SIncDING/Pods-SIncDING.release.xcconfig"; sourceTree = "<group>"; };
 		35D8AEDD651AE1EABFB3B09F /* Pods_SIncDING.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIncDING.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5A624341C1C83D37E4FA98 /* Pods-SIncDING.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIncDING.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SIncDING/Pods-SIncDING.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				03DE2FCE1C8F7A4000BF1327 /* AppDelegate.swift */,
 				03DE2FD01C8F7A4000BF1327 /* ViewController.swift */,
 				03DE2FFE1C8F874E00BF1327 /* SidingParser.swift */,
+				03DE30001C8FA87C00BF1327 /* File.swift */,
 				03DE2FD21C8F7A4000BF1327 /* Assets.xcassets */,
 				03DE2FD41C8F7A4000BF1327 /* Main.storyboard */,
 				03DE2FD71C8F7A4000BF1327 /* Info.plist */,
@@ -448,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03DE2FFF1C8F874E00BF1327 /* SidingParser.swift in Sources */,
+				03DE30011C8FA87C00BF1327 /* File.swift in Sources */,
 				03DE2FD11C8F7A4000BF1327 /* ViewController.swift in Sources */,
 				03DE2FCF1C8F7A4000BF1327 /* AppDelegate.swift in Sources */,
 			);
