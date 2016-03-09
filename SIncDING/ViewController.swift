@@ -28,6 +28,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameField.stringValue = "negebauer"
+        ruta.stringValue = "/Users/Nico/Dropbox/PUC/01 Cursos/2016-1/"
         passwordField.stringValue = ""
     }
     
