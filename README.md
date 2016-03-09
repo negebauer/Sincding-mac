@@ -4,10 +4,14 @@
 * [Instrucciones de uso](#instrucciones-de-uso)
 * [Preguntas frecuentes](#preguntas-frecuentes)
 
+***
+
 ### Descripción
 
 Para que nunca más tengas que perder tu tiempo revisando todas las carpetas de todos tus cursos en el SIDING para ver si alguien ha subido algún archivo.
 Con SIncDING la búsqueda y descarga de estos se hace de manera fácil y rápida.
+
+***
 
 ### Instrucciones de uso
 
@@ -33,6 +37,8 @@ Con SIncDING la búsqueda y descarga de estos se hace de manera fácil y rápida
 ![app](https://github.com/negebauer/SIncDING/blob/master/Resources/Tutorial/app.png)
 
 **Si aún te quedan dudas puedes ver un [vídeo de demostración aquí](https://www.dropbox.com/s/5axm9wub46kanuh/SIncDing.mp4?dl=0)**
+
+***
 
 ### Preguntas frecuentes
 
