@@ -165,17 +165,29 @@ class SidingParser: NSObject {
             }
             
             taskCount--
-            checkTaskReady()
+            checkIndexTaskReady()
         }
     }
     
-    func checkTaskReady() {
+    func checkIndexTaskReady() {
         if taskCount == 0 {
             viewController.fileReferencesReady()
         }
     }
     
+    func checkFileTaskReady() {
+        if taskCount == 0 {
+            viewController.fileProccessReady()
+        }
+    }
+    
     func downloadAndSaveFiles() {
-        files.forEach({ $0.doYourThing(self.path) })
+        taskCount = files.count
+        files.forEach({ $0.doYourThing(self.path, headers: self.headers(), callback: { self.fileDidThing() } ) })
+    }
+    
+    func fileDidThing() {
+        taskCount--
+        checkFileTaskReady()
     }
 }

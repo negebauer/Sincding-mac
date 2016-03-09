@@ -24,6 +24,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var passwordField: NSSecureTextField!
     @IBOutlet weak var path: NSTextField!
     @IBOutlet weak var buttonIndex: NSButton!
+    @IBOutlet weak var buttonDownload: NSButton!
     
     // MARK: - Init
     
@@ -70,6 +71,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
             alert.runModal()
             return
         }
+        buttonDownload.title = "Working"
         sidingParser.downloadAndSaveFiles()
     }
     
@@ -81,6 +83,10 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     func fileReferencesReady() {
         buttonIndex.title = "Index ready!"
+    }
+    
+    func fileProccessReady() {
+        buttonDownload.title = "Files synchronized!"
     }
     
 }

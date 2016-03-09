@@ -715,6 +715,9 @@
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4js-cg-3gY">
                                 <rect key="frame" x="147" y="84" width="186" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="174" id="w2J-nH-4Ou"/>
+                                </constraints>
                                 <buttonCell key="cell" type="push" title="Download files and save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wnQ-Mp-ADA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -744,6 +747,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonDownload" destination="4js-cg-3gY" id="Nwj-CG-1m0"/>
                         <outlet property="buttonIndex" destination="eE7-mj-cE8" id="1IV-NV-Bmm"/>
                         <outlet property="passwordField" destination="5IQ-hA-Cd7" id="dG7-In-lvk"/>
                         <outlet property="path" destination="j2X-N5-Fk2" id="ZXf-ZG-gW7"/>

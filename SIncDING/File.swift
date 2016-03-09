@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 struct File {
     
@@ -41,18 +42,28 @@ struct File {
         return !isFile()
     }
     
-    func doYourThing(path: String) {
-        //Get the local docs directory and append your local filename.
-        //                        var docURL = (NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)).last! as NSURL
-        //
-        //                        docURL = docURL.URLByAppendingPathComponent( "myFileName.pdf")
-        //
-        //                        //Lastly, write your file to the disk.
-        //                        data!.writeToURL(docURL, atomically: true)
+    func doYourThing(path: String, headers: [String: String], callback: (() -> Void)) {
         let filePath = "\(path)/\(course)/\(folder)/\(name)"
-        var fileExists = NSFileManager.defaultManager().fileExistsAtPath(filePath)
+        let fileExists = NSFileManager.defaultManager().fileExistsAtPath(filePath)
         if !fileExists {
-            print("Should create a file")
+            Alamofire.request(.GET, link, headers: headers).response { (_, response, data, error) in
+                if error != nil {
+                    print("Error: \(error!)")
+                } else {
+                    self.checkFolderStructure(path)
+                    data!.writeToFile(filePath, atomically: false)
+                }
+                callback()
+            }
+        } else {
+            callback()
+        }
+    }
+    
+    func checkFolderStructure(path: String) {
+        let fileFolder = "\(path)/\(course)/\(folder)/"
+        if !NSFileManager.defaultManager().fileExistsAtPath(fileFolder) {
+            try? NSFileManager.defaultManager().createDirectoryAtPath(fileFolder, withIntermediateDirectories: true, attributes: nil)
         }
     }
     
