@@ -16,9 +16,9 @@
 		03DE2FFF1C8F874E00BF1327 /* SidingParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FFE1C8F874E00BF1327 /* SidingParser.swift */; };
 		03DE30011C8FA87C00BF1327 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE30001C8FA87C00BF1327 /* File.swift */; };
 		03F9C8581C90D61D005D67B3 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F9C8571C90D61D005D67B3 /* LogViewController.swift */; };
-		247762CF86C862E5D2CA6DF6 /* Pods_SIncDINGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7E0D8B9BE15607195A81FE6 /* Pods_SIncDINGUITests.framework */; };
-		F659DAFAF81ADF9C592070D7 /* Pods_SIncDING.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35D8AEDD651AE1EABFB3B09F /* Pods_SIncDING.framework */; };
-		FAD2D614C00C587BBFDA0CF7 /* Pods_SIncDINGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D7EAA606CF74AEBC61DEC3 /* Pods_SIncDINGTests.framework */; };
+		16DCE54F77DAD643EE35770A /* Pods_SIncDINGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7A8F000F7EAAAEB367C2CD /* Pods_SIncDINGUITests.framework */; };
+		78554BA523DFF0CDC3619A78 /* Pods_SIncDING.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B01BC50DA4D7745D7B0411 /* Pods_SIncDING.framework */; };
+		7AFEB70DA6292F32A20483FF /* Pods_SIncDINGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8865DD7EEF48E946A21B6314 /* Pods_SIncDINGTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +54,15 @@
 		03DE2FFE1C8F874E00BF1327 /* SidingParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidingParser.swift; sourceTree = "<group>"; };
 		03DE30001C8FA87C00BF1327 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		03F9C8571C90D61D005D67B3 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
-		22580C8D0B00A9DFB6682C13 /* Pods-SIncDING.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIncDING.release.xcconfig"; path = "Pods/Target Support Files/Pods-SIncDING/Pods-SIncDING.release.xcconfig"; sourceTree = "<group>"; };
-		35D8AEDD651AE1EABFB3B09F /* Pods_SIncDING.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIncDING.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A5A624341C1C83D37E4FA98 /* Pods-SIncDING.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIncDING.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SIncDING/Pods-SIncDING.debug.xcconfig"; sourceTree = "<group>"; };
-		C4D7EAA606CF74AEBC61DEC3 /* Pods_SIncDINGTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIncDINGTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7E0D8B9BE15607195A81FE6 /* Pods_SIncDINGUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIncDINGUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FB2631D63D7189DF48C40A8 /* Pods-SIncDINGTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIncDINGTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SIncDINGTests/Pods-SIncDINGTests.release.xcconfig"; sourceTree = "<group>"; };
+		13B5CD8D7051388D7FA27C02 /* Pods-SIncDING.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIncDING.release.xcconfig"; path = "Pods/Target Support Files/Pods-SIncDING/Pods-SIncDING.release.xcconfig"; sourceTree = "<group>"; };
+		1D7A8F000F7EAAAEB367C2CD /* Pods_SIncDINGUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIncDINGUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34B01BC50DA4D7745D7B0411 /* Pods_SIncDING.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIncDING.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8865DD7EEF48E946A21B6314 /* Pods_SIncDINGTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIncDINGTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D902222B02FC342F6F6D136 /* Pods-SIncDINGUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIncDINGUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SIncDINGUITests/Pods-SIncDINGUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BADC53D5537DACD38B602000 /* Pods-SIncDINGUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIncDINGUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SIncDINGUITests/Pods-SIncDINGUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D21E0A08F7DF3DAE89D81FD3 /* Pods-SIncDINGTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIncDINGTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SIncDINGTests/Pods-SIncDINGTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E0647A3C3FF322F9598D9C9E /* Pods-SIncDING.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIncDING.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SIncDING/Pods-SIncDING.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F659DAFAF81ADF9C592070D7 /* Pods_SIncDING.framework in Frameworks */,
+				78554BA523DFF0CDC3619A78 /* Pods_SIncDING.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAD2D614C00C587BBFDA0CF7 /* Pods_SIncDINGTests.framework in Frameworks */,
+				7AFEB70DA6292F32A20483FF /* Pods_SIncDINGTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				247762CF86C862E5D2CA6DF6 /* Pods_SIncDINGUITests.framework in Frameworks */,
+				16DCE54F77DAD643EE35770A /* Pods_SIncDINGUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,8 +100,8 @@
 				03DE2FDF1C8F7A4000BF1327 /* SIncDINGTests */,
 				03DE2FEA1C8F7A4000BF1327 /* SIncDINGUITests */,
 				03DE2FCC1C8F7A4000BF1327 /* Products */,
-				539BBF675CCD6388872818B2 /* Pods */,
-				5473AEA18C2D7F6F0E5287E3 /* Frameworks */,
+				C031C869F48F374FFCC6311F /* Pods */,
+				AFE858EE697CE47E324A9B31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,23 +148,27 @@
 			path = SIncDINGUITests;
 			sourceTree = "<group>";
 		};
-		539BBF675CCD6388872818B2 /* Pods */ = {
+		AFE858EE697CE47E324A9B31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6A5A624341C1C83D37E4FA98 /* Pods-SIncDING.debug.xcconfig */,
-				22580C8D0B00A9DFB6682C13 /* Pods-SIncDING.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		5473AEA18C2D7F6F0E5287E3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				35D8AEDD651AE1EABFB3B09F /* Pods_SIncDING.framework */,
-				C4D7EAA606CF74AEBC61DEC3 /* Pods_SIncDINGTests.framework */,
-				D7E0D8B9BE15607195A81FE6 /* Pods_SIncDINGUITests.framework */,
+				34B01BC50DA4D7745D7B0411 /* Pods_SIncDING.framework */,
+				8865DD7EEF48E946A21B6314 /* Pods_SIncDINGTests.framework */,
+				1D7A8F000F7EAAAEB367C2CD /* Pods_SIncDINGUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C031C869F48F374FFCC6311F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0647A3C3FF322F9598D9C9E /* Pods-SIncDING.debug.xcconfig */,
+				13B5CD8D7051388D7FA27C02 /* Pods-SIncDING.release.xcconfig */,
+				D21E0A08F7DF3DAE89D81FD3 /* Pods-SIncDINGTests.debug.xcconfig */,
+				0FB2631D63D7189DF48C40A8 /* Pods-SIncDINGTests.release.xcconfig */,
+				8D902222B02FC342F6F6D136 /* Pods-SIncDINGUITests.debug.xcconfig */,
+				BADC53D5537DACD38B602000 /* Pods-SIncDINGUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,14 +178,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03DE2FF01C8F7A4000BF1327 /* Build configuration list for PBXNativeTarget "SIncDING" */;
 			buildPhases = (
-				DFF7332B4C1985F02B8EBF0F /* Check Pods Manifest.lock */,
+				87B6E69E4EDC212D1C5CB220 /* 📦 Check Pods Manifest.lock */,
 				03DE2FC71C8F7A4000BF1327 /* Sources */,
 				03DE2FC81C8F7A4000BF1327 /* Frameworks */,
 				03DE2FC91C8F7A4000BF1327 /* Resources */,
-				3DA02F0214B078E90ACDC2B1 /* Embed Pods Frameworks */,
-				E9868D40551068A0A2236FEE /* Copy Pods Resources */,
 				03DE2FFA1C8F7BAA00BF1327 /* ShellScript */,
 				03DE2FF91C8F7BA400BF1327 /* ShellScript */,
+				250E923568706DB3BB6D8DA5 /* 📦 Embed Pods Frameworks */,
+				DD67333DBE3C30B1FB323AE8 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,12 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03DE2FF31C8F7A4000BF1327 /* Build configuration list for PBXNativeTarget "SIncDINGTests" */;
 			buildPhases = (
-				8C6BD4E602B072007E2872DB /* Check Pods Manifest.lock */,
+				233890B854A412B9CADDB3F6 /* 📦 Check Pods Manifest.lock */,
 				03DE2FD81C8F7A4000BF1327 /* Sources */,
 				03DE2FD91C8F7A4000BF1327 /* Frameworks */,
 				03DE2FDA1C8F7A4000BF1327 /* Resources */,
-				30CA8908F1652CDCDE899ADB /* Embed Pods Frameworks */,
-				0E18895CFC9E1268C1ED04A2 /* Copy Pods Resources */,
+				D0E21D9FFD59610FD64C208F /* 📦 Embed Pods Frameworks */,
+				78D9853E66A5A1369C344897 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,11 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03DE2FF61C8F7A4000BF1327 /* Build configuration list for PBXNativeTarget "SIncDINGUITests" */;
 			buildPhases = (
-				223B8EF65D04CBCD5FCD699E /* Check Pods Manifest.lock */,
+				2E5805BE2AE27B3C565D04D3 /* 📦 Check Pods Manifest.lock */,
 				03DE2FE31C8F7A4000BF1327 /* Sources */,
 				03DE2FE41C8F7A4000BF1327 /* Frameworks */,
 				03DE2FE51C8F7A4000BF1327 /* Resources */,
-				DED3FF7073BC63F8F4B87030 /* Copy Pods Resources */,
+				303C79EE0BF30B32364ADB92 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -326,29 +334,14 @@
 			shellPath = /bin/sh;
 			shellScript = "TAGS=\"TODO:|FIXME:\"\nERRORTAG=\"ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
 		};
-		0E18895CFC9E1268C1ED04A2 /* Copy Pods Resources */ = {
+		233890B854A412B9CADDB3F6 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SIncDINGTests/Pods-SIncDINGTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		223B8EF65D04CBCD5FCD699E /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,29 +349,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		30CA8908F1652CDCDE899ADB /* Embed Pods Frameworks */ = {
+		250E923568706DB3BB6D8DA5 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SIncDINGTests/Pods-SIncDINGTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3DA02F0214B078E90ACDC2B1 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,14 +364,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SIncDING/Pods-SIncDING-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8C6BD4E602B072007E2872DB /* Check Pods Manifest.lock */ = {
+		2E5805BE2AE27B3C565D04D3 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,14 +379,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		DED3FF7073BC63F8F4B87030 /* Copy Pods Resources */ = {
+		303C79EE0BF30B32364ADB92 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,14 +394,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SIncDINGUITests/Pods-SIncDINGUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DFF7332B4C1985F02B8EBF0F /* Check Pods Manifest.lock */ = {
+		78D9853E66A5A1369C344897 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SIncDINGTests/Pods-SIncDINGTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87B6E69E4EDC212D1C5CB220 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,14 +424,29 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E9868D40551068A0A2236FEE /* Copy Pods Resources */ = {
+		D0E21D9FFD59610FD64C208F /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SIncDINGTests/Pods-SIncDINGTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD67333DBE3C30B1FB323AE8 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,7 +594,7 @@
 		};
 		03DE2FF11C8F7A4000BF1327 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A5A624341C1C83D37E4FA98 /* Pods-SIncDING.debug.xcconfig */;
+			baseConfigurationReference = E0647A3C3FF322F9598D9C9E /* Pods-SIncDING.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -600,7 +608,7 @@
 		};
 		03DE2FF21C8F7A4000BF1327 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22580C8D0B00A9DFB6682C13 /* Pods-SIncDING.release.xcconfig */;
+			baseConfigurationReference = 13B5CD8D7051388D7FA27C02 /* Pods-SIncDING.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -614,6 +622,7 @@
 		};
 		03DE2FF41C8F7A4000BF1327 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D21E0A08F7DF3DAE89D81FD3 /* Pods-SIncDINGTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -627,6 +636,7 @@
 		};
 		03DE2FF51C8F7A4000BF1327 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FB2631D63D7189DF48C40A8 /* Pods-SIncDINGTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -640,6 +650,7 @@
 		};
 		03DE2FF71C8F7A4000BF1327 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D902222B02FC342F6F6D136 /* Pods-SIncDINGUITests.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SIncDINGUITests/Info.plist;
@@ -653,6 +664,7 @@
 		};
 		03DE2FF81C8F7A4000BF1327 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BADC53D5537DACD38B602000 /* Pods-SIncDINGUITests.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SIncDINGUITests/Info.plist;

@@ -8,12 +8,25 @@
 
 import Cocoa
 import Crashlytics
+import KeychainAccess
 
 class ViewController: NSViewController, NSTextFieldDelegate {
+    
+    // MARK: - Enums
+    
+    enum DataKeys: String {
+        case SaveData, Username, Password, Path
+        
+        static func array() -> [DataKeys] {
+            return [SaveData, Username, Password, Path]
+        }
+    }
     
     // MARK: - Constants
     
     let workingText = "Trabajando..."
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    let keychain = Keychain(service: "com.negebauer.SIncDING")
     
     // MARK: - Variables
     
@@ -27,15 +40,29 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var path: NSTextField!
     @IBOutlet weak var buttonIndex: NSButton!
     @IBOutlet weak var buttonDownload: NSButton!
+    @IBOutlet weak var saveData: NSButton!
     
     // MARK: - Init
     
     override func viewDidLoad() {
         super.viewDidLoad()
         path.stringValue = ""
-//        usernameField.stringValue = "negebauer"
-//        path.stringValue = "/Users/Nico/Downloads/TEST"
-//        passwordField.stringValue = ""
+        
+        if userDefaults.boolForKey(DataKeys.SaveData.rawValue) {
+            saveData.state = NSOnState
+            if let username = userDefaults.stringForKey(DataKeys.Username.rawValue) {
+                usernameField.stringValue = username
+            }
+            let password = try? keychain.getString(DataKeys.Password.rawValue)
+            if password != nil {
+                passwordField.stringValue = password!!
+            }
+            if let path = userDefaults.stringForKey(DataKeys.Path.rawValue) {
+                self.path.stringValue = path
+            }
+        } else {
+            saveData.state = NSOffState
+        }
     }
     
     override var representedObject: AnyObject? {
@@ -58,6 +85,15 @@ class ViewController: NSViewController, NSTextFieldDelegate {
                 return
             }
         }
+        if saveData.state == NSOnState {
+            userDefaults.setValue(true, forKey: DataKeys.SaveData.rawValue)
+            userDefaults.setValue(usernameField.stringValue, forKey: DataKeys.Username.rawValue)
+            let _ = try? keychain.set(passwordField.stringValue, key: DataKeys.Password.rawValue)
+            userDefaults.setValue(path.stringValue, forKey: DataKeys.Path.rawValue)
+        } else {
+            userDefaults.setValue(false, forKey: DataKeys.SaveData.rawValue)
+            let _ = try? keychain.set("", key: DataKeys.Password.rawValue)
+        }
         sidingParser = SidingParser(username: usernameField.stringValue, password: passwordField.stringValue, path: path.stringValue)
         sidingParser.viewController = self
         buttonIndex.title = workingText
@@ -78,7 +114,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         sidingParser.downloadAndSaveFiles()
     }
     
-    @IBAction func passwordEnterPressed(sender: AnyObject) {
+    @IBAction func enterPressed(sender: AnyObject) {
         doStuff(sender)
     }
     

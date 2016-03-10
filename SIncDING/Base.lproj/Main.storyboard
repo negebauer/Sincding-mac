@@ -685,11 +685,14 @@
                             </button>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hus-hh-htS">
                                 <rect key="frame" x="153" y="186" width="174" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" placeholderString="usuario uc" drawsBackground="YES" id="2GN-1V-5KK">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" alignment="left" placeholderString="usuario uc" drawsBackground="YES" id="2GN-1V-5KK">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="enterPressed:" target="XfG-lQ-9wD" id="6pd-5e-SSH"/>
+                                </connections>
                             </textField>
                             <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5IQ-hA-Cd7">
                                 <rect key="frame" x="153" y="154" width="174" height="22"/>
@@ -702,16 +705,19 @@
                                     </allowedInputSourceLocales>
                                 </secureTextFieldCell>
                                 <connections>
-                                    <action selector="passwordEnterPressed:" target="XfG-lQ-9wD" id="M21-s9-ahK"/>
+                                    <action selector="enterPressed:" target="XfG-lQ-9wD" id="Off-tf-KOH"/>
                                 </connections>
                             </secureTextField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j2X-N5-Fk2">
                                 <rect key="frame" x="8" y="228" width="464" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="ruta carpeta, ejemplo: /Users/Pedrito/PUC" drawsBackground="YES" id="sgC-eD-23k">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="ruta carpeta, ejemplo: /Users/Pedrito/PUC" drawsBackground="YES" id="sgC-eD-23k">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="enterPressed:" target="XfG-lQ-9wD" id="kQr-vp-UUi"/>
+                                </connections>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4js-cg-3gY">
                                 <rect key="frame" x="147" y="84" width="186" height="32"/>
@@ -736,10 +742,18 @@
                                     <action selector="showLog:" target="XfG-lQ-9wD" id="IcT-7V-ai7"/>
                                 </connections>
                             </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="ngW-FS-rlR">
+                                <rect key="frame" x="333" y="126" width="109" height="18"/>
+                                <buttonCell key="cell" type="check" title="Guardar datos" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="4QV-Rh-Hss">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="2zq-I6-rZ9"/>
                             <constraint firstAttribute="trailing" secondItem="lT3-Th-73Z" secondAttribute="trailing" constant="20" id="CNp-ov-rLg"/>
+                            <constraint firstItem="ngW-FS-rlR" firstAttribute="centerY" secondItem="eE7-mj-cE8" secondAttribute="centerY" id="KfI-39-j47"/>
                             <constraint firstItem="hus-hh-htS" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="L0A-Tu-J6Z"/>
                             <constraint firstItem="4js-cg-3gY" firstAttribute="top" secondItem="eE7-mj-cE8" secondAttribute="bottom" constant="12" id="ODD-at-EHy"/>
                             <constraint firstItem="4js-cg-3gY" firstAttribute="width" secondItem="eE7-mj-cE8" secondAttribute="width" id="RZm-Dh-BNu"/>
@@ -753,6 +767,7 @@
                             <constraint firstAttribute="bottom" secondItem="lT3-Th-73Z" secondAttribute="bottom" constant="20" id="gqL-LU-R5F"/>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="width" secondItem="hus-hh-htS" secondAttribute="width" id="kb7-S6-fwj"/>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="top" secondItem="5IQ-hA-Cd7" secondAttribute="bottom" constant="8" id="qXY-GS-gEB"/>
+                            <constraint firstItem="ngW-FS-rlR" firstAttribute="leading" secondItem="eE7-mj-cE8" secondAttribute="trailing" constant="8" id="re3-dt-WQm"/>
                             <constraint firstAttribute="trailing" secondItem="j2X-N5-Fk2" secondAttribute="trailing" constant="8" id="tWd-dd-lix"/>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="width" secondItem="5IQ-hA-Cd7" secondAttribute="width" id="tfb-jr-jEU"/>
                             <constraint firstItem="4js-cg-3gY" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="u53-Js-qu0"/>
@@ -763,6 +778,7 @@
                         <outlet property="buttonIndex" destination="eE7-mj-cE8" id="1IV-NV-Bmm"/>
                         <outlet property="passwordField" destination="5IQ-hA-Cd7" id="dG7-In-lvk"/>
                         <outlet property="path" destination="j2X-N5-Fk2" id="ZXf-ZG-gW7"/>
+                        <outlet property="saveData" destination="ngW-FS-rlR" id="HQb-wU-IFi"/>
                         <outlet property="usernameField" destination="hus-hh-htS" id="Sui-Of-5o2"/>
                         <segue destination="q8z-lU-oaZ" kind="show" identifier="IDShowLog" id="R5c-Wp-xF6"/>
                     </connections>
@@ -802,7 +818,7 @@
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="h8q-aC-S0y">
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="h8q-aC-S0y">
                                     <rect key="frame" x="423" y="1" width="16" height="228"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>

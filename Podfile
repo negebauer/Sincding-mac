@@ -9,6 +9,7 @@ target 'SIncDING' do
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'Kanna', '~> 1.0.0'
+    pod 'KeychainAccess'
 end
 
 target 'SIncDINGTests' do

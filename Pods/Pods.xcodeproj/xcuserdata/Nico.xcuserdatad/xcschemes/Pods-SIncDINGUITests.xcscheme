@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B8885C756BA4D8D82B71946384A358DA"
-               BuildableName = "Pods_SIncDING.framework"
-               BlueprintName = "Pods-SIncDING"
+               BlueprintIdentifier = "BA6DD22052F8EB0930765E6BCA41AE56"
+               BuildableName = "Pods_SIncDINGUITests.framework"
+               BlueprintName = "Pods-SIncDINGUITests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B8885C756BA4D8D82B71946384A358DA"
-            BuildableName = "Pods_SIncDING.framework"
-            BlueprintName = "Pods-SIncDING"
+            BlueprintIdentifier = "BA6DD22052F8EB0930765E6BCA41AE56"
+            BuildableName = "Pods_SIncDINGUITests.framework"
+            BlueprintName = "Pods-SIncDINGUITests"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
