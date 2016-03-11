@@ -54,7 +54,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
                 usernameField.stringValue = username
             }
             let password = try? keychain.getString(DataKeys.Password.rawValue)
-            if password != nil {
+            if password != nil && password! != nil {
                 passwordField.stringValue = password!!
             }
             if let path = userDefaults.stringForKey(DataKeys.Path.rawValue) {
