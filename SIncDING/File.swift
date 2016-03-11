@@ -19,14 +19,16 @@ struct File {
     var folder: String
     var name: String
     var link: String
+    var path: String
     
     // MARK: - Init
     
-    init(course: String, folder: String, name: String, link: String) {
+    init(course: String, folder: String, name: String, link: String, path: String) {
         self.course = course
         self.folder = folder
         self.name = name
         self.link = link
+        self.path = path
     }
     
     // MARK: - Functions
@@ -42,17 +44,15 @@ struct File {
         return !isFile()
     }
     
-    func doYourThing(path: String, headers: [String: String], callback: (() -> Void)) {
+    func doYourThing(headers: [String: String], callback: (() -> Void)) {
         // print(link)
-        let filePath = "\(path)/\(course)/\(folder)/\(name)"
-        let fileExists = NSFileManager.defaultManager().fileExistsAtPath(filePath)
-        if !fileExists {
+        if !fileExists() {
             Alamofire.request(.GET, link, headers: headers).response { (_, response, data, error) in
                 if error != nil {
                     print("Error: \(error!)")
                 } else {
-                    self.checkFolderStructure(path)
-                    data!.writeToFile(filePath, atomically: false)
+                    self.checkFolderStructure(self.path)
+                    data!.writeToFile(self.filePath(), atomically: false)
                 }
                 callback()
             }
@@ -66,6 +66,24 @@ struct File {
         if !NSFileManager.defaultManager().fileExistsAtPath(fileFolder) {
             let _ = try? NSFileManager.defaultManager().createDirectoryAtPath(fileFolder, withIntermediateDirectories: true, attributes: nil)
         }
+    }
+    
+    func filePath() -> String {
+        var filePath = path
+        if course != "" {
+            filePath += "/" + course
+            if folder != "" {
+                filePath += "/" + folder
+                if name != "" {
+                    filePath += "/" + name
+                }
+            }
+        }
+        return filePath
+    }
+    
+    func fileExists() -> Bool {
+        return NSFileManager.defaultManager().fileExistsAtPath(filePath())
     }
     
 }

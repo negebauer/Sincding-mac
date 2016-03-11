@@ -160,10 +160,10 @@ class SidingParser: NSObject {
                 if href!.containsString("id_archivo") {
                     let name = link.text!
                     let link = sidingSite.componentsSeparatedByString("/siding/dirdes/ingcursos/cursos/vista.phtml")[0] + href!
-                    let file = File(course: course, folder: folder, name: name, link: link)
+                    let file = File(course: course, folder: folder, name: name, link: link, path: path)
                     files.append(file)
                     
-                    log += "--- Encontrado:\n\tCurso: \(course)\n\tCarpeta: \(folder)\n\tArchivo: \(name)\n"
+                    log += "\(!file.fileExists() ? "- (Nuevo!) " : "")--- Encontrado:\n\tCurso: \(course)\n\tCarpeta: \(folder)\n\tArchivo: \(name)\n"
                 }
             }
             
@@ -186,7 +186,7 @@ class SidingParser: NSObject {
     
     func downloadAndSaveFiles() {
         taskCount = files.count
-        files.forEach({ $0.doYourThing(self.path, headers: self.headers(), callback: { self.fileDidThing() } ) })
+        files.forEach({ $0.doYourThing(self.headers(), callback: { self.fileDidThing() } ) })
     }
     
     func fileDidThing() {
