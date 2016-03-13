@@ -92,7 +92,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
             userDefaults.setValue(false, forKey: DataKeys.SaveData.rawValue)
             let _ = try? keychain.set("", key: DataKeys.Password.rawValue)
         }
-        sidingParser.generateIndex()
+        sidingParser.generateIndex(path.stringValue)
     }
     
     @IBAction func syncFiles(sender: AnyObject) {

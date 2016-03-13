@@ -58,7 +58,8 @@ class SidingParser: NSObject {
         }
     }
     
-    func generateIndex() {
+    func generateIndex(path: String? = nil) {
+        self.path = path ?? self.path
         files.removeAll()
         guard headers() != [:] else {
             login()
