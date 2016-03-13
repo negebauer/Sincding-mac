@@ -1,5 +1,7 @@
 # SIncDING (Sync SIDING)
 
+[Numero de descargas 🙊](http://www.somsubhra.com/github-release-stats/?username=negebauer&repository=SIncDING)
+
 * [Descripción](#descripción)
 * [Instrucciones de uso](#instrucciones-de-uso)
 * [Preguntas frecuentes](#preguntas-frecuentes)
