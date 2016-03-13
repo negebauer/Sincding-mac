@@ -48,6 +48,11 @@ class File {
             callback()
             return
         }
+        guard !exists() else {
+            synced = true
+            callback()
+            return
+        }
         Alamofire.request(.GET, link, headers: headers).response { (_, response, data, error) in
             if error != nil {
                 print("Error: \(error!)")
