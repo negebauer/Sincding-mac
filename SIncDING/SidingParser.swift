@@ -121,7 +121,7 @@ class SidingParser: NSObject {
             elements.filter({ $0["href"]!.containsString("vista.phtml?") }).forEach({
                 let folder = $0.text!
                 let link = self.sidingSite.componentsSeparatedByString("vista.phtml")[0] + $0["href"]!
-                let file = File(course: file.course, folder: folder, name: nil, link: link, parentPath: file.parentPath)
+                let file = File(course: file.course, folder: "\(file.folder!)/\(folder)", name: nil, link: link, parentPath: file.parentPath)
                 self.discovered(file) {
                     self.checkFolderContent($0)
                 }
@@ -151,16 +151,14 @@ class SidingParser: NSObject {
         files.filter({ !$0.synced }).forEach({ $0.download(self.headers(), callback: { self.checkFileSyncTask() }) })
     }
     
-    // MARK: - Data
+    // MARK: - Progress check
     
     func newFiles() -> Int {
         return files.filter({ !$0.exists() }).count
     }
     
-    // MARK: - Progress check
-    
     func checkIndexTask() {
-        delegate?.indexedFiles(files.filter({ $0.checked }).count, total: files.count, new: files.filter{ !$0.exists() }.count)
+        delegate?.indexedFiles(files.filter({ $0.checked }).count, total: files.count, new: newFiles())
     }
     
     func checkFileSyncTask() {
@@ -181,8 +179,8 @@ class SidingParser: NSObject {
     // MARK: - Log
     
     func log(devLog: Bool) -> String {
-        var log = "Archivos nuevos: \(files.count)\n"
-        log += "Archivos totales: \(newFiles())\n"
+        var log = "Archivos nuevos: \(newFiles())\n"
+        log += "Archivos totales: \(files.count)\n"
         for file in files.sort({ $1.course > $0.course }) {
             log += "\(!file.exists() ? "- (Nuevo!) " : "")--- Encontrado:\n\tCurso: \(file.course)\n"
             if file.folder != nil {
