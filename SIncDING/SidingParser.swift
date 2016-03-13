@@ -20,15 +20,12 @@ class SidingParser: NSObject {
     
     // MARK: - Variables
     
-    weak var viewController: ViewController!
-    
+    var delegate: SidingParserDelegate?
     var username: String
     var password: String
     var path: String
     var cookies: [NSHTTPCookie] = []
     var files: [File] = []
-    var taskCount = 0
-    var log = ""
     
     // MARK: - Init
     
@@ -38,19 +35,9 @@ class SidingParser: NSObject {
         self.path = path
     }
     
-    // MARK: - Functions
-
-    func headers() -> [String: String] {
-        return NSHTTPCookie.requestHeaderFieldsWithCookies(cookies)
-    }
+    // MARK: - Main
     
-    func stringFromSidingData(data: NSData) -> String {
-        let str = String(data: data, encoding: NSASCIIStringEncoding)!
-        return str
-    }
-    
-    func doStuff() {
-        files = []
+    func login() {
         let params: [String: String] = [
             "login": username,
             "passwd": password,
@@ -66,131 +53,148 @@ class SidingParser: NSObject {
                 } else {
                     let cookies = NSHTTPCookie.cookiesWithResponseHeaderFields(response!.allHeaderFields as! [String: String], forURL: NSURL(string: self.sidingDomain)!)
                     self.cookies.appendContentsOf(cookies)
-                    self.doStuff2()
+                    self.generateIndex()
                 }
         }
     }
     
-    func doStuff2() {
-        Alamofire.request(.GET, sidingSite, headers: headers())
+    func generateIndex() {
+        files.removeAll()
+        guard headers() != [:] else {
+            login()
+            return
+        }
+        checkCourses()
+    }
+    
+    func getData(link: String, filter: String..., checkData: (elements: [XMLElement]) -> Void) {
+        Alamofire.request(.GET, link, headers: headers())
             .response { (_, response, data, error) in
                 if error != nil {
                     print("Error: \(error!)")
                 } else {
-                    self.lookForFolders(self.stringFromSidingData(data!))
+                    let stringData = data != nil ? self.stringFromSidingData(data!) : ""
+                    if let doc = Kanna.HTML(html: stringData, encoding: NSUTF8StringEncoding) {
+                        let elements = doc.xpath("//a | //link").filter({
+                            let href = $0["href"]
+                            return href != nil && filter.contains({ href!.containsString($0) })
+                        })
+                        checkData(elements: elements)
+                    }
                 }
         }
     }
     
-    func lookForFolders(data: String) {
-        if let doc = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding) {
-
-            var courses: [(String, String)] = []
-            
-            for link in doc.xpath("//a | //link") {
-                let href = link["href"]
-                if href!.containsString("id_curso") {
-                    let auxSplit = link.text!.componentsSeparatedByString("s.")[1]
-                    let section = auxSplit.substringToIndex(auxSplit.startIndex.successor())
-                    let split = link.text!.componentsSeparatedByString(" s.\(section) ")
-                    let course = split[0] + " " + split[1]
-                    let link = sidingSite.componentsSeparatedByString("vista.phtml")[0] + href!
-                    // print("Name: \(name)")
-                    // print("Link: \(link)")
-                    courses.append((course, link))
+    func checkCourses() {
+        getData(sidingSite, filter: "id_curso") { (elements: [XMLElement]) in
+            elements.forEach({
+                let auxSplit = $0.text!.componentsSeparatedByString("s.")[1]
+                let section = auxSplit.substringToIndex(auxSplit.startIndex.successor())
+                let split = $0.text!.componentsSeparatedByString(" s.\(section) ")
+                let course = split[0] + " " + split[1]
+                let link = self.sidingSite.componentsSeparatedByString("vista.phtml")[0] + $0["href"]!
+                let file = File(course: course, folder: nil, name: nil, link: link, parentPath: self.path)
+                self.discovered(file) {
+                    self.checkFolder($0)
                 }
-            }
-            
-            courses.forEach({
-                self.searchFolder($0.0, link: $0.1)
             })
         }
     }
     
-    func searchFolder(course: String, link: String) {
-        Alamofire.request(.GET, link, headers: headers()).response { (_, response, data, error) in
-            if error != nil {
-                print("Error: \(error!)")
-            } else {
-                // print("\n\n\n----- Checkeando \(name)")
-                self.checkFolder(course, data: self.stringFromSidingData(data!))
-            }
-        }
-    }
-    
-    func checkFolder(course: String, data: String) {
-        if let doc = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding) {
-            
-            var folders: [(String, String)] = []
-            
-            for link in doc.xpath("//a | //link") {
-                let href = link["href"]
-                if href!.containsString("vista.phtml?") {
-                    let folder = link.text!
-                    let link = sidingSite.componentsSeparatedByString("vista.phtml")[0] + href!
-                    // print("Name: \(name)")
-                    // print("Link: \(link)")
-                    folders.append((folder, link))
+    func checkFolder(file: File) {
+        getData(file.link, filter: "vista.phtml?") { (elements: [XMLElement]) in
+            file.checked = true
+            elements.forEach({
+                let folder = $0.text!
+                let link = self.sidingSite.componentsSeparatedByString("vista.phtml")[0] + $0["href"]!
+                let file = File(course: file.course, folder: folder, name: nil, link: link, parentPath: file.parentPath)
+                self.discovered(file) {
+                    self.checkFolderContent($0)
                 }
-            }
-            
-            taskCount = folders.count
-            
-            folders.forEach({
-                self.searchSubFolder(course, folder: $0.0, link: $0.1)
             })
         }
     }
     
-    func searchSubFolder(course: String, folder: String, link: String) {
-        Alamofire.request(.GET, link, headers: headers()).response { (_, response, data, error) in
-            if error != nil {
-                print("Error: \(error!)")
-            } else {
-                self.checkFiles(course, folder: folder, data: self.stringFromSidingData(data!))
-            }
+    func checkFolderContent(file: File) {
+        getData(file.link, filter: "vista.phtml?", "id_archivo") { (elements: [XMLElement]) in
+            file.checked = true
+            elements.filter({ $0["href"]!.containsString("vista.phtml?") }).forEach({
+                let folder = $0.text!
+                let link = self.sidingSite.componentsSeparatedByString("vista.phtml")[0] + $0["href"]!
+                let file = File(course: file.course, folder: folder, name: nil, link: link, parentPath: file.parentPath)
+                self.discovered(file) {
+                    self.checkFolderContent($0)
+                }
+            })
+            elements.filter({ $0["href"]!.containsString("id_archivo") }).forEach({
+                let name = $0.text!
+                let link = self.sidingSite.componentsSeparatedByString("/siding/dirdes/ingcursos/cursos/vista.phtml")[0] + $0["href"]!
+                let file = File(course: file.course, folder: file.folder!, name: name, link: link, parentPath: file.parentPath)
+                self.discovered(file)
+            })
         }
     }
     
-    func checkFiles(course: String, folder: String, data: String) {
-        if let doc = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding) {
-            
-            for link in doc.xpath("//a | //link") {
-                let href = link["href"]
-                if href!.containsString("id_archivo") {
-                    let name = link.text!
-                    let link = sidingSite.componentsSeparatedByString("/siding/dirdes/ingcursos/cursos/vista.phtml")[0] + href!
-                    let file = File(course: course, folder: folder, name: name, link: link, path: path)
-                    files.append(file)
-                    
-                    log += "\(!file.fileExists() ? "- (Nuevo!) " : "")--- Encontrado:\n\tCurso: \(course)\n\tCarpeta: \(folder)\n\tArchivo: \(name)\n"
+    func discovered(file: File?, newFile: ((file: File) -> Void)? = nil) {
+        if let file = file {
+            mainQueue({
+                if !self.files.contains({ $0.link == file.link }) {
+                    self.files.append(file)
+                    newFile?(file: file)
+                }
+            })
+        }
+        checkIndexTask()
+    }
+    
+    func syncFiles() {
+        files.filter({ !$0.synced }).forEach({ $0.download(self.headers(), callback: { self.checkFileSyncTask() }) })
+    }
+    
+    // MARK: - Data
+    
+    func newFiles() -> Int {
+        return files.filter({ !$0.exists() }).count
+    }
+    
+    // MARK: - Progress check
+    
+    func checkIndexTask() {
+        delegate?.indexedFiles(files.filter({ $0.checked }).count, total: files.count, new: files.filter{ !$0.exists() }.count)
+    }
+    
+    func checkFileSyncTask() {
+        delegate?.syncedFiles(files.filter({ $0.synced }).count, total: files.count)
+    }
+    
+    // MARK: - Helpers
+    
+    func headers() -> [String: String] {
+        return NSHTTPCookie.requestHeaderFieldsWithCookies(cookies)
+    }
+    
+    func stringFromSidingData(data: NSData) -> String {
+        let str = String(data: data, encoding: NSASCIIStringEncoding)!
+        return str
+    }
+    
+    // MARK: - Log
+    
+    func log(devLog: Bool) -> String {
+        var log = "Archivos nuevos: \(files.count)\n"
+        log += "Archivos totales: \(newFiles())\n"
+        for file in files.sort({ $1.course > $0.course }) {
+            log += "\(!file.exists() ? "- (Nuevo!) " : "")--- Encontrado:\n\tCurso: \(file.course)\n"
+            if file.folder != nil {
+                log += "\tCarpeta: \(file.folder!)\n"
+                if file.name != nil {
+                    log += "\tArchivo: \(file.name!)\n"
                 }
             }
-            
-            taskCount--
-            checkIndexTaskReady()
+            if devLog {
+                log += "\tLink: \(file.link)\n"
+            }
         }
-    }
-    
-    func checkIndexTaskReady() {
-        if taskCount == 0 {
-            viewController.fileReferencesReady()
-        }
-    }
-    
-    func checkFileTaskReady() {
-        if taskCount == 0 {
-            viewController.fileProccessReady()
-        }
-    }
-    
-    func downloadAndSaveFiles() {
-        taskCount = files.count
-        files.forEach({ $0.doYourThing(self.headers(), callback: { self.fileDidThing() } ) })
-    }
-    
-    func fileDidThing() {
-        taskCount--
-        checkFileTaskReady()
+        return log
     }
 }

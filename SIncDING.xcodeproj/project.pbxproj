@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		036F148A1C95081100462FBE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F14891C95081100462FBE /* Constants.swift */; };
+		036F148C1C95082D00462FBE /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F148B1C95082D00462FBE /* Segue.swift */; };
+		036F148E1C95088500462FBE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F148D1C95088500462FBE /* Extensions.swift */; };
+		036F14901C95090900462FBE /* SidingParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F148F1C95090900462FBE /* SidingParserDelegate.swift */; };
+		036F14921C95102400462FBE /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F14911C95102400462FBE /* Utilities.swift */; };
 		03DE2FCF1C8F7A4000BF1327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FCE1C8F7A4000BF1327 /* AppDelegate.swift */; };
 		03DE2FD11C8F7A4000BF1327 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FD01C8F7A4000BF1327 /* ViewController.swift */; };
 		03DE2FD31C8F7A4000BF1327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03DE2FD21C8F7A4000BF1327 /* Assets.xcassets */; };
@@ -39,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		036F14891C95081100462FBE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		036F148B1C95082D00462FBE /* Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
+		036F148D1C95088500462FBE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		036F148F1C95090900462FBE /* SidingParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidingParserDelegate.swift; sourceTree = "<group>"; };
+		036F14911C95102400462FBE /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		03DE2FCB1C8F7A4000BF1327 /* SIncDING.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIncDING.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DE2FCE1C8F7A4000BF1327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03DE2FD01C8F7A4000BF1327 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +136,11 @@
 				03DE2FD21C8F7A4000BF1327 /* Assets.xcassets */,
 				03DE2FD41C8F7A4000BF1327 /* Main.storyboard */,
 				03DE2FD71C8F7A4000BF1327 /* Info.plist */,
+				036F14891C95081100462FBE /* Constants.swift */,
+				036F148B1C95082D00462FBE /* Segue.swift */,
+				036F148D1C95088500462FBE /* Extensions.swift */,
+				036F14911C95102400462FBE /* Utilities.swift */,
+				036F148F1C95090900462FBE /* SidingParserDelegate.swift */,
 			);
 			path = SIncDING;
 			sourceTree = "<group>";
@@ -464,8 +479,13 @@
 				03DE2FFF1C8F874E00BF1327 /* SidingParser.swift in Sources */,
 				03F9C8581C90D61D005D67B3 /* LogViewController.swift in Sources */,
 				03DE30011C8FA87C00BF1327 /* File.swift in Sources */,
+				036F14901C95090900462FBE /* SidingParserDelegate.swift in Sources */,
+				036F148E1C95088500462FBE /* Extensions.swift in Sources */,
+				036F148C1C95082D00462FBE /* Segue.swift in Sources */,
 				03DE2FD11C8F7A4000BF1327 /* ViewController.swift in Sources */,
 				03DE2FCF1C8F7A4000BF1327 /* AppDelegate.swift in Sources */,
+				036F14921C95102400462FBE /* Utilities.swift in Sources */,
+				036F148A1C95081100462FBE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

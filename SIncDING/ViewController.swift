@@ -10,7 +10,7 @@ import Cocoa
 import Crashlytics
 import KeychainAccess
 
-class ViewController: NSViewController, NSTextFieldDelegate {
+class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegate {
     
     // MARK: - Enums
     
@@ -24,7 +24,6 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     // MARK: - Constants
     
-    let workingText = "Trabajando..."
     let userDefaults = NSUserDefaults.standardUserDefaults()
     let keychain = Keychain(service: "com.negebauer.SIncDING")
     
@@ -41,6 +40,8 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var buttonIndex: NSButton!
     @IBOutlet weak var buttonDownload: NSButton!
     @IBOutlet weak var saveData: NSButton!
+    @IBOutlet weak var indexLabel: NSTextField!
+    @IBOutlet weak var syncLabel: NSTextField!
     
     // MARK: - Init
     
@@ -73,17 +74,14 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     // MARK: - Actions
     
-    @IBAction func doStuff(sender: AnyObject) {
+    @IBAction func generateIndex(sender: AnyObject) {
         if sidingParser == nil {
             guard usernameField.stringValue != "" && passwordField.stringValue != "" else {
-                let alert = NSAlert()
-                alert.addButtonWithTitle("Ok, sorry")
-                alert.messageText = "Pon tu usuario y tu clave po"
-                alert.informativeText = "Como queri que funcione sin eso..."
-                alert.alertStyle = .WarningAlertStyle
-                alert.runModal()
+                showMissingDataAlert("Pon tu usuario y tu clave po")
                 return
             }
+            sidingParser = SidingParser(username: usernameField.stringValue, password: passwordField.stringValue, path: path.stringValue)
+            sidingParser.delegate = self
         }
         if saveData.state == NSOnState {
             userDefaults.setValue(true, forKey: DataKeys.SaveData.rawValue)
@@ -94,42 +92,52 @@ class ViewController: NSViewController, NSTextFieldDelegate {
             userDefaults.setValue(false, forKey: DataKeys.SaveData.rawValue)
             let _ = try? keychain.set("", key: DataKeys.Password.rawValue)
         }
-        sidingParser = SidingParser(username: usernameField.stringValue, password: passwordField.stringValue, path: path.stringValue)
-        sidingParser.viewController = self
-        buttonIndex.title = workingText
-        sidingParser.doStuff()
+        sidingParser.generateIndex()
     }
     
-    @IBAction func downloadAndSave(sender: AnyObject) {
+    @IBAction func syncFiles(sender: AnyObject) {
         guard sidingParser != nil else {
-            let alert = NSAlert()
-            alert.addButtonWithTitle("Ok, sorry")
-            alert.messageText = "Primero genera el index po"
-            alert.informativeText = "Como queri que funcione sin eso..."
-            alert.alertStyle = .WarningAlertStyle
-            alert.runModal()
+            showMissingDataAlert("Primero genera el index po")
             return
         }
-        buttonDownload.title = workingText
-        sidingParser.downloadAndSaveFiles()
+        guard sidingParser.newFiles() > 0 else {
+            syncLabel.stringValue = "No hay nuevos archivos que descargar"
+            return
+        }
+        sidingParser.syncFiles()
     }
     
     @IBAction func enterPressed(sender: AnyObject) {
-        doStuff(sender)
+        generateIndex(sender)
     }
     
     @IBAction func showLog(sender: AnyObject) {
-        performSegueWithIdentifier("IDShowLog", sender: self)
+        performSegueWithIdentifier(Segue.ShowLog, sender: sender)
+    }
+    
+    @IBAction func showDevLog(sender: AnyObject) {
+        performSegueWithIdentifier(Segue.ShowLog, sender: true)
     }
     
     // MARK: - Functions
     
-    func fileReferencesReady() {
-        buttonIndex.title = "Index listo!"
+    func showMissingDataAlert(message: String) {
+        let alert = NSAlert()
+        alert.addButtonWithTitle("Ok, sorry")
+        alert.messageText = message
+        alert.informativeText = "Como queri que funcione sin eso..."
+        alert.alertStyle = .WarningAlertStyle
+        alert.runModal()
     }
     
-    func fileProccessReady() {
-        buttonDownload.title = "Archivos sincronizados"
+    // MARK: - SidingParserDelegate methods
+    
+    func indexedFiles(checked: Int, total: Int, new: Int) {
+        indexLabel.stringValue = "Indexados \(checked)/\(total)\t\(new) nuevos archivos/carpetas"
+    }
+    
+    func syncedFiles(synced: Int, total: Int) {
+        syncLabel.stringValue = "Descargados \(synced)/\(total)"
     }
     
     // MARK: - Navigation
@@ -137,7 +145,8 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "IDShowLog" {
             let logView = segue.destinationController as! LogViewController
-            logView.log = sidingParser.log
+            let devLog = sender as? Bool
+            logView.log = sidingParser.log(devLog ?? false)
         }
     }
     

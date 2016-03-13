@@ -674,17 +674,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eE7-mj-cE8">
-                                <rect key="frame" x="147" y="117" width="186" height="33"/>
+                                <rect key="frame" x="144" y="124" width="192" height="32"/>
                                 <buttonCell key="cell" type="push" title="Generar index archivos" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QOA-no-WNX">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="doStuff:" target="XfG-lQ-9wD" id="dEi-Z0-rlg"/>
+                                    <action selector="generateIndex:" target="XfG-lQ-9wD" id="8iP-wi-MPX"/>
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hus-hh-htS">
-                                <rect key="frame" x="153" y="186" width="174" height="22"/>
+                                <rect key="frame" x="150" y="190" width="180" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" alignment="left" placeholderString="usuario uc" drawsBackground="YES" id="2GN-1V-5KK">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -695,7 +695,7 @@
                                 </connections>
                             </textField>
                             <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5IQ-hA-Cd7">
-                                <rect key="frame" x="153" y="154" width="174" height="22"/>
+                                <rect key="frame" x="150" y="160" width="180" height="22"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" placeholderString="clave" drawsBackground="YES" usesSingleLineMode="YES" id="wFp-7w-nup">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -720,16 +720,16 @@
                                 </connections>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4js-cg-3gY">
-                                <rect key="frame" x="147" y="84" width="186" height="32"/>
+                                <rect key="frame" x="144" y="95" width="192" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="174" id="w2J-nH-4Ou"/>
+                                    <constraint firstAttribute="width" constant="180" id="6Gs-B9-dW1"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Descargar archivos" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wnQ-Mp-ADA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="downloadAndSave:" target="XfG-lQ-9wD" id="grN-CN-HIc"/>
+                                    <action selector="syncFiles:" target="XfG-lQ-9wD" id="Aoz-W2-YBy"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lT3-Th-73Z">
@@ -743,42 +743,76 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="ngW-FS-rlR">
-                                <rect key="frame" x="333" y="126" width="109" height="18"/>
+                                <rect key="frame" x="336" y="133" width="109" height="18"/>
                                 <buttonCell key="cell" type="check" title="Guardar datos" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="4QV-Rh-Hss">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pu1-Qu-djl">
+                                <rect key="frame" x="6" y="77" width="468" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" placeholderString="Genera el index" id="HEd-dc-ZXI">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4LD-uQ-qhr">
+                                <rect key="frame" x="6" y="52" width="468" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" placeholderString="Descarga los archivos" id="yzx-j8-fSd">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="32K-3c-QDS">
+                                <rect key="frame" x="414" y="242" width="72" height="32"/>
+                                <buttonCell key="cell" type="push" title="dev log" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rrd-AR-yPK">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemThin" size="9"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="showDevLog:" target="XfG-lQ-9wD" id="uuT-4d-acG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="eE7-mj-cE8" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="2zq-I6-rZ9"/>
+                            <constraint firstItem="4LD-uQ-qhr" firstAttribute="top" secondItem="Pu1-Qu-djl" secondAttribute="bottom" constant="8" id="2vy-LZ-XIy"/>
+                            <constraint firstItem="32K-3c-QDS" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="6NH-dd-JMz"/>
+                            <constraint firstItem="4js-cg-3gY" firstAttribute="top" secondItem="eE7-mj-cE8" secondAttribute="bottom" constant="8" id="AOM-TJ-dlm"/>
+                            <constraint firstItem="hus-hh-htS" firstAttribute="top" secondItem="j2X-N5-Fk2" secondAttribute="bottom" constant="16" id="AXw-77-sTU"/>
+                            <constraint firstItem="Pu1-Qu-djl" firstAttribute="top" secondItem="4js-cg-3gY" secondAttribute="bottom" constant="8" id="BkF-T3-3by"/>
                             <constraint firstAttribute="trailing" secondItem="lT3-Th-73Z" secondAttribute="trailing" constant="20" id="CNp-ov-rLg"/>
-                            <constraint firstItem="ngW-FS-rlR" firstAttribute="centerY" secondItem="eE7-mj-cE8" secondAttribute="centerY" id="KfI-39-j47"/>
-                            <constraint firstItem="hus-hh-htS" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="L0A-Tu-J6Z"/>
-                            <constraint firstItem="4js-cg-3gY" firstAttribute="top" secondItem="eE7-mj-cE8" secondAttribute="bottom" constant="12" id="ODD-at-EHy"/>
-                            <constraint firstItem="4js-cg-3gY" firstAttribute="width" secondItem="eE7-mj-cE8" secondAttribute="width" id="RZm-Dh-BNu"/>
-                            <constraint firstItem="eE7-mj-cE8" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Ras-HV-zVP"/>
-                            <constraint firstItem="5IQ-hA-Cd7" firstAttribute="top" secondItem="hus-hh-htS" secondAttribute="bottom" constant="10" id="Xk3-09-S5Q"/>
-                            <constraint firstItem="eE7-mj-cE8" firstAttribute="height" secondItem="hus-hh-htS" secondAttribute="height" id="ace-Gf-RY6"/>
+                            <constraint firstItem="5IQ-hA-Cd7" firstAttribute="width" secondItem="eE7-mj-cE8" secondAttribute="width" id="DxO-Rh-fE1"/>
+                            <constraint firstItem="ngW-FS-rlR" firstAttribute="leading" secondItem="eE7-mj-cE8" secondAttribute="trailing" constant="8" id="Ftn-cw-Mtb"/>
+                            <constraint firstItem="4LD-uQ-qhr" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="8" id="PpN-5C-p0v"/>
+                            <constraint firstItem="Pu1-Qu-djl" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="8" id="QoW-qY-4AE"/>
+                            <constraint firstAttribute="trailing" secondItem="Pu1-Qu-djl" secondAttribute="trailing" constant="8" id="SUE-zI-FAM"/>
+                            <constraint firstItem="5IQ-hA-Cd7" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="UcO-Lw-Yqa"/>
+                            <constraint firstItem="ngW-FS-rlR" firstAttribute="centerY" secondItem="eE7-mj-cE8" secondAttribute="centerY" id="XmT-CM-rmy"/>
+                            <constraint firstItem="eE7-mj-cE8" firstAttribute="top" secondItem="5IQ-hA-Cd7" secondAttribute="bottom" constant="8" id="Y5C-Le-j1e"/>
+                            <constraint firstItem="5IQ-hA-Cd7" firstAttribute="top" secondItem="hus-hh-htS" secondAttribute="bottom" constant="8" id="YFf-vo-LBt"/>
+                            <constraint firstItem="hus-hh-htS" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="bBR-PS-WiU"/>
+                            <constraint firstItem="eE7-mj-cE8" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="bNR-iZ-hbo"/>
                             <constraint firstItem="j2X-N5-Fk2" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="fH4-AT-Uxg"/>
-                            <constraint firstItem="5IQ-hA-Cd7" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="fHn-Db-IyW"/>
-                            <constraint firstItem="eE7-mj-cE8" firstAttribute="height" secondItem="5IQ-hA-Cd7" secondAttribute="height" id="fOB-Ca-TQs"/>
+                            <constraint firstItem="hus-hh-htS" firstAttribute="width" secondItem="eE7-mj-cE8" secondAttribute="width" id="fkO-si-2dy"/>
                             <constraint firstItem="j2X-N5-Fk2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="8" id="g3a-5j-vOC"/>
                             <constraint firstAttribute="bottom" secondItem="lT3-Th-73Z" secondAttribute="bottom" constant="20" id="gqL-LU-R5F"/>
-                            <constraint firstItem="eE7-mj-cE8" firstAttribute="width" secondItem="hus-hh-htS" secondAttribute="width" id="kb7-S6-fwj"/>
-                            <constraint firstItem="eE7-mj-cE8" firstAttribute="top" secondItem="5IQ-hA-Cd7" secondAttribute="bottom" constant="8" id="qXY-GS-gEB"/>
-                            <constraint firstItem="ngW-FS-rlR" firstAttribute="leading" secondItem="eE7-mj-cE8" secondAttribute="trailing" constant="8" id="re3-dt-WQm"/>
+                            <constraint firstItem="4js-cg-3gY" firstAttribute="width" secondItem="eE7-mj-cE8" secondAttribute="width" id="hnV-ga-hew"/>
+                            <constraint firstAttribute="trailing" secondItem="4LD-uQ-qhr" secondAttribute="trailing" constant="8" id="n2T-NY-oJ5"/>
+                            <constraint firstItem="4js-cg-3gY" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="nYp-iv-nHU"/>
                             <constraint firstAttribute="trailing" secondItem="j2X-N5-Fk2" secondAttribute="trailing" constant="8" id="tWd-dd-lix"/>
-                            <constraint firstItem="eE7-mj-cE8" firstAttribute="width" secondItem="5IQ-hA-Cd7" secondAttribute="width" id="tfb-jr-jEU"/>
-                            <constraint firstItem="4js-cg-3gY" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="u53-Js-qu0"/>
+                            <constraint firstAttribute="trailing" secondItem="32K-3c-QDS" secondAttribute="trailing" id="xIf-z7-egI"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonDownload" destination="4js-cg-3gY" id="Nwj-CG-1m0"/>
                         <outlet property="buttonIndex" destination="eE7-mj-cE8" id="1IV-NV-Bmm"/>
+                        <outlet property="indexLabel" destination="Pu1-Qu-djl" id="Qpa-he-J5e"/>
                         <outlet property="passwordField" destination="5IQ-hA-Cd7" id="dG7-In-lvk"/>
                         <outlet property="path" destination="j2X-N5-Fk2" id="ZXf-ZG-gW7"/>
                         <outlet property="saveData" destination="ngW-FS-rlR" id="HQb-wU-IFi"/>
+                        <outlet property="syncLabel" destination="4LD-uQ-qhr" id="nso-Fm-Iuw"/>
                         <outlet property="usernameField" destination="hus-hh-htS" id="Sui-Of-5o2"/>
                         <segue destination="q8z-lU-oaZ" kind="show" identifier="IDShowLog" id="R5c-Wp-xF6"/>
                     </connections>
