@@ -112,7 +112,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
     }
     
     @IBAction func showLog(sender: AnyObject) {
-        performSegueWithIdentifier(Segue.ShowLog, sender: sender)
+        performSegueWithIdentifier(Segue.ShowLog, sender: false)
     }
     
     @IBAction func showDevLog(sender: AnyObject) {
@@ -146,6 +146,10 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
         if segue.identifier == "IDShowLog" {
             let logView = segue.destinationController as! LogViewController
             let devLog = sender as? Bool
+            guard sidingParser != nil else {
+                logView.log = "Primero haz el index"
+                return
+            }
             logView.log = sidingParser.log(devLog ?? false)
         }
     }

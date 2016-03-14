@@ -182,7 +182,10 @@ class SidingParser: NSObject {
     func log(devLog: Bool) -> String {
         var log = "Archivos nuevos: \(newFiles())\n"
         log += "Archivos totales: \(files.count)\n"
-        for file in files.sort({ $1.course > $0.course }) {
+        let filesNew = files.filter({ !$0.exists() })
+        let filesSynced = files.filter({ $0.exists() })
+        let sort: (file1: File, file2: File) -> Bool = { $1.course > $0.course }
+        for file in filesNew.sort(sort) + filesSynced.sort(sort) {
             log += "\(!file.exists() ? "- (Nuevo!) " : "")--- Encontrado:\n\tCurso: \(file.course)\n"
             if file.folder != nil {
                 log += "\tCarpeta: \(file.folder!)\n"
