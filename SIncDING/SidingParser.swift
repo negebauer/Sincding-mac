@@ -143,6 +143,7 @@ class SidingParser: NSObject {
                     self.files.append(file)
                     newFile?(file: file)
                 }
+                self.checkIndexTask()
             })
         }
         checkIndexTask()
