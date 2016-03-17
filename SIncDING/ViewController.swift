@@ -31,6 +31,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
     
     var sidingParser: SidingParser!
     var filesReferenced = false
+    var logView: LogViewController?
     
     // MARK: - Outlets
     
@@ -144,13 +145,14 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "IDShowLog" {
-            let logView = segue.destinationController as! LogViewController
+            logView?.view.window?.close()
+            logView = segue.destinationController as? LogViewController
             let devLog = sender as? Bool
             guard sidingParser != nil else {
-                logView.log = "Primero haz el index"
+                logView?.log = "Primero haz el index"
                 return
             }
-            logView.log = sidingParser.log(devLog ?? false)
+            logView?.log = sidingParser.log(devLog ?? false)
         }
     }
     
