@@ -63,7 +63,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
             if let path = userDefaults.stringForKey(DataKeys.Path.rawValue) {
                 self.path.stringValue = path
             }
-        } else if data == nil {
+        } else if data != nil {
             saveData.state = NSOnState
         } else {
             saveData.state = NSOffState
