@@ -31,7 +31,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
     
     var sidingParser: SidingParser!
     var filesReferenced = false
-    var logView: LogViewController?
+    weak var logView: LogViewController?
     
     // MARK: - Outlets
     
