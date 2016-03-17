@@ -196,6 +196,7 @@ class SidingParser: NSObject {
             }
             if devLog {
                 log += "\tLink: \(file.link)\n"
+                log += "\tPath: \(file.path())\n"
             }
         }
         return log
