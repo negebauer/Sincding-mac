@@ -50,6 +50,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
         super.viewDidLoad()
         path.stringValue = ""
         
+        let data = userDefaults.dataForKey(DataKeys.SaveData.rawValue)
         if userDefaults.boolForKey(DataKeys.SaveData.rawValue) {
             saveData.state = NSOnState
             if let username = userDefaults.stringForKey(DataKeys.Username.rawValue) {
@@ -62,6 +63,8 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
             if let path = userDefaults.stringForKey(DataKeys.Path.rawValue) {
                 self.path.stringValue = path
             }
+        } else if data == nil {
+            saveData.state = NSOnState
         } else {
             saveData.state = NSOffState
         }
