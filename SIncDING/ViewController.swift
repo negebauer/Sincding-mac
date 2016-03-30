@@ -76,6 +76,12 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
         }
     }
     
+    // MARK: - De Init
+    
+    override func viewDidDisappear() {
+        NSApplication.sharedApplication().terminate(nil)
+    }
+    
     // MARK: - Actions
     
     @IBAction func generateIndex(sender: AnyObject) {
