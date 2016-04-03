@@ -10,15 +10,6 @@
             <sparkle:releaseNotesLink>
                 https://github.com/negebauer/SIncDING/releases/tag/v1.0.5
             </sparkle:releaseNotesLink>
-            <sparkle:version>1.0.5</sparkle:version>
-            <link>https://github.com/negebauer/SIncDING/releases/download/v1.0.5/SIncDING.zip</link>
-            <sparkle:minimumSystemVersion>10.7</sparkle:minimumSystemVersion>
-        </item>
-        <item>
-            <title>Version 1.0.5</title>
-            <sparkle:releaseNotesLink>
-                https://github.com/negebauer/SIncDING/releases/tag/v1.0.5
-            </sparkle:releaseNotesLink>
             <pubDate>Mon, 05 Oct 2015 19:20:11 +0000</pubDate>
             <enclosure url="https://github.com/negebauer/SIncDING/releases/download/v1.0.5/SIncDING.zip"
                 sparkle:version="1.0.5"
