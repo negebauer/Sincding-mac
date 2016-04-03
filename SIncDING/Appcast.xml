@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
         <title>SIncDING's Changelog</title>
-        <link>https://github.com/negebauer/SIncDING/blob/master/SIncDING/Appcast.xml</link>
+        <link>https://raw.githubusercontent.com/negebauer/SIncDING/master/SIncDING/Appcast.xml</link>
         <description>Most recent changes with links to updates.</description>
         <language>es</language>
         <item>
