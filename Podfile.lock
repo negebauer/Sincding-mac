@@ -5,6 +5,7 @@ PODS:
   - Fabric (1.6.6)
   - Kanna (1.0.5)
   - KeychainAccess (2.3.3)
+  - Sparkle (1.14.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - Fabric
   - Kanna (~> 1.0.0)
   - KeychainAccess
+  - Sparkle (~> 1.14)
 
 SPEC CHECKSUMS:
   Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
@@ -19,7 +21,8 @@ SPEC CHECKSUMS:
   Fabric: 1abc1e59f11fa39ede6f690ef7309d8563e3ec59
   Kanna: 1df5cd995dc1f3a282e3dcf7521cfef2f069ac4d
   KeychainAccess: 9b7e49e48277e329b1b3195e54697ed313d30acf
+  Sparkle: ccd95233b12a3e3d4eeb55ff01dd4c8bb8188b07
 
-PODFILE CHECKSUM: 92fb9c071a32d8bfb0aecdc42d72218ebd490c59
+PODFILE CHECKSUM: 3ccbbf91e0f9f0b12a7bba6e738b3449f1f2c64f
 
 COCOAPODS: 1.0.0.beta.5

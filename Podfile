@@ -10,6 +10,7 @@ target 'SIncDING' do
     pod 'Crashlytics'
     pod 'Kanna', '~> 1.0.0'
     pod 'KeychainAccess'
+    pod 'Sparkle', '~> 1.14'
 end
 
 target 'SIncDINGTests' do

@@ -87,9 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/Kanna/Kanna.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/KeychainAccess/KeychainAccess.framework"
+  install_framework "${PODS_ROOT}/Sparkle/Sparkle.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/Kanna/Kanna.framework"
   install_framework "$CONFIGURATION_BUILD_DIR/KeychainAccess/KeychainAccess.framework"
+  install_framework "${PODS_ROOT}/Sparkle/Sparkle.framework"
 fi
