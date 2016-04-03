@@ -6,6 +6,16 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
         <item>
+            <title>Version 1.0.6</title>
+            <sparkle:releaseNotesLink>
+                https://github.com/negebauer/SIncDING/releases/tag/v1.0.6
+            </sparkle:releaseNotesLink>
+            <enclosure url="https://github.com/negebauer/SIncDING/releases/download/v1.0.6/SIncDING.zip"
+            sparkle:version="10"
+            sparkle:shortVersionString="1.0.6"
+            type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 1.0.5</title>
             <sparkle:releaseNotesLink>
                 https://github.com/negebauer/SIncDING/releases/tag/v1.0.5
@@ -13,16 +23,6 @@
             <enclosure url="https://github.com/negebauer/SIncDING/releases/download/v1.0.5/SIncDING.zip"
                 sparkle:version="9"
                 sparkle:shortVersionString="1.0.5"
-                type="application/octet-stream" />
-        </item>
-        <item>
-            <title>Version 1.0.6</title>
-            <sparkle:releaseNotesLink>
-                https://github.com/negebauer/SIncDING/releases/tag/v1.0.6
-            </sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/negebauer/SIncDING/releases/download/v1.0.6/SIncDING.zip"
-                sparkle:version="10"
-                sparkle:shortVersionString="1.0.6"
                 type="application/octet-stream" />
         </item>
     </channel>
