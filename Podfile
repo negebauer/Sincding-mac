@@ -5,7 +5,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 target 'SIncDING' do
-	pod 'Alamofire', '~> 3.0'
+	pod 'Alamofire'
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'Kanna', '~> 1.0.0'

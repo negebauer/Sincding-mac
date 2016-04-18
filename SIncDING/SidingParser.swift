@@ -45,8 +45,7 @@ class SidingParser: NSObject {
             "sh": "",
             "cd": ""
         ]
-        Alamofire.request(.POST, sidingLogin, parameters: params,
-            encoding: .URL)
+        Alamofire.request(.POST, sidingLogin, parameters: params, encoding: .URL)
             .response { (_, response, data, error) in
                 if error != nil {
                     print("Error: \(error!)")
