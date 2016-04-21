@@ -33,7 +33,7 @@ Con SIncDING la búsqueda y descarga de estos se hace de manera fácil y rápida
   - Si aún se demora mucho, prueba cerrando y abriendo el app de nuevo (click derecho en la app y en cerrar o apretar las teclas `Cmd+Q`)
   - Puedes hacer click en "Log" para ver la lista de archivos que SIncDing descubrió
 8. Haz click en "Descargar archivos"
-9. Espera a que aparezca el mensaje "Archivos sincronizados" (_este puede demorar más dependiendo de cuantos archivos hay que bajar y que tan grandes son_)
+9. Espera a que se descarguen todos los archivos (_esto puede demorar más dependiendo de cuantos archivos hay que bajar y que tan grandes son_)
 10. Abre tu carpeta y felicitate a ti mismo por ahorrar mucho tiempo! 😁
 
 ![app](https://github.com/negebauer/SIncDING/blob/master/Resources/Tutorial/app.png)
