@@ -9,12 +9,14 @@
 import Cocoa
 import Fabric
 import Crashlytics
+import Sparkle
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         Fabric.with([Crashlytics.self])
+        SUUpdater.sharedUpdater().checkForUpdatesInBackground()
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
