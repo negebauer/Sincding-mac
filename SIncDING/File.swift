@@ -75,7 +75,7 @@ class File {
     
     func isFile() -> Bool {
         let split = name?.componentsSeparatedByString(".")
-        if split?.count > 1 && split?[1].characters.count < 5 {
+        if split?.count > 1 && split?[(split?.count ?? 1) - 1].characters.count < 5 {
             return true
         }
         return false
