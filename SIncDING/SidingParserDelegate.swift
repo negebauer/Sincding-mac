@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SidingParserDelegate {
+protocol SidingParserDelegate: class {
     
     func indexedFiles(checked: Int, total: Int, new: Int)
     func syncedFiles(synced: Int, total: Int)

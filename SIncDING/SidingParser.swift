@@ -20,7 +20,7 @@ class SidingParser: NSObject {
     
     // MARK: - Variables
     
-    var delegate: SidingParserDelegate?
+    weak var delegate: SidingParserDelegate?
     var username: String
     var password: String
     var path: String
