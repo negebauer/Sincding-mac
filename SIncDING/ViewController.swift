@@ -147,7 +147,12 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
     }
     
     func syncedFiles(synced: Int, total: Int) {
-        syncLabel.stringValue = "Descargados \(synced)/\(total)"
+        if synced == total {
+            syncLabel.stringValue = "Descarga finalizada"
+        }
+        else {
+            syncLabel.stringValue = "Descargados \(synced)/\(total)"
+        }
     }
     
     // MARK: - Navigation
