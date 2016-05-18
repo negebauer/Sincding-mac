@@ -149,7 +149,7 @@ class SidingParser: NSObject {
     }
     
     func syncFiles() {
-        files.filter({ !$0.synced }).forEach({ $0.download(self.headers(), callback: { self.checkFileSyncTask() }) })
+        files.filter({ !$0.exists() }).forEach({ $0.download(self.headers(), callback: { self.checkFileSyncTask() }) })
     }
     
     // MARK: - Progress check
@@ -163,7 +163,7 @@ class SidingParser: NSObject {
     }
     
     func checkFileSyncTask() {
-        delegate?.syncedFiles(files.filter({ $0.synced }).count, total: files.count)
+        delegate?.syncedFiles(files.filter({ $0.exists() }).count, total: files.count)
     }
     
     // MARK: - Helpers

@@ -15,13 +15,18 @@ class File {
 
     // MARK: - Variables
     
+    /* The course to which this file belongs */
     var course: String
+    /* The folder where this file is keep */
     var folder: String?
+    /* The name of the file, if it's not a folder */
     var name: String?
+    /* URL link of this file */
     var link: String
+    /* The path of the parent folder of this file */
     var parentPath: String
+    /* Defines if a File corresponding to a Folder has been checked or not */
     var checked = false
-    var synced = false
     
     // MARK: - Init
     
@@ -34,9 +39,6 @@ class File {
         if name != nil {
             checked = true
         }
-        if exists() {
-            synced = true
-        }
     }
     
     // MARK: - Saving
@@ -44,12 +46,10 @@ class File {
     func download(headers: [String: String], callback: (() -> Void)) {
         guard isFile() else {
             checkFolderStructure()
-            synced = true
             callback()
             return
         }
         guard !exists() else {
-            synced = true
             callback()
             return
         }
@@ -57,10 +57,15 @@ class File {
             if error != nil {
                 print("Error: \(error!)")
             } else {
+//                  Usar esto para ver si actualizar archivos? Muestra fecha actualizacion
+//                let resposeHeaders = response?.allHeaderFields
+//                print(resposeHeaders)
+//                let size = response?.expectedContentLength
+//                print("size : \(size)")
+                
                 self.checkFolderStructure()
                 data!.writeToFile(self.path(), atomically: true)
             }
-            self.synced = true
             callback()
         }
     }
