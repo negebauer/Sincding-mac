@@ -28,6 +28,11 @@ class LogViewController: NSViewController {
         logText.string = log
     }
     
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        view.window?.title = "Log"
+    }
+    
     override var representedObject: AnyObject? {
         didSet {
             // Update the view, if already loaded.

@@ -48,6 +48,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         path.stringValue = ""
         
         let data = userDefaults.dataForKey(DataKeys.SaveData.rawValue)
@@ -68,6 +69,11 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
         } else {
             saveData.state = NSOffState
         }
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        view.window?.title = "SIncDING"
     }
     
     override var representedObject: AnyObject? {
