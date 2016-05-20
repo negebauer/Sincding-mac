@@ -15,10 +15,10 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
     // MARK: - Enums
     
     enum DataKeys: String {
-        case SaveData, Username, Password, Path
+        case SaveData, DownloadOnIndex, Username, Password, Path
         
         static func array() -> [DataKeys] {
-            return [SaveData, Username, Password, Path]
+            return [SaveData, DownloadOnIndex, Username, Password, Path]
         }
     }
     
@@ -41,6 +41,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
     @IBOutlet weak var buttonIndex: NSButton!
     @IBOutlet weak var buttonDownload: NSButton!
     @IBOutlet weak var saveData: NSButton!
+    @IBOutlet weak var syncAtIndex: NSButton!
     @IBOutlet weak var indexLabel: NSTextField!
     @IBOutlet weak var syncLabel: NSTextField!
     
@@ -48,27 +49,9 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         path.stringValue = ""
+        loadSettings()
         
-        let data = userDefaults.dataForKey(DataKeys.SaveData.rawValue)
-        if userDefaults.boolForKey(DataKeys.SaveData.rawValue) {
-            saveData.state = NSOnState
-            if let username = userDefaults.stringForKey(DataKeys.Username.rawValue) {
-                usernameField.stringValue = username
-            }
-            let password = try? keychain.getString(DataKeys.Password.rawValue)
-            if password != nil && password! != nil {
-                passwordField.stringValue = password!!
-            }
-            if let path = userDefaults.stringForKey(DataKeys.Path.rawValue) {
-                self.path.stringValue = path
-            }
-        } else if data != nil {
-            saveData.state = NSOnState
-        } else {
-            saveData.state = NSOffState
-        }
     }
     
     override func viewDidAppear() {
@@ -99,15 +82,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
             sidingParser = SidingParser(username: usernameField.stringValue, password: passwordField.stringValue, path: path.stringValue)
             sidingParser.delegate = self
         }
-        if saveData.state == NSOnState {
-            userDefaults.setValue(true, forKey: DataKeys.SaveData.rawValue)
-            userDefaults.setValue(usernameField.stringValue, forKey: DataKeys.Username.rawValue)
-            let _ = try? keychain.set(passwordField.stringValue, key: DataKeys.Password.rawValue)
-            userDefaults.setValue(path.stringValue, forKey: DataKeys.Path.rawValue)
-        } else {
-            userDefaults.setValue(false, forKey: DataKeys.SaveData.rawValue)
-            let _ = try? keychain.set("", key: DataKeys.Password.rawValue)
-        }
+        saveSettings()
         sidingParser.generateIndex(path.stringValue)
     }
     
@@ -127,6 +102,23 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
         generateIndex(sender)
     }
     
+    @IBAction func saveSettingsPush(sender: AnyObject) {
+        saveSettings()
+    }
+    
+    @IBAction func chooseFolder(sender: AnyObject) {
+        let chooseFolder = NSOpenPanel()
+        chooseFolder.canChooseFiles = false
+        chooseFolder.canChooseDirectories = true
+        chooseFolder.allowsMultipleSelection = false
+        chooseFolder.prompt = "Seleccionar carpeta"
+        if chooseFolder.runModal() == NSModalResponseOK {
+            let file = chooseFolder.URLs[0]
+            path.stringValue = file.path ?? "Error cargando la ruta, intentalo de nuevo"
+            saveSettings()
+        }
+    }
+    
     @IBAction func showLog(sender: AnyObject) {
         performSegueWithIdentifier(Segue.ShowLog, sender: false)
     }
@@ -136,6 +128,47 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
     }
     
     // MARK: - Functions
+    
+    func loadSettings() {
+        let data = userDefaults.dataForKey(DataKeys.SaveData.rawValue)
+        if userDefaults.boolForKey(DataKeys.SaveData.rawValue) {
+            saveData.state = NSOnState
+            if let username = userDefaults.stringForKey(DataKeys.Username.rawValue) {
+                usernameField.stringValue = username
+            }
+            let password = try? keychain.getString(DataKeys.Password.rawValue)
+            if password != nil && password! != nil {
+                passwordField.stringValue = password!!
+            }
+            if let path = userDefaults.stringForKey(DataKeys.Path.rawValue) {
+                self.path.stringValue = path
+            }
+        } else if data == nil {
+            saveData.state = NSOnState
+        } else {
+            saveData.state = NSOffState
+        }
+        
+        syncAtIndex.state = userDefaults.boolForKey(DataKeys.DownloadOnIndex.rawValue) ? NSOnState : NSOffState
+    }
+    
+    func saveSettings() {
+        if saveData.state == NSOnState {
+            userDefaults.setValue(true, forKey: DataKeys.SaveData.rawValue)
+            userDefaults.setValue(usernameField.stringValue, forKey: DataKeys.Username.rawValue)
+            let _ = try? keychain.set(passwordField.stringValue, key: DataKeys.Password.rawValue)
+            userDefaults.setValue(path.stringValue, forKey: DataKeys.Path.rawValue)
+        } else {
+            userDefaults.setValue(false, forKey: DataKeys.SaveData.rawValue)
+            let _ = try? keychain.set("", key: DataKeys.Password.rawValue)
+        }
+        
+        if syncAtIndex.state == NSOnState {
+            userDefaults.setValue(true, forKey: DataKeys.DownloadOnIndex.rawValue)
+        } else {
+            userDefaults.setValue(false, forKey: DataKeys.DownloadOnIndex.rawValue)
+        }
+    }
     
     func showMissingDataAlert(message: String) {
         let alert = NSAlert()
@@ -150,13 +183,15 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
     
     func indexedFiles(checked: Int, total: Int, new: Int) {
         indexLabel.stringValue = "Indexados \(checked)/\(total)\t\(new) nuevos archivos/carpetas"
+        if syncAtIndex.state == NSOnState {
+            syncFiles(checked)
+        }
     }
     
     func syncedFiles(synced: Int, total: Int) {
         if synced == total {
             syncLabel.stringValue = "Descarga finalizada"
-        }
-        else {
+        } else {
             syncLabel.stringValue = "Descargados \(synced)/\(total)"
         }
     }

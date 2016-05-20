@@ -27,6 +27,8 @@ class File {
     var parentPath: String
     /* Defines if a File corresponding to a Folder has been checked or not */
     var checked = false
+    /* Defines if the File is currently being downloaded */
+    var downloading = false
     
     // MARK: - Init
     
@@ -49,11 +51,16 @@ class File {
             callback()
             return
         }
+        guard !downloading else {
+            return
+        }
         guard !exists() else {
             callback()
             return
         }
+        downloading = true
         Alamofire.request(.GET, link, headers: headers).response { (_, response, data, error) in
+            self.downloading = false
             if error != nil {
                 print("Error: \(error!)")
             } else {

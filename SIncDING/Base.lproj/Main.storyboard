@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -716,7 +716,7 @@
                                 </connections>
                             </secureTextField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j2X-N5-Fk2">
-                                <rect key="frame" x="8" y="228" width="464" height="22"/>
+                                <rect key="frame" x="8" y="228" width="344" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="ruta carpeta, ejemplo: /Users/Pedrito/PUC" drawsBackground="YES" id="sgC-eD-23k">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -740,7 +740,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lT3-Th-73Z">
-                                <rect key="frame" x="403" y="13" width="63" height="32"/>
+                                <rect key="frame" x="403" y="9" width="63" height="32"/>
                                 <buttonCell key="cell" type="push" title="Log" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XQY-ST-oar">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -750,14 +750,22 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="ngW-FS-rlR">
-                                <rect key="frame" x="336" y="133" width="109" height="18"/>
-                                <buttonCell key="cell" type="check" title="Guardar datos" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="4QV-Rh-Hss">
+                                <rect key="frame" x="336" y="162" width="138" height="18"/>
+                                <buttonCell key="cell" type="check" title="Guardar datos" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="4QV-Rh-Hss">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="1Pe-Cb-O78">
+                                <rect key="frame" x="336" y="124" width="138" height="34"/>
+                                <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="cWI-Sg-5QV">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <string key="title">Descargarautomaticamente</string>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pu1-Qu-djl">
-                                <rect key="frame" x="6" y="77" width="468" height="17"/>
+                                <rect key="frame" x="6" y="69" width="468" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" placeholderString="Genera el index" id="HEd-dc-ZXI">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -765,18 +773,38 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4LD-uQ-qhr">
-                                <rect key="frame" x="6" y="52" width="468" height="17"/>
+                                <rect key="frame" x="6" y="44" width="468" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" placeholderString="Descarga los archivos" id="yzx-j8-fSd">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="32K-3c-QDS">
-                                <rect key="frame" x="414" y="242" width="72" height="32"/>
-                                <buttonCell key="cell" type="push" title="dev log" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rrd-AR-yPK">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wfz-YE-ZsW">
+                                <rect key="frame" x="350" y="82" width="110" height="32"/>
+                                <buttonCell key="cell" type="push" title="Guardar ajustes" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WeV-PZ-yt8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="systemThin" size="9"/>
+                                    <font key="font" metaFont="system" size="9"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveSettingsPush:" target="XfG-lQ-9wD" id="8Rt-up-pWX"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gII-Du-fsw">
+                                <rect key="frame" x="354" y="222" width="124" height="32"/>
+                                <buttonCell key="cell" type="push" title="Elegir carpeta" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GLC-WN-kFI">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="chooseFolder:" target="XfG-lQ-9wD" id="Win-b0-bVN"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="32K-3c-QDS">
+                                <rect key="frame" x="0.0" y="0.0" width="33" height="16"/>
+                                <buttonCell key="cell" type="square" title="dev log" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rrd-AR-yPK">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="6"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="showDevLog:" target="XfG-lQ-9wD" id="uuT-4d-acG"/>
@@ -784,32 +812,40 @@
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="1Pe-Cb-O78" firstAttribute="top" secondItem="ngW-FS-rlR" secondAttribute="bottom" constant="8" id="2Ij-4o-W13"/>
                             <constraint firstItem="4LD-uQ-qhr" firstAttribute="top" secondItem="Pu1-Qu-djl" secondAttribute="bottom" constant="8" id="2vy-LZ-XIy"/>
-                            <constraint firstItem="32K-3c-QDS" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="6NH-dd-JMz"/>
+                            <constraint firstItem="wfz-YE-ZsW" firstAttribute="top" secondItem="1Pe-Cb-O78" secondAttribute="bottom" constant="16" id="4Ki-3Y-DN9"/>
+                            <constraint firstItem="ngW-FS-rlR" firstAttribute="centerY" secondItem="5IQ-hA-Cd7" secondAttribute="centerY" id="7bt-x5-8G4"/>
+                            <constraint firstItem="gII-Du-fsw" firstAttribute="centerY" secondItem="j2X-N5-Fk2" secondAttribute="centerY" id="9x2-6I-PHx"/>
                             <constraint firstItem="4js-cg-3gY" firstAttribute="top" secondItem="eE7-mj-cE8" secondAttribute="bottom" constant="8" id="AOM-TJ-dlm"/>
                             <constraint firstItem="hus-hh-htS" firstAttribute="top" secondItem="j2X-N5-Fk2" secondAttribute="bottom" constant="16" id="AXw-77-sTU"/>
-                            <constraint firstItem="Pu1-Qu-djl" firstAttribute="top" secondItem="4js-cg-3gY" secondAttribute="bottom" constant="8" id="BkF-T3-3by"/>
+                            <constraint firstItem="Pu1-Qu-djl" firstAttribute="top" secondItem="4js-cg-3gY" secondAttribute="bottom" constant="16" id="BkF-T3-3by"/>
                             <constraint firstAttribute="trailing" secondItem="lT3-Th-73Z" secondAttribute="trailing" constant="20" id="CNp-ov-rLg"/>
                             <constraint firstItem="5IQ-hA-Cd7" firstAttribute="width" secondItem="eE7-mj-cE8" secondAttribute="width" id="DxO-Rh-fE1"/>
                             <constraint firstItem="ngW-FS-rlR" firstAttribute="leading" secondItem="eE7-mj-cE8" secondAttribute="trailing" constant="8" id="Ftn-cw-Mtb"/>
+                            <constraint firstItem="wfz-YE-ZsW" firstAttribute="centerX" secondItem="1Pe-Cb-O78" secondAttribute="centerX" id="JNf-8r-IFE"/>
                             <constraint firstItem="4LD-uQ-qhr" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="8" id="PpN-5C-p0v"/>
                             <constraint firstItem="Pu1-Qu-djl" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="8" id="QoW-qY-4AE"/>
                             <constraint firstAttribute="trailing" secondItem="Pu1-Qu-djl" secondAttribute="trailing" constant="8" id="SUE-zI-FAM"/>
                             <constraint firstItem="5IQ-hA-Cd7" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="UcO-Lw-Yqa"/>
-                            <constraint firstItem="ngW-FS-rlR" firstAttribute="centerY" secondItem="eE7-mj-cE8" secondAttribute="centerY" id="XmT-CM-rmy"/>
+                            <constraint firstItem="ngW-FS-rlR" firstAttribute="width" secondItem="1Pe-Cb-O78" secondAttribute="width" id="VHO-1O-t30"/>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="top" secondItem="5IQ-hA-Cd7" secondAttribute="bottom" constant="8" id="Y5C-Le-j1e"/>
                             <constraint firstItem="5IQ-hA-Cd7" firstAttribute="top" secondItem="hus-hh-htS" secondAttribute="bottom" constant="8" id="YFf-vo-LBt"/>
                             <constraint firstItem="hus-hh-htS" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="bBR-PS-WiU"/>
                             <constraint firstItem="eE7-mj-cE8" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="bNR-iZ-hbo"/>
+                            <constraint firstAttribute="trailing" secondItem="gII-Du-fsw" secondAttribute="trailing" constant="8" id="cGP-Xy-eHb"/>
                             <constraint firstItem="j2X-N5-Fk2" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="fH4-AT-Uxg"/>
                             <constraint firstItem="hus-hh-htS" firstAttribute="width" secondItem="eE7-mj-cE8" secondAttribute="width" id="fkO-si-2dy"/>
                             <constraint firstItem="j2X-N5-Fk2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="8" id="g3a-5j-vOC"/>
-                            <constraint firstAttribute="bottom" secondItem="lT3-Th-73Z" secondAttribute="bottom" constant="20" id="gqL-LU-R5F"/>
+                            <constraint firstAttribute="bottom" secondItem="lT3-Th-73Z" secondAttribute="bottom" constant="16" id="gqL-LU-R5F"/>
                             <constraint firstItem="4js-cg-3gY" firstAttribute="width" secondItem="eE7-mj-cE8" secondAttribute="width" id="hnV-ga-hew"/>
+                            <constraint firstItem="gII-Du-fsw" firstAttribute="leading" secondItem="j2X-N5-Fk2" secondAttribute="trailing" constant="8" id="ivl-5D-JTT"/>
+                            <constraint firstItem="32K-3c-QDS" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="l2O-Ww-497"/>
                             <constraint firstAttribute="trailing" secondItem="4LD-uQ-qhr" secondAttribute="trailing" constant="8" id="n2T-NY-oJ5"/>
                             <constraint firstItem="4js-cg-3gY" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="nYp-iv-nHU"/>
-                            <constraint firstAttribute="trailing" secondItem="j2X-N5-Fk2" secondAttribute="trailing" constant="8" id="tWd-dd-lix"/>
-                            <constraint firstAttribute="trailing" secondItem="32K-3c-QDS" secondAttribute="trailing" id="xIf-z7-egI"/>
+                            <constraint firstAttribute="bottom" secondItem="32K-3c-QDS" secondAttribute="bottom" id="qQZ-qD-JIP"/>
+                            <constraint firstAttribute="trailing" secondItem="1Pe-Cb-O78" secondAttribute="trailing" constant="8" id="qYG-VI-d8c"/>
+                            <constraint firstItem="1Pe-Cb-O78" firstAttribute="leading" secondItem="4js-cg-3gY" secondAttribute="trailing" constant="8" id="w5Z-vg-dYg"/>
                         </constraints>
                     </view>
                     <connections>
@@ -819,6 +855,7 @@
                         <outlet property="passwordField" destination="5IQ-hA-Cd7" id="dG7-In-lvk"/>
                         <outlet property="path" destination="j2X-N5-Fk2" id="ZXf-ZG-gW7"/>
                         <outlet property="saveData" destination="ngW-FS-rlR" id="HQb-wU-IFi"/>
+                        <outlet property="syncAtIndex" destination="1Pe-Cb-O78" id="XQC-ud-85A"/>
                         <outlet property="syncLabel" destination="4LD-uQ-qhr" id="nso-Fm-Iuw"/>
                         <outlet property="usernameField" destination="hus-hh-htS" id="Sui-Of-5o2"/>
                         <segue destination="q8z-lU-oaZ" kind="show" identifier="IDShowLog" id="R5c-Wp-xF6"/>
