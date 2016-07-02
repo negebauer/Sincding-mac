@@ -4,12 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Based of [Keep a Changelog](http://keepachangelog.com)
 
 ## [Unreleased]
-#### Added
-#### Changed
-#### Deprecated
-#### Removed
-#### Fixed
-#### Security
+
+[//]: # (Added)
+[//]: # (Changed)
+[//]: # (Deprecated)
+[//]: # (Removed)
+[//]: # (Fixed)
+[//]: # (Security)
 
 ## [1.0.8] - 2016/07/02
 
