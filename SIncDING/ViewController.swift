@@ -32,6 +32,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
     var sidingParser: SidingParser!
     var filesReferenced = false
     weak var logView: LogViewController?
+    var isUserSet = false
     
     // MARK: - Outlets
     
@@ -79,10 +80,13 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
                 showMissingDataAlert("Pon tu usuario y tu clave po")
                 return
             }
+            if !isUserSet {
+                setUser(usernameField.stringValue)
+            }
             sidingParser = SidingParser(username: usernameField.stringValue, password: passwordField.stringValue, path: path.stringValue)
             sidingParser.delegate = self
         }
-        Answers.logCustomEventWithName("Index generation", customAttributes: nil)
+        Answers.logCustomEventWithName("Index", customAttributes: nil)
         saveSettings()
         sidingParser.generateIndex(path.stringValue)
     }
@@ -92,10 +96,12 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
             showMissingDataAlert("Primero genera el index po")
             return
         }
-        guard sidingParser.newFiles() > 0 else {
+        let newFiles = sidingParser.newFiles()
+        guard newFiles > 0 else {
             syncLabel.stringValue = "No hay nuevos archivos que descargar"
             return
         }
+        Answers.logCustomEventWithName("Sync", customAttributes: ["Files": newFiles])
         sidingParser.syncFiles()
     }
     
@@ -130,24 +136,35 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
     
     // MARK: - Functions
     
+    func setUser(username: String) {
+        Crashlytics.sharedInstance().setUserIdentifier(username)
+        Crashlytics.sharedInstance().setUserEmail(username + "@uc.cl")
+        isUserSet = true
+    }
+    
     func loadSettings() {
         let data = userDefaults.dataForKey(DataKeys.SaveData.rawValue)
         if userDefaults.boolForKey(DataKeys.SaveData.rawValue) {
             saveData.state = NSOnState
-            if let username = userDefaults.stringForKey(DataKeys.Username.rawValue) {
-                usernameField.stringValue = username
-            }
+            let username = userDefaults.stringForKey(DataKeys.Username.rawValue)
             let password = try? keychain.getString(DataKeys.Password.rawValue)
-            if password != nil && password! != nil {
-                passwordField.stringValue = password!!
+            let path = userDefaults.stringForKey(DataKeys.Path.rawValue)
+            if let username = username {
+                usernameField.stringValue = username
+                setUser(username)
             }
-            if let path = userDefaults.stringForKey(DataKeys.Path.rawValue) {
+            if let pass = password, let password = pass {
+                passwordField.stringValue = password
+            }
+            if let path = path {
                 self.path.stringValue = path
             }
+            Answers.logCustomEventWithName("Settings", customAttributes: ["Save": true.description])
         } else if data == nil {
             saveData.state = NSOnState
         } else {
             saveData.state = NSOffState
+            Answers.logCustomEventWithName("Settings", customAttributes: ["Save": false.description])
         }
         
         syncAtIndex.state = userDefaults.boolForKey(DataKeys.DownloadOnIndex.rawValue) ? NSOnState : NSOffState
