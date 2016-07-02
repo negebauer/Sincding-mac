@@ -17,6 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         Fabric.with([Crashlytics.self])
         SUUpdater.sharedUpdater().checkForUpdatesInBackground()
+        NSUserDefaults.standardUserDefaults().registerDefaults(["NSApplicationCrashOnExceptions": true])
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
