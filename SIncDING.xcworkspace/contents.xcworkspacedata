@@ -10,4 +10,7 @@
    <FileRef
       location = "group:Resources">
    </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
 </Workspace>
