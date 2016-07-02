@@ -44,4 +44,4 @@ Con SIncDING la búsqueda y descarga de estos se hace de manera fácil y rápida
 
 ### Preguntas
 
-Puedes abrir un [issue](../../issues/) en este mismo repositorio con tu duda o problema
+Puedes abrir un [issue](../../issues/new) en este mismo repositorio con tu duda o problema. Recuerda revisar las que ya [están abiertas](../../issues?utf8=✓&q=is%3Aissue) antes!
