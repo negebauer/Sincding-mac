@@ -4,7 +4,7 @@
 
 * [Descripción](#descripción)
 * [Instrucciones de uso](#instrucciones-de-uso)
-* [Preguntas frecuentes](#preguntas-frecuentes)
+* [Preguntas?](#preguntas)
 
 ***
 
@@ -42,6 +42,6 @@ Con SIncDING la búsqueda y descarga de estos se hace de manera fácil y rápida
 
 ***
 
-### Preguntas frecuentes
+### Preguntas
 
-No hay aún 😁
+Puedes abrir un [issue](../../issues/) en este mismo repositorio con tu duda o problema
