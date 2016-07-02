@@ -51,7 +51,6 @@
 		036F148F1C95090900462FBE /* SidingParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidingParserDelegate.swift; sourceTree = "<group>"; };
 		036F14911C95102400462FBE /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		03A398B81CB17B1600E3EE76 /* Appcast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Appcast.xml; sourceTree = "<group>"; };
-		03A722E21CEEC137006CE9D9 /* SIncDING.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SIncDING.entitlements; sourceTree = "<group>"; };
 		03DE2FCB1C8F7A4000BF1327 /* SIncDING.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIncDING.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DE2FCE1C8F7A4000BF1327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03DE2FD01C8F7A4000BF1327 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +130,6 @@
 		03DE2FCD1C8F7A4000BF1327 /* SIncDING */ = {
 			isa = PBXGroup;
 			children = (
-				03A722E21CEEC137006CE9D9 /* SIncDING.entitlements */,
 				03DE2FCE1C8F7A4000BF1327 /* AppDelegate.swift */,
 				03DE2FD01C8F7A4000BF1327 /* ViewController.swift */,
 				03F9C8571C90D61D005D67B3 /* LogViewController.swift */,
@@ -272,7 +270,7 @@
 						DevelopmentTeam = BJJKE72WM4;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -562,7 +560,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -606,7 +604,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -630,13 +628,14 @@
 			baseConfigurationReference = E0647A3C3FF322F9598D9C9E /* Pods-SIncDING.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SIncDING/SIncDING.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SIncDING/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.SIncDING;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -645,13 +644,14 @@
 			baseConfigurationReference = 13B5CD8D7051388D7FA27C02 /* Pods-SIncDING.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SIncDING/SIncDING.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SIncDING/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.SIncDING;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
