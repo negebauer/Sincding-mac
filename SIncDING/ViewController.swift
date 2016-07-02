@@ -82,6 +82,7 @@ class ViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegat
             sidingParser = SidingParser(username: usernameField.stringValue, password: passwordField.stringValue, path: path.stringValue)
             sidingParser.delegate = self
         }
+        Answers.logCustomEventWithName("Index generation", customAttributes: nil)
         saveSettings()
         sidingParser.generateIndex(path.stringValue)
     }
