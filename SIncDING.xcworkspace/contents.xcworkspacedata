@@ -16,4 +16,7 @@
    <FileRef
       location = "group:CHANGELOG.md">
    </FileRef>
+   <FileRef
+      location = "group:Changelog">
+   </FileRef>
 </Workspace>
