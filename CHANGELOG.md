@@ -82,7 +82,7 @@ Based of [Keep a Changelog](http://keepachangelog.com)
 #### Added
 - Download SIDING files
 
-[Unreleased]: https://github.com/negebauer/SIncDING/compare/v1.0.8...HEAD
+[Unreleased]: https://github.com/negebauer/SIncDING/compare/v1.0.8...dev
 [1.0.8]: https://github.com/negebauer/SIncDING/compare/v1.0.7...v1.0.8
 [1.0.7]: https://github.com/negebauer/SIncDING/compare/v1.0.6...v1.0.7
 [1.0.6]: https://github.com/negebauer/SIncDING/compare/v1.0.5...v1.0.6
