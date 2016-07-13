@@ -10,7 +10,6 @@ import Cocoa
 import Fabric
 import Crashlytics
 import Sparkle
-import UCSiding
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
