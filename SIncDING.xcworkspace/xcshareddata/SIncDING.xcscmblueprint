@@ -4,27 +4,27 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "354B689CE04327390DC4BE9ECE6FDD76D3D95193" : 0,
-    "7FA13FBA311A8C9A9FC3562B43EDDE422EAA25AB" : 0
+    "7FA13FBA311A8C9A9FC3562B43EDDE422EAA25AB" : 0,
+    "F20C18CF2F443D8C55C750FA5A363CB2B401A9DD" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2D798E0B-CC78-43CF-B32E-0E5D7002952E",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "354B689CE04327390DC4BE9ECE6FDD76D3D95193" : "UCSiding\/",
-    "7FA13FBA311A8C9A9FC3562B43EDDE422EAA25AB" : "SIncDING\/"
+    "7FA13FBA311A8C9A9FC3562B43EDDE422EAA25AB" : "SIncDING\/",
+    "F20C18CF2F443D8C55C750FA5A363CB2B401A9DD" : "UCSiding\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "SIncDING",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SIncDING.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/negebauer\/UCSiding.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "354B689CE04327390DC4BE9ECE6FDD76D3D95193"
-    },
-    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/negebauer\/SIncDING.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7FA13FBA311A8C9A9FC3562B43EDDE422EAA25AB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/negebauer\/UCSiding.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F20C18CF2F443D8C55C750FA5A363CB2B401A9DD"
     }
   ]
 }

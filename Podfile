@@ -11,6 +11,8 @@ target 'SIncDING' do
     pod 'Kanna', '~> 1.0.6'
     pod 'KeychainAccess', '~> 2.3.5'
     pod 'Sparkle', '~> 1.14'
+    
+    pod 'UCSiding', path: '../UCSiding'
 end
 
 target 'SIncDINGTests' do

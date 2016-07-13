@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Networking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SIncDING.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,10 +39,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UCSiding.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0105E8133BC1299FB9D4E5383FD4661F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2653005B54C7988FEC59A03B03F6F743</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5CD96DA0F4F6CCD72DA42E82D8AEF5DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>636BAD7FC7C83E7F9439B6C5001D3081</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -53,11 +78,6 @@
 			<true/>
 		</dict>
 		<key>B6312CAD7E18804AD5E11308495CFD52</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B8885C756BA4D8D82B71946384A358DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
