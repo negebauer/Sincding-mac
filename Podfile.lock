@@ -5,10 +5,9 @@ PODS:
   - Fabric (1.6.7)
   - Kanna (1.0.6)
   - KeychainAccess (2.3.5)
-  - Networking (1.1.0)
   - Sparkle (1.14.0)
   - UCSiding (0.1.2):
-    - Networking (~> 1)
+    - Alamofire (~> 3.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.3.0)
@@ -29,9 +28,8 @@ SPEC CHECKSUMS:
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   Kanna: 9f30945bbd293a609f698ea164687ccc0990ff60
   KeychainAccess: e283c1981a6c5655e1984cd411c6faf16fa165ae
-  Networking: 20a1714d673bc077aad2bd2d539007ea6087662f
   Sparkle: ccd95233b12a3e3d4eeb55ff01dd4c8bb8188b07
-  UCSiding: 0d35886ea6038d5540fea1bbd4698f1cdbb1da94
+  UCSiding: 6a41a08f24c27c6985d80629c68f995995df1d7f
 
 PODFILE CHECKSUM: 55d5d6d4021fcfe4995494f311b1dc90e2a18f1a
 
