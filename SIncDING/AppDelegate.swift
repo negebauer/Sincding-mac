@@ -19,10 +19,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Fabric.with([Crashlytics.self])
         SUUpdater.sharedUpdater().checkForUpdatesInBackground()
         NSUserDefaults.standardUserDefaults().registerDefaults(["NSApplicationCrashOnExceptions": true])
-        
-        let test = Test()
-        test.test()
-        test.test2()
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -31,4 +27,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
 }
-
