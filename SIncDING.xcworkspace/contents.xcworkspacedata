@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SIncDING.xcodeproj">
+      location = "group:/Users/Nico/Documents/Xcode/UC/SIncDING/Sincding.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

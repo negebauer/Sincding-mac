@@ -19,25 +19,16 @@
 		03DE2FD11C8F7A4000BF1327 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FD01C8F7A4000BF1327 /* MainViewController.swift */; };
 		03DE2FD31C8F7A4000BF1327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03DE2FD21C8F7A4000BF1327 /* Assets.xcassets */; };
 		03DE2FD61C8F7A4000BF1327 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03DE2FD41C8F7A4000BF1327 /* Main.storyboard */; };
-		03DE2FE11C8F7A4000BF1327 /* SIncDINGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FE01C8F7A4000BF1327 /* SIncDINGTests.swift */; };
-		03DE2FEC1C8F7A4000BF1327 /* SIncDINGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FEB1C8F7A4000BF1327 /* SIncDINGUITests.swift */; };
+		03DE2FE11C8F7A4000BF1327 /* SincdingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FE01C8F7A4000BF1327 /* SincdingTests.swift */; };
 		03DE2FFF1C8F874E00BF1327 /* SidingParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FFE1C8F874E00BF1327 /* SidingParser.swift */; };
 		03DE30011C8FA87C00BF1327 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE30001C8FA87C00BF1327 /* File.swift */; };
 		03F9C8581C90D61D005D67B3 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F9C8571C90D61D005D67B3 /* LogViewController.swift */; };
-		16DCE54F77DAD643EE35770A /* Pods_SIncDINGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7A8F000F7EAAAEB367C2CD /* Pods_SIncDINGUITests.framework */; };
 		78554BA523DFF0CDC3619A78 /* Pods_SIncDING.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B01BC50DA4D7745D7B0411 /* Pods_SIncDING.framework */; };
 		7AFEB70DA6292F32A20483FF /* Pods_SIncDINGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8865DD7EEF48E946A21B6314 /* Pods_SIncDINGTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		03DE2FDD1C8F7A4000BF1327 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03DE2FC31C8F7A4000BF1327 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 03DE2FCA1C8F7A4000BF1327;
-			remoteInfo = SIncDING;
-		};
-		03DE2FE81C8F7A4000BF1327 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 03DE2FC31C8F7A4000BF1327 /* Project object */;
 			proxyType = 1;
@@ -55,18 +46,15 @@
 		036F148F1C95090900462FBE /* SidingParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidingParserDelegate.swift; sourceTree = "<group>"; };
 		036F14911C95102400462FBE /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		03A398B81CB17B1600E3EE76 /* Appcast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Appcast.xml; sourceTree = "<group>"; };
-		03DE2FCB1C8F7A4000BF1327 /* SIncDING.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIncDING.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03DE2FCB1C8F7A4000BF1327 /* Sincding.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sincding.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DE2FCE1C8F7A4000BF1327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03DE2FD01C8F7A4000BF1327 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		03DE2FD21C8F7A4000BF1327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03DE2FD51C8F7A4000BF1327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03DE2FD71C8F7A4000BF1327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03DE2FDC1C8F7A4000BF1327 /* SIncDINGTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SIncDINGTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03DE2FE01C8F7A4000BF1327 /* SIncDINGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIncDINGTests.swift; sourceTree = "<group>"; };
+		03DE2FDC1C8F7A4000BF1327 /* Sincding.temp_caseinsensitive_rename.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sincding.temp_caseinsensitive_rename.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03DE2FE01C8F7A4000BF1327 /* SincdingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SincdingTests.swift; sourceTree = "<group>"; };
 		03DE2FE21C8F7A4000BF1327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03DE2FE71C8F7A4000BF1327 /* SIncDINGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SIncDINGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03DE2FEB1C8F7A4000BF1327 /* SIncDINGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIncDINGUITests.swift; sourceTree = "<group>"; };
-		03DE2FED1C8F7A4000BF1327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03DE2FFE1C8F874E00BF1327 /* SidingParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidingParser.swift; sourceTree = "<group>"; };
 		03DE30001C8FA87C00BF1327 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		03F9C8571C90D61D005D67B3 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
@@ -98,23 +86,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		03DE2FE41C8F7A4000BF1327 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				16DCE54F77DAD643EE35770A /* Pods_SIncDINGUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		03DE2FC21C8F7A4000BF1327 = {
 			isa = PBXGroup;
 			children = (
-				03DE2FCD1C8F7A4000BF1327 /* SIncDING */,
-				03DE2FDF1C8F7A4000BF1327 /* SIncDINGTests */,
-				03DE2FEA1C8F7A4000BF1327 /* SIncDINGUITests */,
+				03DE2FCD1C8F7A4000BF1327 /* Sincding */,
+				03DE2FDF1C8F7A4000BF1327 /* SincdingTests */,
 				03DE2FCC1C8F7A4000BF1327 /* Products */,
 				C031C869F48F374FFCC6311F /* Pods */,
 				AFE858EE697CE47E324A9B31 /* Frameworks */,
@@ -124,14 +103,13 @@
 		03DE2FCC1C8F7A4000BF1327 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				03DE2FCB1C8F7A4000BF1327 /* SIncDING.app */,
-				03DE2FDC1C8F7A4000BF1327 /* SIncDINGTests.xctest */,
-				03DE2FE71C8F7A4000BF1327 /* SIncDINGUITests.xctest */,
+				03DE2FCB1C8F7A4000BF1327 /* Sincding.temp_caseinsensitive_rename.app */,
+				03DE2FDC1C8F7A4000BF1327 /* Sincding.temp_caseinsensitive_rename.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		03DE2FCD1C8F7A4000BF1327 /* SIncDING */ = {
+		03DE2FCD1C8F7A4000BF1327 /* Sincding */ = {
 			isa = PBXGroup;
 			children = (
 				03DE2FCE1C8F7A4000BF1327 /* AppDelegate.swift */,
@@ -151,25 +129,17 @@
 				03DE2FD71C8F7A4000BF1327 /* Info.plist */,
 				03A398B81CB17B1600E3EE76 /* Appcast.xml */,
 			);
-			path = SIncDING;
+			path = Sincding;
 			sourceTree = "<group>";
 		};
-		03DE2FDF1C8F7A4000BF1327 /* SIncDINGTests */ = {
+		03DE2FDF1C8F7A4000BF1327 /* SincdingTests */ = {
 			isa = PBXGroup;
 			children = (
-				03DE2FE01C8F7A4000BF1327 /* SIncDINGTests.swift */,
+				03DE2FE01C8F7A4000BF1327 /* SincdingTests.swift */,
 				03DE2FE21C8F7A4000BF1327 /* Info.plist */,
 			);
+			name = SincdingTests;
 			path = SIncDINGTests;
-			sourceTree = "<group>";
-		};
-		03DE2FEA1C8F7A4000BF1327 /* SIncDINGUITests */ = {
-			isa = PBXGroup;
-			children = (
-				03DE2FEB1C8F7A4000BF1327 /* SIncDINGUITests.swift */,
-				03DE2FED1C8F7A4000BF1327 /* Info.plist */,
-			);
-			path = SIncDINGUITests;
 			sourceTree = "<group>";
 		};
 		AFE858EE697CE47E324A9B31 /* Frameworks */ = {
@@ -217,7 +187,7 @@
 			);
 			name = SIncDING;
 			productName = SIncDING;
-			productReference = 03DE2FCB1C8F7A4000BF1327 /* SIncDING.app */;
+			productReference = 03DE2FCB1C8F7A4000BF1327 /* Sincding.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
 		};
 		03DE2FDB1C8F7A4000BF1327 /* SIncDINGTests */ = {
@@ -238,28 +208,8 @@
 			);
 			name = SIncDINGTests;
 			productName = SIncDINGTests;
-			productReference = 03DE2FDC1C8F7A4000BF1327 /* SIncDINGTests.xctest */;
+			productReference = 03DE2FDC1C8F7A4000BF1327 /* Sincding.temp_caseinsensitive_rename.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		03DE2FE61C8F7A4000BF1327 /* SIncDINGUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 03DE2FF61C8F7A4000BF1327 /* Build configuration list for PBXNativeTarget "SIncDINGUITests" */;
-			buildPhases = (
-				2E5805BE2AE27B3C565D04D3 /* [CP] Check Pods Manifest.lock */,
-				03DE2FE31C8F7A4000BF1327 /* Sources */,
-				03DE2FE41C8F7A4000BF1327 /* Frameworks */,
-				03DE2FE51C8F7A4000BF1327 /* Resources */,
-				303C79EE0BF30B32364ADB92 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				03DE2FE91C8F7A4000BF1327 /* PBXTargetDependency */,
-			);
-			name = SIncDINGUITests;
-			productName = SIncDINGUITests;
-			productReference = 03DE2FE71C8F7A4000BF1327 /* SIncDINGUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -284,13 +234,9 @@
 						CreatedOnToolsVersion = 7.2.1;
 						TestTargetID = 03DE2FCA1C8F7A4000BF1327;
 					};
-					03DE2FE61C8F7A4000BF1327 = {
-						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = 03DE2FCA1C8F7A4000BF1327;
-					};
 				};
 			};
-			buildConfigurationList = 03DE2FC61C8F7A4000BF1327 /* Build configuration list for PBXProject "SIncDING" */;
+			buildConfigurationList = 03DE2FC61C8F7A4000BF1327 /* Build configuration list for PBXProject "Sincding" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -305,7 +251,6 @@
 			targets = (
 				03DE2FCA1C8F7A4000BF1327 /* SIncDING */,
 				03DE2FDB1C8F7A4000BF1327 /* SIncDINGTests */,
-				03DE2FE61C8F7A4000BF1327 /* SIncDINGUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -322,13 +267,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		03DE2FDA1C8F7A4000BF1327 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03DE2FE51C8F7A4000BF1327 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -394,36 +332,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SIncDING/Pods-SIncDING-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2E5805BE2AE27B3C565D04D3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		303C79EE0BF30B32364ADB92 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SIncDINGUITests/Pods-SIncDINGUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		78D9853E66A5A1369C344897 /* [CP] Copy Pods Resources */ = {
@@ -512,15 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03DE2FE11C8F7A4000BF1327 /* SIncDINGTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		03DE2FE31C8F7A4000BF1327 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03DE2FEC1C8F7A4000BF1327 /* SIncDINGUITests.swift in Sources */,
+				03DE2FE11C8F7A4000BF1327 /* SincdingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,11 +431,6 @@
 			isa = PBXTargetDependency;
 			target = 03DE2FCA1C8F7A4000BF1327 /* SIncDING */;
 			targetProxy = 03DE2FDD1C8F7A4000BF1327 /* PBXContainerItemProxy */;
-		};
-		03DE2FE91C8F7A4000BF1327 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 03DE2FCA1C8F7A4000BF1327 /* SIncDING */;
-			targetProxy = 03DE2FE81C8F7A4000BF1327 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -641,8 +536,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SIncDING/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.SIncDING;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.sincding;
+				PRODUCT_NAME = Sincding.temp_caseinsensitive_rename;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -657,8 +552,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SIncDING/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.SIncDING;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.sincding;
+				PRODUCT_NAME = Sincding.temp_caseinsensitive_rename;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -672,8 +567,8 @@
 				INFOPLIST_FILE = SIncDINGTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.SIncDINGTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SIncDING.app/Contents/MacOS/SIncDING";
+				PRODUCT_NAME = Sincding.temp_caseinsensitive_rename;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sincding.temp_caseinsensitive_rename.app/Contents/MacOS/Sincding.temp_caseinsensitive_rename";
 			};
 			name = Debug;
 		};
@@ -686,43 +581,15 @@
 				INFOPLIST_FILE = SIncDINGTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.SIncDINGTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SIncDING.app/Contents/MacOS/SIncDING";
-			};
-			name = Release;
-		};
-		03DE2FF71C8F7A4000BF1327 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D902222B02FC342F6F6D136 /* Pods-SIncDINGUITests.debug.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SIncDINGUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.SIncDINGUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = SIncDING;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		03DE2FF81C8F7A4000BF1327 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BADC53D5537DACD38B602000 /* Pods-SIncDINGUITests.release.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SIncDINGUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.negebauer.SIncDINGUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = SIncDING;
-				USES_XCTRUNNER = YES;
+				PRODUCT_NAME = Sincding.temp_caseinsensitive_rename;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sincding.temp_caseinsensitive_rename.app/Contents/MacOS/Sincding.temp_caseinsensitive_rename";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		03DE2FC61C8F7A4000BF1327 /* Build configuration list for PBXProject "SIncDING" */ = {
+		03DE2FC61C8F7A4000BF1327 /* Build configuration list for PBXProject "Sincding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03DE2FEE1C8F7A4000BF1327 /* Debug */,
@@ -745,15 +612,6 @@
 			buildConfigurations = (
 				03DE2FF41C8F7A4000BF1327 /* Debug */,
 				03DE2FF51C8F7A4000BF1327 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		03DE2FF61C8F7A4000BF1327 /* Build configuration list for PBXNativeTarget "SIncDINGUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				03DE2FF71C8F7A4000BF1327 /* Debug */,
-				03DE2FF81C8F7A4000BF1327 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

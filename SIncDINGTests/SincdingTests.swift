@@ -1,6 +1,6 @@
 //
-//  SIncDINGTests.swift
-//  SIncDINGTests
+//  SincdingTests.swift
+//  SincdingTests
 //
 //  Created by Nicolás Gebauer on 08-03-16.
 //  Copyright © 2016 Nicolás Gebauer. All rights reserved.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import SIncDING
 
-class SIncDINGTests: XCTestCase {
+class SincdingTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
