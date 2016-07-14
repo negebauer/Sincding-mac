@@ -14,3 +14,9 @@ extension NSViewController {
         performSegueWithIdentifier(segue.rawValue, sender: sender)
     }
 }
+
+extension Bool {
+    func nsState() -> Int {
+        return self ? NSOnState : NSOffState
+    }
+}
