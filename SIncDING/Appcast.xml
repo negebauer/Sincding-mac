@@ -6,6 +6,16 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
         <item>
+            <title>Version 1.1.0</title>
+            <sparkle:releaseNotesLink>
+                https://github.com/negebauer/SIncDING/blob/master/Changelog/1.1.0.html
+            </sparkle:releaseNotesLink>
+            <enclosure url="https://github.com/negebauer/SIncDING/releases/download/v1.1.0/SIncDING.zip"
+            sparkle:version="14"
+            sparkle:shortVersionString="1.1.0"
+            type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 1.0.8</title>
             <sparkle:releaseNotesLink>
                 https://github.com/negebauer/SIncDING/blob/master/Changelog/1.0.8.html

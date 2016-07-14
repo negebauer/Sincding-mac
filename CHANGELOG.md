@@ -12,6 +12,20 @@ Based of [Keep a Changelog](http://keepachangelog.com)
 [//]: # (Fixed)
 [//]: # (Security)
 
+## [1.1.0]
+
+#### Added
+
+- Now uses [UCSiding](https://github.com/negebauer/UCSiding) pod
+
+#### Changed
+
+- Internal improvements
+
+#### Fixed
+
+- Pressing `Generate index` multiple times generated incorrect file paths [`#3`](https://github.com/negebauer/sincding/issues/3)
+
 ## [1.0.8] - 2016/07/02
 
 #### Added
@@ -82,12 +96,13 @@ Based of [Keep a Changelog](http://keepachangelog.com)
 #### Added
 - Download SIDING files
 
-[Unreleased]: https://github.com/negebauer/SIncDING/compare/v1.0.8...dev
-[1.0.8]: https://github.com/negebauer/SIncDING/compare/v1.0.7...v1.0.8
-[1.0.7]: https://github.com/negebauer/SIncDING/compare/v1.0.6...v1.0.7
-[1.0.6]: https://github.com/negebauer/SIncDING/compare/v1.0.5...v1.0.6
-[1.0.5]: https://github.com/negebauer/SIncDING/compare/v1.0.4...v1.0.5
-[1.0.4]: https://github.com/negebauer/SIncDING/compare/v1.0.3...v1.0.4
-[1.0.3]: https://github.com/negebauer/SIncDING/compare/v1.0.2...v1.0.3
-[1.0.2]: https://github.com/negebauer/SIncDING/compare/v1.0.1...v1.0.2
-[1.0.1]: https://github.com/negebauer/SIncDING/compare/v1.0...v1.0.1
+[Unreleased]: https://github.com/negebauer/sincding/compare/v1.1.0...dev
+[1.1.0]: https://github.com/negebauer/sincding/compare/v1.0.8...v1.1.0
+[1.0.8]: https://github.com/negebauer/sincding/compare/v1.0.7...v1.0.8
+[1.0.7]: https://github.com/negebauer/sincding/compare/v1.0.6...v1.0.7
+[1.0.6]: https://github.com/negebauer/sincding/compare/v1.0.5...v1.0.6
+[1.0.5]: https://github.com/negebauer/sincding/compare/v1.0.4...v1.0.5
+[1.0.4]: https://github.com/negebauer/sincding/compare/v1.0.3...v1.0.4
+[1.0.3]: https://github.com/negebauer/sincding/compare/v1.0.2...v1.0.3
+[1.0.2]: https://github.com/negebauer/sincding/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/negebauer/sincding/compare/v1.0...v1.0.1
