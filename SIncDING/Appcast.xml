@@ -8,9 +8,9 @@
         <item>
             <title>Version 1.1.0</title>
             <sparkle:releaseNotesLink>
-                https://github.com/negebauer/Sincding/blob/master/Changelog/1.1.0.html
+                http://htmlpreview.github.io/?https://github.com/negebauer/Sincding/blob/master/Changelog/1.1.0.html
             </sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/negebauer/Sincding/releases/download/v1.1.0/Sincding.zip"
+            <enclosure url="https://github.com/negebauer/Sincding/releases/download/v1.0.8/Sincding.zip"
             sparkle:version="14"
             sparkle:shortVersionString="1.1.0"
             type="application/octet-stream" />
@@ -18,7 +18,7 @@
         <item>
             <title>Version 1.0.8</title>
             <sparkle:releaseNotesLink>
-                https://github.com/negebauer/Sincding/blob/master/Changelog/1.0.8.html
+                http://htmlpreview.github.io/?https://github.com/negebauer/Sincding/blob/master/Changelog/1.0.8.html
             </sparkle:releaseNotesLink>
             <enclosure url="https://github.com/negebauer/Sincding/releases/download/v1.0.8/Sincding.zip"
             sparkle:version="13"
@@ -28,7 +28,7 @@
         <item>
             <title>Version 1.0.7</title>
             <sparkle:releaseNotesLink>
-                https://github.com/negebauer/Sincding/blob/master/Changelog/1.0.7.html
+                http://htmlpreview.github.io/?https://github.com/negebauer/Sincding/blob/master/Changelog/1.0.7.html
             </sparkle:releaseNotesLink>
             <enclosure url="https://github.com/negebauer/Sincding/releases/download/v1.0.7/Sincding.zip"
             sparkle:version="11"
@@ -38,7 +38,7 @@
         <item>
             <title>Version 1.0.6</title>
             <sparkle:releaseNotesLink>
-                https://github.com/negebauer/Sincding/blob/master/Changelog/1.0.6.html
+                http://htmlpreview.github.io/?https://github.com/negebauer/Sincding/blob/master/Changelog/1.0.6.html
             </sparkle:releaseNotesLink>
             <enclosure url="https://github.com/negebauer/Sincding/releases/download/v1.0.6/Sincding.zip"
             sparkle:version="10"
@@ -48,7 +48,7 @@
         <item>
             <title>Version 1.0.5</title>
             <sparkle:releaseNotesLink>
-                https://github.com/negebauer/Sincding/blob/master/Changelog/1.0.5.html
+                http://htmlpreview.github.io/?https://github.com/negebauer/Sincding/blob/master/Changelog/1.0.5.html
             </sparkle:releaseNotesLink>
             <enclosure url="https://github.com/negebauer/Sincding/releases/download/v1.0.5/Sincding.zip"
                 sparkle:version="9"
