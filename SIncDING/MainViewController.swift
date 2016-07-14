@@ -123,50 +123,6 @@ class MainViewController: NSViewController, NSTextFieldDelegate, SidingParserDel
     
     // MARK: - Functions
     
-    func setUser(username: String) {
-        Crashlytics.sharedInstance().setUserIdentifier(username)
-        Crashlytics.sharedInstance().setUserEmail(username + "@uc.cl")
-        isUserSet = true
-    }
-    
-    func loadSettings() {
-        guard Settings.configured else {
-            return saveData.state = NSOnState
-        }
-        if Settings.saveData {
-            saveData.state = NSOnState
-            let username = Settings.username
-            let password = Settings.password
-            let path = Settings.path
-            if let username = username, let password = password, let path = path {
-                usernameField.stringValue = username
-                setUser(username)
-                passwordField.stringValue = password
-                self.path.stringValue = path
-            }
-            Answers.logCustomEventWithName("Settings", customAttributes: ["Save": true.description])
-        } else {
-            saveData.state = NSOffState
-            Answers.logCustomEventWithName("Settings", customAttributes: ["Save": false.description])
-        }
-        
-        syncAtIndex.state = Settings.downloadOnIndex ? NSOnState : NSOffState
-    }
-    
-    func saveSettings() {
-        Settings.saveData = saveData.state == NSOnState
-        if Settings.saveData {
-            Settings.saveData = true
-            Settings.username = usernameField.stringValue
-            Settings.password = passwordField.stringValue
-            Settings.path = path.stringValue
-        } else {
-            Settings.deleteData()
-        }
-        
-        Settings.downloadOnIndex = syncAtIndex.state == NSOnState
-    }
-    
     func showMissingDataAlert(message: String) {
         let alert = NSAlert()
         alert.addButtonWithTitle("Ok, sorry")
@@ -174,6 +130,36 @@ class MainViewController: NSViewController, NSTextFieldDelegate, SidingParserDel
         alert.informativeText = "Como queri que funcione sin eso..."
         alert.alertStyle = .WarningAlertStyle
         alert.runModal()
+    }
+    
+    // MARK: - Settings management
+    
+    func loadSettings() {
+        guard Settings.configured else {
+            saveData.state = true.nsState()
+            return
+        }
+        let load = Settings.saveData
+        saveData.state = load.nsState()
+        if load {
+            usernameField.stringValue = Settings.username ?? ""
+            passwordField.stringValue = Settings.password ?? ""
+            path.stringValue = Settings.path ?? ""
+        }
+        syncAtIndex.state = Settings.downloadOnIndex.nsState()
+    }
+    
+    func saveSettings() {
+        let save = saveData.state == NSOnState
+        Settings.saveData = save
+        if save {
+            Settings.username = usernameField.stringValue
+            Settings.password = passwordField.stringValue
+            Settings.path = path.stringValue
+        } else {
+            Settings.deleteData()
+        }
+        Settings.downloadOnIndex = syncAtIndex.state == NSOnState
     }
     
     // MARK: - SidingParserDelegate methods
