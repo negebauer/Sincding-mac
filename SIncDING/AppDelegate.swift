@@ -16,8 +16,10 @@ import UCSiding
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        Fabric.with([Crashlytics.self])
-        SUUpdater.sharedUpdater().checkForUpdatesInBackground()
+        #if RELEASE
+            Fabric.with([Crashlytics.self])
+            SUUpdater.sharedUpdater().checkForUpdatesInBackground()
+        #endif
         NSUserDefaults.standardUserDefaults().registerDefaults(["NSApplicationCrashOnExceptions": true])
     }
 
