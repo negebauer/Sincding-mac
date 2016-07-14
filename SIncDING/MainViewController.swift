@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import Crashlytics
 
 class MainViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegate, MainViewModelDelegate {
     
@@ -62,7 +61,6 @@ class MainViewController: NSViewController, NSTextFieldDelegate, SidingParserDel
             return
         }
         saveSettings()
-        Answers.logCustomEventWithName("Index", customAttributes: nil)
         model.generateIndex(username, password: password, path: path.stringValue)
     }
     

@@ -35,6 +35,7 @@ class MainViewModel {
     // MARK: - Files
     
     func generateIndex(username: String, password: String, path: String) {
+        Answers.logCustomEventWithName("Index", customAttributes: nil)
         newSession(username, password: password)
         self.path = path
     }
