@@ -1,6 +1,6 @@
 #import <Cocoa/Cocoa.h>
 
 
-FOUNDATION_EXPORT double Pods_SIncDINGTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_SIncDINGTestsVersionString[];
+FOUNDATION_EXPORT double Pods_SincdingTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SincdingTestsVersionString[];
 

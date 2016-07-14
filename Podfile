@@ -4,7 +4,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-target 'SIncDING' do
+target 'Sincding' do
 	pod 'Alamofire', '~> 3.3.0'
     pod 'Fabric'
     pod 'Crashlytics'
@@ -15,11 +15,7 @@ target 'SIncDING' do
     pod 'UCSiding', path: '../UCSiding'
 end
 
-target 'SIncDINGTests' do
-    
-end
-
-target 'SIncDINGUITests' do
+target 'SincdingTests' do
     
 end
 

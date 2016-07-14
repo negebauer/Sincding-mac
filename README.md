@@ -1,6 +1,6 @@
 # Sincding (Sync SIDING)
 
-[Numero de descargas 🙊](http://www.somsubhra.com/github-release-stats/?username=negebauer&repository=SIncDING)
+[Numero de descargas 🙊](http://www.somsubhra.com/github-release-stats/?username=negebauer&repository=Sincding)
 
 * [Descripción](#descripción)
 * [Instrucciones de uso](#instrucciones-de-uso)
@@ -11,19 +11,19 @@
 ### Descripción
 
 Para que nunca más tengas que perder tu tiempo revisando todas las carpetas de todos tus cursos en el SIDING para ver si alguien ha subido algún archivo.
-Con SIncDING la búsqueda y descarga de estos se hace de manera fácil y rápida.
+Con Sincding la búsqueda y descarga de estos se hace de manera fácil y rápida.
 
 ***
 
 ### Instrucciones de uso
 
-1. Dirígete a la [página de descargas](https://github.com/negebauer/SIncDING/releases) y descarga la última versión (archivo .zip)
+1. Dirígete a la [página de descargas](https://github.com/negebauer/Sincding/releases) y descarga la última versión (archivo .zip)
 
-![descarga](https://github.com/negebauer/SIncDING/blob/master/Resources/Tutorial/descarga.png)
+![descarga](https://github.com/negebauer/Sincding/blob/master/Resources/Tutorial/descarga.png)
 
 2. Copia la ruta de la carpeta donde quieres descargar los archivos del SIDING
 
-![ruta](https://github.com/negebauer/SIncDING/blob/master/Resources/Tutorial/copiar%20ruta.png)
+![ruta](https://github.com/negebauer/Sincding/blob/master/Resources/Tutorial/copiar%20ruta.png)
 
 3. Pega la ruta en el campo ruta de SIncdDING
 4. Ingresa tu usuario uc (sin el @uc.cl)
@@ -36,7 +36,7 @@ Con SIncDING la búsqueda y descarga de estos se hace de manera fácil y rápida
 9. Espera a que se descarguen todos los archivos (_esto puede demorar más dependiendo de cuantos archivos hay que bajar y que tan grandes son_)
 10. Abre tu carpeta y felicitate a ti mismo por ahorrar mucho tiempo! 😁
 
-![app](https://github.com/negebauer/SIncDING/blob/master/Resources/Tutorial/app.png)
+![app](https://github.com/negebauer/Sincding/blob/master/Resources/Tutorial/app.png)
 
 **Si aún te quedan dudas puedes ver un [vídeo de demostración aquí](https://www.dropbox.com/s/5axm9wub46kanuh/SIncDing.mp4?dl=0)**
 

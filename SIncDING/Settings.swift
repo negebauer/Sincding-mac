@@ -1,6 +1,6 @@
 //
 //  Settings.swift
-//  SIncDING
+//  Sincding
 //
 //  Created by Nicolás Gebauer on 13-07-16.
 //  Copyright © 2016 Nicolás Gebauer. All rights reserved.
@@ -21,7 +21,7 @@ struct Settings {
     // MARK: - Constants
     
     static let userDefaults = NSUserDefaults.standardUserDefaults()
-    static let keychain = Keychain(service: "com.negebauer.SIncDING")
+    static let keychain = Keychain(service: Settings.bundleIdentifier())
 
     // MARK: - Variables
     
@@ -77,6 +77,16 @@ struct Settings {
     }
     
     // MARK: - Functions
+    
+    static func appName() -> String {
+        return NSBundle.mainBundle().infoDictionary!["CFBundleName"] as? String ?? "Sincding"
+        // Swift 3
+        // return Bundle.main.infoDictionary![kCFBundleNameKey as String] ?? "Sincding"
+    }
+    
+    static func bundleIdentifier() -> String {
+        return NSBundle.mainBundle().bundleIdentifier ?? "com.negebauer.sincding"
+    }
 
     static func deleteData() {
         username = ""

@@ -1,5 +1,5 @@
-framework module Pods_SIncDINGTests {
-  umbrella header "Pods-SIncDINGTests-umbrella.h"
+framework module Pods_SincdingTests {
+  umbrella header "Pods-SincdingTests-umbrella.h"
 
   export *
   module * { export * }

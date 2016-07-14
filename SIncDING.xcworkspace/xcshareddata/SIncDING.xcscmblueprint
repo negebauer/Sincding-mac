@@ -9,15 +9,15 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2D798E0B-CC78-43CF-B32E-0E5D7002952E",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "7FA13FBA311A8C9A9FC3562B43EDDE422EAA25AB" : "SIncDING\/",
+    "7FA13FBA311A8C9A9FC3562B43EDDE422EAA25AB" : "Sincding\/",
     "F20C18CF2F443D8C55C750FA5A363CB2B401A9DD" : "UCSiding\/"
   },
-  "DVTSourceControlWorkspaceBlueprintNameKey" : "SIncDING",
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Sincding",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SIncDING.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sincding.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/negebauer\/SIncDING.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/negebauer\/Sincding.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7FA13FBA311A8C9A9FC3562B43EDDE422EAA25AB"
     },

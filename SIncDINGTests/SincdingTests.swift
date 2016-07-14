@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import SIncDING
+@testable import Sincding
 
 class SincdingTests: XCTestCase {
     

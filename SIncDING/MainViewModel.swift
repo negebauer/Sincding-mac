@@ -1,6 +1,6 @@
 //
 //  MainViewModel.swift
-//  SIncDING
+//  Sincding
 //
 //  Created by Nicolás Gebauer on 13-07-16.
 //  Copyright © 2016 Nicolás Gebauer. All rights reserved.

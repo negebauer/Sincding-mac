@@ -19,17 +19,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SIncDING.xcscheme</key>
+		<key>Pods-Sincding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SIncDINGTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-SIncDINGUITests.xcscheme</key>
+		<key>Pods-SincdingTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,12 +37,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>51B0CB6CF4942C9075A771125DE87EB2</key>
+		<key>4631A22F92138877FC27D1CDAE7B38C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5CD96DA0F4F6CCD72DA42E82D8AEF5DF</key>
+		<key>6B8A3FB04DDE7D87B1733072DD84F67B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,12 +57,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BA6DD22052F8EB0930765E6BCA41AE56</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CB1459C835E03128367A9149B0355ADB</key>
+		<key>CF3A45211EC7BB0AFF66CDDBAADA186B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

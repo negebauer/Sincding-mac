@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_SIncDING : NSObject
+@interface PodsDummy_Pods_Sincding : NSObject
 @end
-@implementation PodsDummy_Pods_SIncDING
+@implementation PodsDummy_Pods_Sincding
 @end
