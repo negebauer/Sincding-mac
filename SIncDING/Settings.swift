@@ -66,7 +66,7 @@ struct Settings {
     }
     
     static var configured: Bool {
-        let saveData = userDefaults.dataForKey(DataKeys.SaveData.rawValue)
+        let saveData = userDefaults.objectForKey(DataKeys.SaveData.rawValue)
         return saveData != nil
     }
     
