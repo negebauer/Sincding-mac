@@ -20,13 +20,14 @@ extension MainViewModelDelegate {
     func syncedFiles(synced: Int, total: Int) {}
 }
 
-class MainViewModel {
+class MainViewModel: UCSCoursesDelegate {
     
     // MARK: - Constants
 
     // MARK: - Variables
     
     var session: UCSSession?
+    var courses: UCSCourses?
     var path: String = ""
     
     var delegate: MainViewModelDelegate?
@@ -35,9 +36,22 @@ class MainViewModel {
     // MARK: - Files
     
     func generateIndex(username: String, password: String, path: String) {
-        Answers.logCustomEventWithName("Index", customAttributes: nil)
-        newSession(username, password: password)
+        AnswersLog.log("Index", attributes: nil)
         self.path = path
+        newSession(username, password: password)
+        if let session = session {
+        session.login({
+            self.generateIndex(session)
+            }, failure: { error in
+                // TODO: Notify view
+                print(error)
+        })
+        }
+    }
+    
+    private func generateIndex(session: UCSSession) {
+        courses = UCSCourses(session: session, delegate: self)
+        courses?.loadCourses()
     }
     
     func isIndexGenerated() -> Bool {
@@ -52,7 +66,7 @@ class MainViewModel {
     
     func syncFiles() {
         //        TODO: Get number of new files
-        Answers.logCustomEventWithName("Sync", customAttributes: ["Files": 2])
+        AnswersLog.log("Sync", attributes: ["Files": 2])
         //        TODO: Actually sync files
     }
     
@@ -74,6 +88,12 @@ class MainViewModel {
         Crashlytics.sharedInstance().setUserIdentifier(username)
         Crashlytics.sharedInstance().setUserEmail(username + "@uc.cl")
         isUserSet = true
+    }
+    
+    // MARK: - UCSCoursesDelegate
+    
+    func coursesFound(courses: [UCSCourse]) {
+        // TODO: Go for files
     }
 
 }

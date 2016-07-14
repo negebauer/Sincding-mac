@@ -22,6 +22,7 @@
 		03DE2FE11C8F7A4000BF1327 /* SincdingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FE01C8F7A4000BF1327 /* SincdingTests.swift */; };
 		03DE2FFF1C8F874E00BF1327 /* SidingParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE2FFE1C8F874E00BF1327 /* SidingParser.swift */; };
 		03DE30011C8FA87C00BF1327 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE30001C8FA87C00BF1327 /* File.swift */; };
+		03EC4C6A1D37DBA7001FA277 /* AnswersLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EC4C691D37DBA7001FA277 /* AnswersLog.swift */; };
 		03F9C8581C90D61D005D67B3 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F9C8571C90D61D005D67B3 /* LogViewController.swift */; };
 		2BA5F9DD5FFE143FF551BCF7 /* Pods_Sincding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96330FBF215C0BD8A787D7F1 /* Pods_Sincding.framework */; };
 		3DFE7871274B4BED44BA8D0F /* Pods_SincdingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED58CE028011B39BD35D077 /* Pods_SincdingTests.framework */; };
@@ -57,6 +58,7 @@
 		03DE2FE21C8F7A4000BF1327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03DE2FFE1C8F874E00BF1327 /* SidingParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidingParser.swift; sourceTree = "<group>"; };
 		03DE30001C8FA87C00BF1327 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		03EC4C691D37DBA7001FA277 /* AnswersLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersLog.swift; sourceTree = "<group>"; };
 		03F9C8571C90D61D005D67B3 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		3569677F2E7E6B948BFA080D /* Pods-Sincding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sincding.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sincding/Pods-Sincding.release.xcconfig"; sourceTree = "<group>"; };
 		3ED58CE028011B39BD35D077 /* Pods_SincdingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SincdingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,7 @@
 				03DE2FD41C8F7A4000BF1327 /* Main.storyboard */,
 				03DE2FD71C8F7A4000BF1327 /* Info.plist */,
 				03A398B81CB17B1600E3EE76 /* Appcast.xml */,
+				03EC4C691D37DBA7001FA277 /* AnswersLog.swift */,
 			);
 			path = Sincding;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03DE2FFF1C8F874E00BF1327 /* SidingParser.swift in Sources */,
+				03EC4C6A1D37DBA7001FA277 /* AnswersLog.swift in Sources */,
 				03F9C8581C90D61D005D67B3 /* LogViewController.swift in Sources */,
 				03DE30011C8FA87C00BF1327 /* File.swift in Sources */,
 				036F14901C95090900462FBE /* SidingParserDelegate.swift in Sources */,
