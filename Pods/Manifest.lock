@@ -3,17 +3,18 @@ PODS:
   - Crashlytics (3.7.2):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.7)
-  - Kanna (1.0.6)
-  - KeychainAccess (2.3.5)
+  - Kanna (1.1.0)
+  - KeychainAccess (2.3.6)
   - Sparkle (1.14.0)
   - UCSiding (0.1.2):
     - Alamofire (~> 3.3.0)
+    - Kanna (~> 1.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.3.0)
   - Crashlytics
   - Fabric
-  - Kanna (~> 1.0.6)
+  - Kanna (~> 1.1.0)
   - KeychainAccess (~> 2.3.5)
   - Sparkle (~> 1.14)
   - UCSiding (from `../UCSiding`)
@@ -26,11 +27,11 @@ SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   Crashlytics: 130ab943f8c78cda7a814b434f270b2e2c8a3cba
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
-  Kanna: 9f30945bbd293a609f698ea164687ccc0990ff60
-  KeychainAccess: e283c1981a6c5655e1984cd411c6faf16fa165ae
+  Kanna: 355ed0193e5d8caf4fd996856b5bc98d586c11b6
+  KeychainAccess: 7f10e2ef998ddf954a64d5d608be08677774684d
   Sparkle: ccd95233b12a3e3d4eeb55ff01dd4c8bb8188b07
-  UCSiding: 6a41a08f24c27c6985d80629c68f995995df1d7f
+  UCSiding: 9796b538738ef70649a763e8b005e62d3addc035
 
-PODFILE CHECKSUM: 55d5d6d4021fcfe4995494f311b1dc90e2a18f1a
+PODFILE CHECKSUM: de4a5ae9443cec8d6a12ebe94c6b02ab0c2a2847
 
 COCOAPODS: 1.0.1
