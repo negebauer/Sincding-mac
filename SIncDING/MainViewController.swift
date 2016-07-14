@@ -9,18 +9,16 @@
 import Cocoa
 import Crashlytics
 
-class MainViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegate {
+class MainViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegate, MainViewModelDelegate {
     
     // MARK: - Constants
     
     // MARK: - Variables
     
     var sidingParser: SidingParser!
-    var filesReferenced = false
     weak var logView: LogViewController?
-    var isUserSet = false
     
-    var model: MainViewModel = MainViewModel()
+    let model: MainViewModel = MainViewModel()
     
     // MARK: - Outlets
     
@@ -38,6 +36,7 @@ class MainViewController: NSViewController, NSTextFieldDelegate, SidingParserDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        model.delegate = self
         path.stringValue = ""
         loadSettings()
     }
@@ -45,12 +44,6 @@ class MainViewController: NSViewController, NSTextFieldDelegate, SidingParserDel
     override func viewDidAppear() {
         super.viewDidAppear()
         view.window?.title = "SIncDING"
-    }
-    
-    override var representedObject: AnyObject? {
-        didSet {
-            // Update the view, if already loaded.
-        }
     }
     
     // MARK: - De Init
@@ -62,34 +55,27 @@ class MainViewController: NSViewController, NSTextFieldDelegate, SidingParserDel
     // MARK: - Actions
     
     @IBAction func generateIndex(sender: AnyObject) {
-        if sidingParser == nil {
-            guard usernameField.stringValue != "" && passwordField.stringValue != "" else {
-                showMissingDataAlert("Pon tu usuario y tu clave po")
-                return
-            }
-            if !isUserSet {
-                setUser(usernameField.stringValue)
-            }
-            sidingParser = SidingParser(username: usernameField.stringValue, password: passwordField.stringValue, path: path.stringValue)
-            sidingParser.delegate = self
+        let username = usernameField.stringValue
+        let password = passwordField.stringValue
+        guard username != "" && password != "" else {
+            showMissingDataAlert("Pon tu usuario y tu clave")
+            return
         }
-        Answers.logCustomEventWithName("Index", customAttributes: nil)
         saveSettings()
-        sidingParser.generateIndex(path.stringValue)
+        Answers.logCustomEventWithName("Index", customAttributes: nil)
+        model.generateIndex(username, password: password, path: path.stringValue)
     }
     
     @IBAction func syncFiles(sender: AnyObject) {
-        guard sidingParser != nil else {
-            showMissingDataAlert("Primero genera el index po")
+        guard model.isIndexGenerated() else {
+            showMissingDataAlert("Primero genera el index")
             return
         }
-        let newFiles = sidingParser.newFiles()
-        guard newFiles > 0 else {
+        guard model.isDownloadNeeded() else {
             syncLabel.stringValue = "No hay nuevos archivos que descargar"
             return
         }
-        Answers.logCustomEventWithName("Sync", customAttributes: ["Files": newFiles])
-        sidingParser.syncFiles()
+        model.syncFiles()
     }
     
     @IBAction func enterPressed(sender: AnyObject) {
@@ -127,12 +113,12 @@ class MainViewController: NSViewController, NSTextFieldDelegate, SidingParserDel
         let alert = NSAlert()
         alert.addButtonWithTitle("Ok, sorry")
         alert.messageText = message
-        alert.informativeText = "Como queri que funcione sin eso..."
+        alert.informativeText = "No puedo funcionar sin eso"
         alert.alertStyle = .WarningAlertStyle
         alert.runModal()
     }
     
-    // MARK: - Settings management
+    // MARK: - Settings
     
     func loadSettings() {
         guard Settings.configured else {
@@ -162,7 +148,7 @@ class MainViewController: NSViewController, NSTextFieldDelegate, SidingParserDel
         Settings.downloadOnIndex = syncAtIndex.state == NSOnState
     }
     
-    // MARK: - SidingParserDelegate methods
+    // MARK: - MainViewModelDelegate methods
     
     func indexedFiles(checked: Int, total: Int, new: Int) {
         indexLabel.stringValue = "Indexados \(checked)/\(total)\t\(new) nuevos archivos/carpetas"
