@@ -9,15 +9,12 @@
 import UCSiding
 import Crashlytics
 
-protocol MainViewModelDelegate {
-    func indexedFiles(checked: Int, total: Int, new: Int)
+protocol MainViewModelDelegate: class {
+    func connecting()
+    func cancelIndexing()
+    func cancelSync()
+    func indexedFiles(checked: Int, total: Int, newFiles: Int, newFolders: Int)
     func syncedFiles(synced: Int, total: Int)
-}
-
-extension MainViewModelDelegate {
-//    TODO: Placeholder MainViewModelDelegate functions
-    func indexedFiles(checked: Int, total: Int, new: Int) {}
-    func syncedFiles(synced: Int, total: Int) {}
 }
 
 class MainViewModel: UCSCoursesDelegate {
@@ -28,46 +25,83 @@ class MainViewModel: UCSCoursesDelegate {
     
     var session: UCSSession?
     var courses: UCSCourses?
+    var files: [File] = []
+    var filesToDownload: [File] = []
     var path: String = ""
     
-    var delegate: MainViewModelDelegate?
+    weak var delegate: MainViewModelDelegate?
     private var isUserSet = false
     
     // MARK: - Files
     
     func generateIndex(username: String, password: String, path: String) {
+        cancelIndexing()
+        delegate?.connecting()
         AnswersLog.log("Index", attributes: nil)
-        self.path = path
+        if path.substringFromIndex(path.endIndex) == "/" {
+            self.path = path.substringToIndex(path.endIndex)
+        } else {
+            self.path = path
+        }
         newSession(username, password: password)
         if let session = session {
         session.login({
             self.generateIndex(session)
             }, failure: { error in
-                // TODO: Notify view
+                // TODO: Notify view of session error
                 print(error)
         })
         }
     }
     
     private func generateIndex(session: UCSSession) {
+        files.removeAll()
         courses = UCSCourses(session: session, delegate: self)
         courses?.loadCourses()
     }
     
+    private func cancelIndexing() {
+        session = nil
+        courses = nil
+        files.removeAll()
+        cancelDownloads()
+        delegate?.cancelIndexing()
+    }
+    
     func isIndexGenerated() -> Bool {
-        //        TODO: Actually consult for the index against UCSCourses
-        return false
+        return courses != nil
     }
     
     func isDownloadNeeded() -> Bool {
-        //        TODO: Actually consult for the against UCSCourses
-        return false
+        return newFilesCount() > 0
     }
     
     func syncFiles() {
-        //        TODO: Get number of new files
-        AnswersLog.log("Sync", attributes: ["Files": 2])
-        //        TODO: Actually sync files
+        cancelDownloads()
+        guard let headers = session?.headers() else { return }
+        AnswersLog.log("Sync", attributes: ["Files": newFilesCount(), "Folders": newFoldersCount()])
+        filesToDownload = files.filter({ !$0.downloaded }).sort({ f1, f2 in f1.isFolder() })
+        print(filesToDownload[0].isFolder())
+        filesToDownload.forEach({ $0.download(headers, callback: { self.updateSyncedFilesCount() }) })
+    }
+    
+    private func cancelDownloads() {
+        delegate?.cancelSync()
+        filesToDownload.forEach({ $0.cancelDownload() })
+        filesToDownload.removeAll()
+    }
+    
+    func updateSyncedFilesCount() {
+        delegate?.syncedFiles(filesToDownload.filter({ $0.downloaded }).count, total: filesToDownload.count)
+    }
+    
+    func newFilesCount() -> Int {
+        return files.filter({ !$0.downloaded && $0.isFile() }).count
+    }
+    
+    func newFoldersCount() -> Int {
+        return files.filter({ !$0.downloaded && $0.isFolder() }).count
+            + (courses?.courses.filter({ File.fileExists(path + $0.pathForChildren()) }).count ?? 0)
     }
     
     // MARK: - Session
@@ -92,8 +126,18 @@ class MainViewModel: UCSCoursesDelegate {
     
     // MARK: - UCSCoursesDelegate
     
-    func coursesFound(courses: [UCSCourse]) {
-        // TODO: Go for files
+    func coursesFound(ucsCourses: UCSCourses, courses: [UCSCourse]) {
+        self.courses?.loadCoursesFiles()
+    }
+    
+    func courseFoundFile(ucsCourses: UCSCourses, courses: [UCSCourse], course: UCSCourse, file: UCSFile) {
+        let newFile = File(sidingFile: file, sincdingFolderPath: path)
+        files.append(newFile)
+        delegate?.indexedFiles(ucsCourses.numberOfCheckedFiles(), total: ucsCourses.numberOfFiles(), newFiles: newFilesCount(), newFolders: newFoldersCount())
+        if let headers = session?.headers() where Settings.downloadOnIndex && !newFile.downloaded {
+            filesToDownload.append(newFile)
+            newFile.download(headers, callback: { self.updateSyncedFilesCount() })
+        }
     }
 
 }

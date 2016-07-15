@@ -8,13 +8,12 @@
 
 import Cocoa
 
-class MainViewController: NSViewController, NSTextFieldDelegate, SidingParserDelegate, MainViewModelDelegate {
+class MainViewController: NSViewController, NSTextFieldDelegate, MainViewModelDelegate {
     
     // MARK: - Constants
     
     // MARK: - Variables
     
-    var sidingParser: SidingParser!
     weak var logView: LogViewController?
     
     let model: MainViewModel = MainViewModel()
@@ -148,11 +147,8 @@ class MainViewController: NSViewController, NSTextFieldDelegate, SidingParserDel
     
     // MARK: - MainViewModelDelegate methods
     
-    func indexedFiles(checked: Int, total: Int, new: Int) {
-        indexLabel.stringValue = "Indexados \(checked)/\(total)\t\(new) nuevos archivos/carpetas"
-        if syncAtIndex.state == NSOnState {
-            syncFiles(checked)
-        }
+    func indexedFiles(checked: Int, total: Int, newFiles: Int, newFolders: Int) {
+        indexLabel.stringValue = "Indexados \(checked)/\(total)\t\(newFiles) nuevos archivos y \(newFolders) nuevas carpetas"
     }
     
     func syncedFiles(synced: Int, total: Int) {
@@ -163,6 +159,18 @@ class MainViewController: NSViewController, NSTextFieldDelegate, SidingParserDel
         }
     }
     
+    func cancelIndexing() {
+        indexLabel.stringValue = ""
+    }
+    
+    func cancelSync() {
+        syncLabel.stringValue = ""
+    }
+    
+    func connecting() {
+        indexLabel.stringValue = "Conectando..."
+    }
+    
     // MARK: - Navigation
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
@@ -170,11 +178,12 @@ class MainViewController: NSViewController, NSTextFieldDelegate, SidingParserDel
             logView?.view.window?.close()
             logView = segue.destinationController as? LogViewController
             let devLog = sender as? Bool
-            guard sidingParser != nil else {
+            guard model.isIndexGenerated() else {
                 logView?.log = "Primero haz el index"
                 return
             }
-            logView?.log = sidingParser.log(devLog ?? false)
+            // TODO: Show logView
+//            logView?.log = sidingParser.log(devLog ?? false)
         }
     }
     

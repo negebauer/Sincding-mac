@@ -6,120 +6,89 @@
 //  Copyright © 2016 Nicolás Gebauer. All rights reserved.
 //
 
-import Foundation
+import UCSiding
 import Alamofire
 
 class File {
     
     // MARK: - Constants
 
+    let sidingFile: UCSFile
+    let parentPath: String
+    
     // MARK: - Variables
     
-    /* The course to which this file belongs */
-    var course: String
-    /* The folder where this file is keep */
-    var folder: String?
-    /* The name of the file, if it's not a folder */
-    var name: String?
-    /* URL link of this file */
-    var link: String
-    /* The path of the parent folder of this file */
-    var parentPath: String
-    /* Defines if a File corresponding to a Folder has been checked or not */
-    var checked = false
-    /* Defines if the File is currently being downloaded */
-    var downloading = false
+    var name: String { return sidingFile.name }
+    var url: String { return sidingFile.url }
+    lazy var pathCompleted: String = { return "\(self.parentPath)/\(self.sidingFile.pathCompleted())" }()
+    lazy var path: String = { return "\(self.parentPath)/\(self.sidingFile.path)" }()
+    
+    private var _downloaded: Bool = false
+    var downloaded: Bool { return _downloaded }
+    private var _downloading: Bool = false
+    var downloading: Bool { return _downloading }
+    
+    private var downloadRequest: Request?
     
     // MARK: - Init
     
-    init(course: String, folder: String?, name: String?, link: String, parentPath: String) {
-        self.course = course
-        self.folder = folder
-        self.name = name
-        self.link = link
-        self.parentPath = parentPath
-        if name != nil {
-            checked = true
-        }
+    init(sidingFile: UCSFile, sincdingFolderPath: String) {
+        self.sidingFile = sidingFile
+        self.parentPath = sincdingFolderPath
+        _downloaded = fileExists()
     }
     
-    // MARK: - Saving
+    // MARK: - Functions
 
+    func checkFolderStructure() {
+        if !NSFileManager.defaultManager().fileExistsAtPath(path) {
+            let _ = try? NSFileManager.defaultManager().createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil)
+        }
+    }
+
+    private func fileExists() -> Bool {
+        return NSFileManager.defaultManager().fileExistsAtPath(pathCompleted)
+    }
+    
+    static func fileExists(path: String) -> Bool {
+        return NSFileManager.defaultManager().fileExistsAtPath(path)
+    }
+    
+    func isFile() -> Bool {
+        return sidingFile.isFile()
+    }
+    
+    func isFolder() -> Bool {
+        return sidingFile.isFolder()
+    }
+    
     func download(headers: [String: String], callback: (() -> Void)) {
         guard isFile() else {
-            checkFolderStructure()
+            _downloaded = true
+            let _ = try? NSFileManager.defaultManager().createDirectoryAtPath(pathCompleted, withIntermediateDirectories: true, attributes: nil)
             callback()
             return
         }
         guard !downloading else {
             return
         }
-        guard !exists() else {
+        guard !downloaded else {
             callback()
             return
         }
-        downloading = true
-        Alamofire.request(.GET, link, headers: headers).response { (_, response, data, error) in
-            self.downloading = false
-            if error != nil {
-                print("Error: \(error!)")
-            } else {
-//                  Usar esto para ver si actualizar archivos? Muestra fecha actualizacion
-//                let resposeHeaders = response?.allHeaderFields
-//                print(resposeHeaders)
-//                let size = response?.expectedContentLength
-//                print("size : \(size)")
-                
-                self.checkFolderStructure()
-                data!.writeToFile(self.path(), atomically: true)
-            }
+        _downloading = true
+        downloadRequest = Alamofire.request(.GET, url, headers: headers).response { (_, response, data, error) in
+            self.downloadRequest = nil
+            self._downloading = false
+            guard let data = data where error == nil else { return print("Error: \(error)") }
+            self.checkFolderStructure()
+            self._downloaded = data.writeToFile(self.pathCompleted, atomically: true)
             callback()
         }
     }
     
-    func checkFolderStructure() {
-        if !NSFileManager.defaultManager().fileExistsAtPath(parentFolder()) {
-            let _ = try? NSFileManager.defaultManager().createDirectoryAtPath(parentFolder(), withIntermediateDirectories: true, attributes: nil)
-        }
-    }
-    
-    // MARK: - Helpers
-    
-    func isFile() -> Bool {
-        let split = name?.componentsSeparatedByString(".")
-        if split?.count > 1 && split?[(split?.count ?? 1) - 1].characters.count < 5 {
-            return true
-        }
-        return false
-    }
-    
-    func isFolder() -> Bool {
-        return !isFile()
-    }
-    
-    func exists() -> Bool {
-        return NSFileManager.defaultManager().fileExistsAtPath(path())
-    }
-    
-    func path() -> String {
-        var path = parentPath
-        path += "/" + course
-        if folder != nil {
-            path += "/" + folder!
-            if name != nil {
-                path += "/" + name!
-            }
-        }
-        return path
-    }
-    
-    func parentFolder() -> String {
-        if name == nil {
-            return path()
-        }
-        let split = path().componentsSeparatedByString("/")
-        let parentFolder = split[0...split.count - 2].joinWithSeparator("/")
-        return parentFolder
+    func cancelDownload() {
+        downloadRequest?.cancel()
     }
     
 }
