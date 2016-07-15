@@ -12,7 +12,7 @@ Based of [Keep a Changelog](http://keepachangelog.com)
 [//]: # (Fixed)
 [//]: # (Security)
 
-## [1.1.0]
+## [1.1.0] - 2016/07/14
 
 #### Added
 
