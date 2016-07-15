@@ -9,7 +9,6 @@
 import Cocoa
 
 extension NSViewController {
-    
     func performSegueWithIdentifier(segue: Segue, sender: AnyObject?) {
         performSegueWithIdentifier(segue.rawValue, sender: sender)
     }

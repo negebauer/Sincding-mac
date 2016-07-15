@@ -171,19 +171,19 @@ class MainViewController: NSViewController, NSTextFieldDelegate, MainViewModelDe
         indexLabel.stringValue = "Conectando..."
     }
     
+    func loginError() {
+        syncLabel.stringValue = "Hubo un problema con el login, intenta de nuevo"
+    }
+    
     // MARK: - Navigation
     
     override func prepareForSegue(segue: NSStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "IDShowLog" {
             logView?.view.window?.close()
             logView = segue.destinationController as? LogViewController
-            let devLog = sender as? Bool
-            guard model.isIndexGenerated() else {
-                logView?.log = "Primero haz el index"
-                return
-            }
-            // TODO: Show logView
-//            logView?.log = sidingParser.log(devLog ?? false)
+//            let devLog = sender as? Bool
+            guard model.isIndexGenerated() else { return }
+            logView?.log = model.generateLog()
         }
     }
     

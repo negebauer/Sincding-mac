@@ -801,7 +801,7 @@ automaticamente</string>
                                     <action selector="chooseFolder:" target="XfG-lQ-9wD" id="Win-b0-bVN"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="32K-3c-QDS">
+                            <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="32K-3c-QDS">
                                 <rect key="frame" x="0.0" y="0.0" width="33" height="16"/>
                                 <buttonCell key="cell" type="square" title="dev log" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rrd-AR-yPK">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>

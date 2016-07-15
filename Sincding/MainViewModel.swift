@@ -13,6 +13,7 @@ protocol MainViewModelDelegate: class {
     func connecting()
     func cancelIndexing()
     func cancelSync()
+    func loginError()
     func indexedFiles(checked: Int, total: Int, newFiles: Int, newFolders: Int)
     func syncedFiles(synced: Int, total: Int)
 }
@@ -48,8 +49,7 @@ class MainViewModel: UCSCoursesDelegate {
         session.login({
             self.generateIndex(session)
             }, failure: { error in
-                // TODO: Notify view of session error
-                print(error)
+                self.delegate?.loginError()
         })
         }
     }
@@ -122,6 +122,21 @@ class MainViewModel: UCSCoursesDelegate {
         Crashlytics.sharedInstance().setUserIdentifier(username)
         Crashlytics.sharedInstance().setUserEmail(username + "@uc.cl")
         isUserSet = true
+    }
+    
+    func generateLog() -> String {
+        var log = ""
+        courses?.courses.forEach({ course in
+            log += "- " + course.name + "\n\n"
+            course.files.forEach({ file in
+                let file = File(sidingFile: file, sincdingFolderPath: self.path)
+                log += file.downloaded ? "" : "(N) "
+                log += file.isFile() ? "(A) " : "(C) "
+                log += file.name + "\n"
+            })
+            log += "\n\n"
+        })
+        return log
     }
     
     // MARK: - UCSCoursesDelegate
