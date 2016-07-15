@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A239m" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
@@ -11,11 +11,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="SIncDING" id="1Xt-HY-uBw">
+                            <menuItem title="Sincding" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="SIncDING" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="Sincding" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About SIncDING" id="5kV-Vb-QxS">
+                                        <menuItem title="About Sincding" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -35,7 +35,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide SIncDING" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide Sincding" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -53,7 +53,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit SIncDING" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit Sincding" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -634,7 +634,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="SIncDING Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="Sincding Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -648,7 +648,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="SIncDING" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Sincding" customModuleProvider="target"/>
                 <customObject id="1BI-9f-ZGP" customClass="SUUpdater"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -672,10 +672,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="SIncDING" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="MainViewController" customModule="Sincding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -760,7 +760,8 @@
                                 <rect key="frame" x="336" y="124" width="138" height="34"/>
                                 <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="cWI-Sg-5QV">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <string key="title">Descargarautomaticamente</string>
+                                    <string key="title">Descargar
+automaticamente</string>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
@@ -784,7 +785,7 @@
                                 <rect key="frame" x="350" y="82" width="110" height="32"/>
                                 <buttonCell key="cell" type="push" title="Guardar ajustes" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WeV-PZ-yt8">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system" size="9"/>
+                                    <font key="font" metaFont="miniSystem"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="saveSettingsPush:" target="XfG-lQ-9wD" id="8Rt-up-pWX"/>
@@ -800,7 +801,7 @@
                                     <action selector="chooseFolder:" target="XfG-lQ-9wD" id="Win-b0-bVN"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="32K-3c-QDS">
+                            <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="32K-3c-QDS">
                                 <rect key="frame" x="0.0" y="0.0" width="33" height="16"/>
                                 <buttonCell key="cell" type="square" title="dev log" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rrd-AR-yPK">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -868,7 +869,7 @@
         <!--Log View Controller-->
         <scene sceneID="XIf-ZF-Mqu">
             <objects>
-                <viewController id="q8z-lU-oaZ" customClass="LogViewController" customModule="SIncDING" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="q8z-lU-oaZ" customClass="LogViewController" customModule="Sincding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ogM-IO-n9u">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>

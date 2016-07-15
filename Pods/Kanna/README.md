@@ -18,6 +18,8 @@ It was inspired by [Nokogiri](https://github.com/sparklemotion/nokogiri)(鋸).
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Reference Status](https://www.versioneye.com/objective-c/kanna/reference_badge.svg?style=flat)](https://www.versioneye.com/objective-c/kanna/references)
 
+:information_source: [Documentation](http://blog.guardlet.com/Kanna/)
+
 
 Features:
 =================
@@ -28,6 +30,20 @@ Features:
 
 Installation:
 =================
+
+### Swift 3.x
+
+Open terminal.app and execute `sudo xcode-select -switch /Applications/Xcode-beta.app/Contents/Developer`
+
+#####Carthage
+Adding it to your `Cartfile`:
+
+```
+github "tid-kijyun/Kanna" "swift3.0"
+```
+
+1. In the project settings add `$(SDKROOT)/usr/include/libxml2` to the "header search paths" field
+
 
 ### Swift 2.x
 

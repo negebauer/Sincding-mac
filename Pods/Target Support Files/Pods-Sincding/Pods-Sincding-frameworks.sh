@@ -88,10 +88,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Kanna/Kanna.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KeychainAccess/KeychainAccess.framework"
   install_framework "${PODS_ROOT}/Sparkle/Sparkle.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/UCSiding/UCSiding.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Kanna/Kanna.framework"
   install_framework "$BUILT_PRODUCTS_DIR/KeychainAccess/KeychainAccess.framework"
   install_framework "${PODS_ROOT}/Sparkle/Sparkle.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/UCSiding/UCSiding.framework"
 fi

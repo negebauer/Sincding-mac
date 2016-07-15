@@ -4,20 +4,18 @@ source 'https://github.com/CocoaPods/Specs.git'
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-target 'SIncDING' do
+target 'Sincding' do
 	pod 'Alamofire', '~> 3.3.0'
     pod 'Fabric'
     pod 'Crashlytics'
-    pod 'Kanna', '~> 1.0.6'
+    pod 'Kanna', '~> 1.1.0'
     pod 'KeychainAccess', '~> 2.3.5'
     pod 'Sparkle', '~> 1.14'
-end
-
-target 'SIncDINGTests' do
     
+    pod 'UCSiding', path: '../UCSiding'
 end
 
-target 'SIncDINGUITests' do
+target 'SincdingTests' do
     
 end
 
