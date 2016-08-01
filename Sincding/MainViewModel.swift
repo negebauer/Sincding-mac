@@ -142,6 +142,7 @@ class MainViewModel: UCSCoursesDelegate {
     // MARK: - UCSCoursesDelegate
     
     func coursesFound(ucsCourses: UCSCourses, courses: [UCSCourse]) {
+        // FIX: Can't download folder if empty
         self.courses?.loadCoursesFiles()
     }
     
