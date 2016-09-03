@@ -12,7 +12,7 @@ target 'Sincding' do
     pod 'KeychainAccess', '~> 2.3.5'
     pod 'Sparkle', '~> 1.14'
     
-    pod 'UCSiding', path: '../UCSiding'
+    pod 'UCSiding', '~> 0.1.2'
 end
 
 target 'SincdingTests' do
