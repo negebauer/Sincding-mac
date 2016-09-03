@@ -130,7 +130,7 @@ class MainViewModel: UCSCoursesDelegate {
             log += "- " + course.name + "\n\n"
             course.files.forEach({ file in
                 let file = File(sidingFile: file, sincdingFolderPath: self.path)
-                log += file.downloaded ? "" : "### "
+                log += file.downloaded ? "" : "##### "
                 log += file.isFile() ? "(A) " : "(C) "
                 log += file.name + "\n"
             })
