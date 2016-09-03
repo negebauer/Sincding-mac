@@ -2,3 +2,6 @@ Sincding.xcworkspace/xcuserdata/
 Sincding.xcodeproj/project.xcworkspace/xcuserdata/
 Sincding.xcodeproj/xcuserdata/
 .DS_Store
+Pods/
+Podfile.lock
+
