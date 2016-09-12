@@ -5,12 +5,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 target 'Sincding' do
-	pod 'Alamofire', '~> 3.3.0'
+	pod 'Alamofire'
     pod 'Fabric'
     pod 'Crashlytics'
-    pod 'Kanna', '~> 1.1.0'
-    pod 'KeychainAccess', '~> 2.3.5'
-    pod 'Sparkle', '~> 1.14'
+    pod 'Kanna'
+    pod 'KeychainAccess'
+    pod 'Sparkle'
     
     pod 'UCSiding', '~> 0.1.2'
 end
